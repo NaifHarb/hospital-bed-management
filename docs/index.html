@@ -33,6 +33,32 @@ button.primary{background:#146b9d}button.secondary{background:#e7f3fa;color:#155
 .login-screen{background:linear-gradient(130deg,#0b2b51,#287db1)}
 @media(max-width:900px){.home-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.home-tile{min-height:190px}header{min-height:135px}}
 @media(max-width:560px){header{padding:20px 14px;min-height:125px}header:after{display:none}header strong{font-size:18px}header small{font-size:12px}.home-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.home-tile{min-height:165px;padding:14px;border-radius:16px;gap:8px}.home-tile .tile-icon{width:49px;height:49px;font-size:25px;border-radius:13px}.home-tile strong{font-size:16px}.home-tile small{font-size:11px}.home-tile:after{width:23px;height:23px;left:10px;bottom:10px;font-size:21px}.grid .panel.stat{min-height:125px}.stat b{font-size:28px}}
+
+/* Compact section navigation + visual bed grid */
+.nav{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:7px;margin-bottom:17px;padding:5px 1px 12px;scrollbar-width:thin}
+.nav button{border:1px solid #d2e4f1;border-radius:11px;background:#fff;padding:10px 13px;font-weight:650;font-size:13px;color:#1e5278;flex:0 0 auto;box-shadow:0 2px 6px #194a6d0b}
+.nav button.active{background:#146a9c;color:white;border-color:#146a9c}
+.nav button:hover{background:#e9f5fc}.nav button.active:hover{background:#146a9c}
+.home-intro{margin:4px 0 12px}
+.bed-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.bed-card{background:white;border:1px solid #d9e5ef;border-top:5px solid #91a8bd;border-radius:17px;padding:16px;box-shadow:0 4px 13px #174c7612;display:grid;gap:10px;min-width:0}
+.bed-card[data-status="ready"]{border-top-color:#1b9a72;background:linear-gradient(180deg,#f0fcf7,#fff 38%)}
+.bed-card[data-status="occupied"]{border-top-color:#3a78c5;background:linear-gradient(180deg,#f0f5ff,#fff 38%)}
+.bed-card[data-status="reserved"]{border-top-color:#e6a13e;background:linear-gradient(180deg,#fff9ee,#fff 38%)}
+.bed-card[data-status="cleaning"]{border-top-color:#9668c5;background:linear-gradient(180deg,#f8f3ff,#fff 38%)}
+.bed-card[data-status="maintenance"]{border-top-color:#d05b59;background:linear-gradient(180deg,#fff3f3,#fff 38%)}
+.bed-card-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.bed-card-head strong{font-size:18px;color:#143d60;overflow-wrap:anywhere}
+.bed-symbol{font-size:29px}
+.bed-meta{font-size:13px;color:#516d83;line-height:1.8}
+.bed-checks{display:flex;flex-wrap:wrap;gap:6px}
+.bed-checks span{font-size:11px;background:#edf4f9;border-radius:7px;padding:5px 7px;color:#365b76}
+.bed-card .primary{width:100%}
+.bed-summary{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}
+.bed-summary span{border-radius:9px;background:#edf5fb;padding:7px 11px;font-size:12px;color:#245476}
+@media(max-width:1150px){.bed-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:750px){.bed-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:420px){.bed-grid{grid-template-columns:1fr}}
 </style></head><body>
 <section class="login-screen" id="loginScreen"><div class="login-card"><div class="login-icon">🏥</div><h1>تسجيل الدخول</h1><p>نظام إدارة الأسرة والطاقة الاستيعابية</p><form id="loginForm"><label>اسم المستخدم<input name="username" autocomplete="username" required placeholder="اسم المستخدم"></label><label>كلمة المرور<input name="password" type="password" autocomplete="current-password" required placeholder="كلمة المرور"></label><div class="login-error" id="loginError" role="alert"></div><button type="submit" class="primary">دخول إلى النظام</button></form><p class="muted" style="margin-top:15px">للمعاينة: <b>admin</b> / <b>123456</b></p><div class="security-hint">تنبيه أمني: تسجيل الدخول للعرض المحلي فقط، ولا يحمي البيانات فعلياً. لا تستخدم بيانات مرضى حقيقية.</div></div></section>
 <div id="appShell" class="hidden"><header><div class="brand"><strong id="hospitalTitle">مستشفى حايل العام</strong><small>نظام إدارة الأسرة والطاقة الاستيعابية</small></div><div class="header-actions"><button onclick="go('alerts')" aria-label="الإشعارات">🔔 الإشعارات</button><button onclick="logout()">تسجيل الخروج</button></div></header>
@@ -93,11 +119,10 @@ function render(){document.getElementById('hospitalTitle').textContent=db.settin
 const nav=document.getElementById('nav');
 const icons={beds:'🛏️',requests:'📋',cleaning:'🧹',equipment:'🩺',transfers:'🚑',alerts:'🔔',reports:'📊',recovery:'🔄',integrations:'🔗',settings:'⚙️'};
 const subtitles={beds:'حالة الأسرة وجاهزيتها',requests:'القبول والحجوزات',cleaning:'التجهيز والصيانة',equipment:'الأجهزة ومواقعها',transfers:'طلبات التحويل',alerts:'التنبيهات الداخلية',reports:'المؤشرات والإحصائيات',recovery:'مطابقة العمليات',integrations:'الجهات والربط',settings:'إعدادات النظام'};
-if(page==='dashboard'){nav.innerHTML='<div class="home-intro"><h1>نظرة عامة على الطاقة الاستيعابية</h1><p>متابعة الأسرة والخدمات في مستشفى حايل العام</p></div>'}
-else{let label=tabs.find(([k])=>k===page)?.[1]||'';nav.innerHTML='<div class="section-bar"><h1>'+label+'</h1><button class="secondary" onclick="go(\'dashboard\')">⌂ العودة للرئيسية</button></div>'}
+nav.innerHTML='<div class="nav" role="navigation" aria-label="القائمة الرئيسية">'+tabs.map(([k,v])=>'<button class="'+(page===k?'active':'')+'" onclick="go(\''+k+'\')">'+v+(k==='alerts'&&db.alerts.some(a=>!a.ack)?' ●':'')+'</button>').join('')+'</div>';
 let html='';
 if(page==='dashboard'){let all=db.beds.length,oper=all-count('maintenance'),occ=count('occupied');html='<div class="grid">'+stat('إجمالي الأسرة',all,'جميع أنواع الرعاية')+stat('جاهزة',db.beds.filter(bedAvailable).length,'جاهزة تشغيلياً')+stat('مشغولة',occ,'إشغال الأسرة التشغيلية '+(oper?Math.round(occ/oper*100):0)+'٪')+stat('محجوزة',count('reserved'),'الحجز لا يعني الإشغال')+'</div>';
-html+='<div class="home-nav">'+tabs.filter(([k])=>k!=='dashboard').map(([k,v])=>'<button class="home-tile" onclick="go(\''+k+'\')"><span class="tile-icon">'+icons[k]+'</span><strong>'+v+(k==='alerts'&&db.alerts.some(a=>!a.ack)?' ●':'')+'</strong><small>'+subtitles[k]+'</small></button>').join('')+'</div>';
+
 html+=panel('الأقسام والطاقة الاستيعابية',table(['القسم','إجمالي','جاهز','مشغول','محجوز','خارج الخدمة'],departments().map(d=>{let b=db.beds.filter(x=>x.dept===d);return tr([esc(d),b.length,b.filter(bedAvailable).length,b.filter(x=>x.status==='occupied').length,b.filter(x=>x.status==='reserved').length,b.filter(x=>x.status==='maintenance').length])})));
 let pressure=oper?occ/oper*100:0;html+=panel('مراقبة الضغط التشغيلي',note('نسبة الإشغال الحالية: <b>'+Math.round(pressure)+'٪</b> من الأسرة التشغيلية. عتبة التنبيه التوضيحية: '+db.settings.threshold+'٪. الاحتياطي المقترح: '+db.settings.reserveMin+' سرير جاهز. الملاءمة الطبية تختلف حسب نوع الرعاية.')+(pressure>=db.settings.threshold?'<p class="pill critical">ضغط مرتفع</p>':'<p class="pill ready">ضمن العتبة التوضيحية</p>'));
 html+=panel('أحدث النشاطات',db.logs.length?db.logs.slice(0,6).map(l=>'<div class="item"><span class="tiny">'+stamp(l.time)+'</span> — '+esc(l.action)+' <span class="muted">'+esc(l.detail)+'</span></div>').join(''):note('لا توجد عمليات مسجلة بعد'))}
@@ -114,7 +139,7 @@ if(page==='integrations'){html=panel('الربط الخارجي — عرض تو�
 if(page==='settings'){html=panel('إعدادات المستشفى التوضيحي',note('هذه الإعدادات تخص متصفح الآيباد فقط. تغيير اسم الدور لا يفرض صلاحيات أمنية فعلية.')+'<div class="formgrid">'+field('اسم المستشفى','hospital')+field('الدور المعروض (توضيحي)','actor')+field('الحد الأدنى المقترح للأسرة الجاهزة','reserveMin','number')+field('عتبة الضغط التشغيلي (%)','threshold','number')+'</div><div class="toolbar" style="margin-top:12px">'+btn('حفظ الإعدادات','saveSettings()','primary')+'</div>')+panel('إدارة البيانات التوضيحية','<div class="toolbar">'+btn('تصدير نسخة JSON','exportJson()')+btn('استيراد نسخة JSON','importJson()')+btn('إعادة ضبط التجربة','resetDemo()','danger')+'</div>'+note('تُخزن البيانات في هذا المتصفح فقط. مسح بيانات Safari قد يؤدي إلى فقدانها؛ احفظ نسخة JSON عند الحاجة.'))+panel('سجل التدقيق التوضيحي',table(['الوقت','الدور التوضيحي','العملية','التفاصيل'],db.logs.slice(0,100).map(l=>tr([stamp(l.time),esc(l.actor),esc(l.action),esc(l.detail)]))))}
 document.getElementById('content').innerHTML=html;if(page==='beds')drawBeds();if(page==='settings'){for(const k of ['hospital','actor','reserveMin','threshold'])document.querySelector('[name="'+k+'"]').value=db.settings[k]}}
 function go(k){page=k;render()}
-function drawBeds(){let el=document.getElementById('bedTable');if(!el)return;let d=document.getElementById('filterDept').value;el.innerHTML=table(['السرير','القسم','النوع','الحالة','نظافة','تجهيزات','إجراء'],db.beds.filter(b=>!d||b.dept===d).map(b=>tr([esc(b.id),esc(b.dept),esc(b.type),pill(b.status),b.clean?'✓':'—',b.equipment?'✓':'—','<div class="actions">'+btn('إدارة','manageBed(\''+attr(b.id)+'\')')+'</div>'])))}
+function drawBeds(){let el=document.getElementById('bedTable');if(!el)return;let d=document.getElementById('filterDept').value;let beds=db.beds.filter(b=>!d||b.dept===d);let states=['ready','occupied','reserved','cleaning','maintenance'];el.innerHTML='<div class="bed-summary">'+states.map(s=>'<span>'+labels[s]+': <b>'+beds.filter(b=>b.status===s).length+'</b></span>').join('')+'</div><div class="bed-grid">'+beds.map(b=>'<article class="bed-card" data-status="'+attr(b.status)+'"><div class="bed-card-head"><strong>'+esc(b.id)+'</strong><span class="bed-symbol" aria-hidden="true">🛏️</span></div><div>'+pill(b.status)+'</div><div class="bed-meta"><div><b>القسم:</b> '+esc(b.dept)+'</div><div><b>نوع الرعاية:</b> '+esc(b.type)+'</div></div><div class="bed-checks"><span>النظافة: '+(b.clean?'✓ مكتملة':'✕ غير مكتملة')+'</span><span>المعدات: '+(b.equipment?'✓ متوفرة':'✕ ناقصة')+'</span></div>'+btn('إدارة السرير','manageBed(\\''+attr(b.id)+'\\')','primary')+'</article>').join('')+'</div>';}
 function addBed(){showForm('إضافة سرير',field('رقم السرير','id')+field('القسم','dept')+field('نوع الرعاية','type','select',[['تنويم','تنويم'],['عناية مركزة','عناية مركزة'],['ملاحظة','ملاحظة'],['أطفال','أطفال'],['عزل','عزل']]),v=>{if(db.beds.some(b=>b.id===v.id))return alert('رقم السرير موجود'),false;db.beds.push({id:v.id,dept:v.dept,type:v.type,status:'cleaning',clean:false,equipment:true});audit('إضافة سرير',v.id)})}
 function manageBed(key){let b=db.beds.find(x=>x.id===key);if(!b)return;let options=b.status==='ready'?['إخراج للصيانة','إلغاء الجاهزية للتنظيف']:b.status==='occupied'?['تأكيد خروج المريض وبدء التنظيف']:b.status==='reserved'?['إلغاء الحجز بعد التحقق']:b.status==='cleaning'?['إنهاء التنظيف','إخراج للصيانة']:['إنهاء الصيانة (بانتظار التنظيف)'];let a=choice('إدارة السرير '+b.id+' — '+labels[b.status],options);if(!a)return;
 if(a.includes('خروج')){let r=db.requests.find(r=>r.bed===b.id&&r.status==='arrived');if(!confirm('هل تؤكد الخروج الفعلي للمريض وبدء تنظيف السرير؟'))return;if(r){r.status='closed';r.bed=''}b.status='cleaning';b.clean=false}
