@@ -59,9 +59,42 @@ button.primary{background:#146b9d}button.secondary{background:#e7f3fa;color:#155
 @media(max-width:1150px){.bed-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:750px){.bed-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:420px){.bed-grid{grid-template-columns:1fr}}
+
+/* Interactive hospital masthead, built from HTML/CSS (no rasterized controls) */
+header.hospital-hero{height:225px;min-height:225px;padding:23px clamp(18px,3vw,48px);display:flex;align-items:flex-start;justify-content:space-between;gap:22px;position:relative;isolation:isolate;overflow:visible;background:linear-gradient(180deg,#071422 0%,#0c2d50 24%,#174f80 64%,#1a7db0 100%);border:0;box-shadow:0 6px 18px #153d6529}
+header.hospital-hero:before{content:"";position:absolute;z-index:-1;inset:auto 0 0;height:55px;background:linear-gradient(160deg,#40a6d5a8,#9ae7f8c9);clip-path:polygon(0 63%,17% 38%,36% 76%,54% 50%,72% 87%,90% 55%,100% 67%,100% 100%,0 100%);opacity:.85}
+header.hospital-hero:after{content:"";position:absolute;z-index:-1;inset:auto 0 0;height:31px;background:#b4ebfa90;clip-path:polygon(0 85%,20% 12%,41% 75%,64% 35%,82% 83%,100% 20%,100% 100%,0 100%)}
+.hero-art{position:absolute;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.hero-art:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#06182e9e 0%,transparent 28%,#06182e20 62%,#06182ea8 100%)}
+.hero-mountain{position:absolute;bottom:0;left:15%;width:49%;height:69%;background:linear-gradient(140deg,#122b43,#547d99 45%,#132c44);clip-path:polygon(0 100%,13% 73%,27% 61%,40% 19%,51% 55%,63% 39%,79% 75%,100% 100%);opacity:.56}
+.hero-building{position:absolute;left:39%;bottom:0;width:25%;height:81%;background:linear-gradient(120deg,#8aa4b5 0%,#d5d7cf 26%,#9caeb7 48%,#526e80 100%);clip-path:polygon(0 14%,48% 0,100% 21%,100% 100%,0 100%);border:1px solid #ffffff66;box-shadow:0 0 35px #102e46}
+.hero-building-name{position:absolute;top:25%;width:100%;font-size:clamp(9px,1.1vw,17px);font-weight:800;color:#163e60;text-align:center;transform:rotate(-2deg)}
+.hero-windows{position:absolute;inset:47% 6% 0;background:repeating-linear-gradient(90deg,transparent 0 18%,#254c65c9 19% 23%,transparent 24% 27%),repeating-linear-gradient(0deg,#356e8d9c 0 16%,#b9d6e38c 17% 21%);opacity:.9}
+.hero-ecg{position:absolute;left:30%;bottom:11%;width:29%;height:75px;filter:drop-shadow(0 0 7px #5be6ff)}.hero-ecg svg{width:100%;height:100%}
+.hero-title{display:flex;align-items:center;gap:20px;z-index:1;max-width:54%;text-shadow:0 2px 8px #001d3e8c}
+.hero-title .hero-mark{font-size:43px;border-left:2px solid #e0f5ff8c;padding-left:20px;color:#b7edff}
+header.hospital-hero strong{font-size:clamp(25px,2.8vw,42px);color:#fff;line-height:1.35}
+header.hospital-hero small{display:block;font-size:clamp(14px,1.7vw,24px);color:#e2f3ff;margin-top:8px}
+.hero-controls{z-index:4;display:flex;align-items:flex-start;gap:24px;direction:ltr}
+.hero-datetime{direction:rtl;display:grid;gap:13px;padding:4px 0;color:#e8f6ff;font-size:clamp(13px,1.3vw,18px);font-weight:650;white-space:nowrap;text-shadow:0 2px 5px #001e37}
+.hero-tools{display:flex;align-items:center;gap:13px;direction:rtl}
+.hero-icon-button,.hero-user-toggle{background:#ffffff16!important;border:1px solid #c7edff66!important;color:white!important;border-radius:24px!important;padding:10px 15px!important;min-height:45px;white-space:nowrap;backdrop-filter:blur(6px)}
+.hero-icon-button{font-size:23px;position:relative;min-width:51px}
+.hero-alert-dot{position:absolute;top:5px;left:7px;width:11px;height:11px;border-radius:50%;background:#fa5252;box-shadow:0 0 0 2px #1a4870}
+.hero-user{position:relative}.hero-user-toggle{font-size:15px;font-weight:750}
+.hero-user-menu{position:absolute;top:calc(100% + 9px);left:0;min-width:190px;background:#fff;color:#183e5f;border-radius:13px;box-shadow:0 12px 35px #071d3680;border:1px solid #d9e8f1;padding:9px;z-index:20;direction:rtl}
+.hero-user-menu button{display:block;width:100%;text-align:right;border:0!important;background:transparent!important;color:#174265!important;border-radius:8px!important;padding:11px!important}
+.hero-user-menu button:hover{background:#eaf4fb!important}.hero-user-caption{font-size:11px;color:#6d8396;padding:7px 10px}
+@media(max-width:1050px){header.hospital-hero{height:210px;min-height:210px}.hero-controls{gap:12px}.hero-datetime{font-size:13px}.hero-title{max-width:53%}.hero-title .hero-mark{font-size:30px;padding-left:12px}}
+@media(max-width:700px){header.hospital-hero{height:225px;min-height:225px;display:block;padding:17px}.hero-title{max-width:100%;gap:10px}.hero-title .hero-mark{font-size:25px;padding-left:10px}header.hospital-hero strong{font-size:23px}header.hospital-hero small{font-size:14px}.hero-controls{position:absolute;bottom:39px;left:15px;right:15px;justify-content:space-between;align-items:flex-end}.hero-datetime{gap:6px;font-size:12px}.hero-tools{gap:7px}.hero-icon-button,.hero-user-toggle{padding:8px 10px!important;min-height:38px}.hero-building{left:35%;width:36%;height:65%}.hero-ecg{left:29%;width:39%;bottom:12%}}
+@media(max-width:390px){.hero-datetime{font-size:10px}.hero-user-toggle{font-size:12px}header.hospital-hero strong{font-size:20px}}
 </style></head><body>
 <section class="login-screen" id="loginScreen"><div class="login-card"><div class="login-icon">🏥</div><h1>تسجيل الدخول</h1><p>نظام إدارة الأسرة والطاقة الاستيعابية</p><form id="loginForm"><label>اسم المستخدم<input name="username" autocomplete="username" required placeholder="اسم المستخدم"></label><label>كلمة المرور<input name="password" type="password" autocomplete="current-password" required placeholder="كلمة المرور"></label><div class="login-error" id="loginError" role="alert"></div><button type="submit" class="primary">دخول إلى النظام</button></form><p class="muted" style="margin-top:15px">للمعاينة: <b>admin</b> / <b>123456</b></p><div class="security-hint">تنبيه أمني: تسجيل الدخول للعرض المحلي فقط، ولا يحمي البيانات فعلياً. لا تستخدم بيانات مرضى حقيقية.</div></div></section>
-<div id="appShell" class="hidden"><header><div class="brand"><strong id="hospitalTitle">مستشفى حايل العام</strong><small>نظام إدارة الأسرة والطاقة الاستيعابية</small></div><div class="header-actions"><button onclick="go('alerts')" aria-label="الإشعارات">🔔 الإشعارات</button><button onclick="logout()">تسجيل الخروج</button></div></header>
+<div id="appShell" class="hidden"><header class="hospital-hero">
+<div class="hero-art" aria-hidden="true"><div class="hero-mountain"></div><div class="hero-building"><div class="hero-building-name">مستشفى حايل العام</div><div class="hero-windows"></div></div><div class="hero-ecg"><svg viewBox="0 0 360 70" preserveAspectRatio="none"><path d="M0 38 H102 L117 31 L131 44 L148 5 L165 64 L181 38 H210 L222 26 L235 46 L248 38 H360" fill="none" stroke="#c6faff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+<div class="hero-title"><div class="hero-mark" aria-hidden="true">✦</div><div><strong id="hospitalTitle">مستشفى حايل العام</strong><small>نظام إدارة الأسرة والطاقة الاستيعابية</small></div></div>
+<div class="hero-controls"><div class="hero-datetime"><span>▦ <span id="liveDate">—</span></span><span>◷ <span id="liveTime">—</span></span></div><div class="hero-tools"><button class="hero-icon-button" onclick="go('alerts')" aria-label="فتح الإشعارات" title="الإشعارات">🔔<span id="headerAlertBadge" class="hero-alert-dot hidden"></span></button><div class="hero-user"><button class="hero-user-toggle" onclick="toggleUserMenu()" aria-expanded="false" id="userMenuButton">المدير <span aria-hidden="true">⌄</span></button><div class="hero-user-menu hidden" id="userMenu"><div class="hero-user-caption">وضع العرض المحلي</div><button onclick="go('settings');closeUserMenu()">⚙️ الإعدادات</button><button onclick="logout();closeUserMenu()">↪ تسجيل الخروج</button></div></div></div></div>
+</header>
 <main class="shell"><div id="nav"></div><div id="content"></div><footer class="footer">نظام إدارة الأسرة والطاقة الاستيعابية</footer></main></div>
 <dialog id="dialog"><form id="entryForm" class="form"><h3 id="formTitle"></h3><div class="formgrid" id="fields"></div><div class="toolbar"><button class="primary" type="submit">حفظ</button><button class="secondary" type="button" onclick="document.getElementById('dialog').close()">إلغاء</button></div></form></dialog>
 <script>
@@ -115,7 +148,11 @@ function choice(title,options){let v=prompt(title+'\n'+options.map((o,i)=>(i+1)+
 function bedAvailable(b){return b&&b.status==='ready'&&b.clean&&b.equipment}
 function compatible(b,r){return bedAvailable(b)&&(!r.care||b.type===r.care)}
 function departments(){return [...new Set(db.beds.map(b=>b.dept))]}
-function render(){document.getElementById('hospitalTitle').textContent=db.settings.hospital;
+function updateHero(){const now=new Date();const d=document.getElementById('liveDate'),t=document.getElementById('liveTime');if(d)d.textContent=new Intl.DateTimeFormat('ar-SA-u-ca-gregory',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Riyadh'}).format(now);if(t)t.textContent=new Intl.DateTimeFormat('ar-SA',{hour:'2-digit',minute:'2-digit',hour12:true,timeZone:'Asia/Riyadh'}).format(now);const badge=document.getElementById('headerAlertBadge');if(badge)badge.classList.toggle('hidden',!db.alerts.some(a=>!a.ack));}
+function toggleUserMenu(){const menu=document.getElementById('userMenu'),button=document.getElementById('userMenuButton');const opening=menu.classList.contains('hidden');menu.classList.toggle('hidden',!opening);button.setAttribute('aria-expanded',String(opening));}
+function closeUserMenu(){document.getElementById('userMenu')?.classList.add('hidden');document.getElementById('userMenuButton')?.setAttribute('aria-expanded','false');}
+document.addEventListener('click',e=>{if(!e.target.closest('.hero-user'))closeUserMenu()});
+function render(){document.getElementById('hospitalTitle').textContent=db.settings.hospital;updateHero();
 const nav=document.getElementById('nav');
 const icons={beds:'🛏️',requests:'📋',cleaning:'🧹',equipment:'🩺',transfers:'🚑',alerts:'🔔',reports:'📊',recovery:'🔄',integrations:'🔗',settings:'⚙️'};
 const subtitles={beds:'حالة الأسرة وجاهزيتها',requests:'القبول والحجوزات',cleaning:'التجهيز والصيانة',equipment:'الأجهزة ومواقعها',transfers:'طلبات التحويل',alerts:'التنبيهات الداخلية',reports:'المؤشرات والإحصائيات',recovery:'مطابقة العمليات',integrations:'الجهات والربط',settings:'إعدادات النظام'};
@@ -182,5 +219,5 @@ function exportJson(){download('hospital-demo-data.json',JSON.stringify(db,null,
 function importJson(){let input=document.createElement('input');input.type='file';input.accept='.json,application/json';input.onchange=async()=>{let file=input.files?.[0];if(!file)return;try{let v=JSON.parse(await file.text());if(!v||!Array.isArray(v.beds)||!Array.isArray(v.requests)||!Array.isArray(v.equipment)||!v.settings||!Array.isArray(v.logs))throw Error('ملف غير متوافق');if(!confirm('سيستبدل هذا الاستيراد البيانات التوضيحية الحالية. هل تتابع؟'))return;db={...structuredClone(initial),...v,settings:{...defaults,...v.settings}};audit('استيراد بيانات توضيحية',file.name);render()}catch(e){alert('تعذر الاستيراد: '+e.message)}};input.click()}
 function resetDemo(){if(!confirm('حذف كل تغييرات التجربة وإعادة البيانات الافتراضية؟'))return;db=structuredClone(initial);persist();render()}
 function saveSettings(){let v={};for(const k of ['hospital','actor','reserveMin','threshold'])v[k]=document.querySelector('[name="'+k+'"]').value;if(!v.hospital.trim()||!v.actor.trim())return alert('الاسم والدور مطلوبان');let reserve=Number(v.reserveMin),threshold=Number(v.threshold);if(!Number.isInteger(reserve)||reserve<0||reserve>100||!Number.isInteger(threshold)||threshold<1||threshold>100)return alert('راجع قيم الحدود');db.settings={hospital:v.hospital,actor:v.actor,reserveMin:reserve,threshold};audit('تغيير إعدادات توضيحية',v.hospital);render()}
-updateAuth();render();
+updateAuth();render();setInterval(updateHero,30000);
 </script></body></html>
