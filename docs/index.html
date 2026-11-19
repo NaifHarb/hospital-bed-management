@@ -31,7 +31,7 @@ const initial={settings:{...defaults},beds:[
 {id:'EQ-003',name:'جهاز تنفس',dept:'العناية المركزة',bed:'ICU-014',status:'maintenance'}
 ],transfers:[],alerts:[],logs:[],recovery:[],version:2};
 let db;try{db=JSON.parse(localStorage.getItem(KEY))||structuredClone(initial)}catch{db=structuredClone(initial)}
-db.settings={...defaults,...db.settings};for(const k of ['beds','requests','equipment','transfers','alerts','logs','recovery'])if(!Array.isArray(db[k]))db[k]=[];
+db.settings={...defaults,...db.settings,hospital:'مستشفى حايل العام'};for(const k of ['beds','requests','equipment','transfers','alerts','logs','recovery'])if(!Array.isArray(db[k]))db[k]=[];
 let page='dashboard';
 const LOGIN_KEY='hospital-bed-view-session';
 function updateAuth(){const ok=sessionStorage.getItem(LOGIN_KEY)==='yes';document.getElementById('loginScreen').classList.toggle('hidden',ok);document.getElementById('appShell').classList.toggle('hidden',!ok)}
@@ -58,7 +58,7 @@ function choice(title,options){let v=prompt(title+'\n'+options.map((o,i)=>(i+1)+
 function bedAvailable(b){return b&&b.status==='ready'&&b.clean&&b.equipment}
 function compatible(b,r){return bedAvailable(b)&&(!r.care||b.type===r.care)}
 function departments(){return [...new Set(db.beds.map(b=>b.dept))]}
-function render(){document.getElementById('hospitalTitle').textContent=db.settings.hospital+' • بيانات توضيحية';document.getElementById('nav').innerHTML=tabs.map(([k,v])=>'<button class="'+(page===k?'active':'')+'" onclick="go(\''+k+'\')">'+v+(k==='alerts'&&db.alerts.some(a=>!a.ack)?' ●':'')+'</button>').join('');let html='';
+function render(){document.getElementById('hospitalTitle').textContent=db.settings.hospital;document.getElementById('nav').innerHTML=tabs.map(([k,v])=>'<button class="'+(page===k?'active':'')+'" onclick="go(\''+k+'\')">'+v+(k==='alerts'&&db.alerts.some(a=>!a.ack)?' ●':'')+'</button>').join('');let html='';
 if(page==='dashboard'){let all=db.beds.length,oper=all-count('maintenance'),occ=count('occupied');html='<div class="grid">'+stat('إجمالي الأسرة',all,'جميع أنواع الرعاية')+stat('جاهزة',db.beds.filter(bedAvailable).length,'جاهزة تشغيلياً')+stat('مشغولة',occ,'إشغال الأسرة التشغيلية '+(oper?Math.round(occ/oper*100):0)+'٪')+stat('محجوزة',count('reserved'),'الحجز لا يعني الإشغال')+'</div>';
 html+=panel('الأقسام والطاقة الاستيعابية',table(['القسم','إجمالي','جاهز','مشغول','محجوز','خارج الخدمة'],departments().map(d=>{let b=db.beds.filter(x=>x.dept===d);return tr([esc(d),b.length,b.filter(bedAvailable).length,b.filter(x=>x.status==='occupied').length,b.filter(x=>x.status==='reserved').length,b.filter(x=>x.status==='maintenance').length])})));
 let pressure=oper?occ/oper*100:0;html+=panel('مراقبة الضغط التشغيلي',note('نسبة الإشغال الحالية: <b>'+Math.round(pressure)+'٪</b> من الأسرة التشغيلية. عتبة التنبيه التوضيحية: '+db.settings.threshold+'٪. الاحتياطي المقترح: '+db.settings.reserveMin+' سرير جاهز. الملاءمة الطبية تختلف حسب نوع الرعاية.')+(pressure>=db.settings.threshold?'<p class="pill critical">ضغط مرتفع</p>':'<p class="pill ready">ضمن العتبة التوضيحية</p>'));
