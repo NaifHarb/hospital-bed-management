@@ -208,7 +208,29 @@ function addDemoPatients(target){const examples=[
  ['راشد العتيبي','قسم داخلي','تنويم','عادي','pending','','متابعة حالة','','قسم التنويم']
  ];const existing=new Set(target.requests.map(r=>r.identity));examples.forEach((x,i)=>{const identity='1999'+String(100000+i).padStart(6,'0');if(!existing.has(identity))target.requests.push({id:'DEMO-'+String(i+1).padStart(3,'0'),patient:x[0],identity,source:x[1],care:x[2],priority:x[3],status:x[4],bed:x[5],caseReason:x[6],fromHospital:x[7],destinationClinic:x[8],receivedAt:new Date().toISOString()})});target.samplePatientsV3=true;return target}
 function seedOccupiedExamples(target){const demo=[['ICU-013','مريض عناية توضيحي','1000000103','عناية مركزة'],['MED-102','مريض تنويم توضيحي','1000000102','تنويم'],['PED-031','مريض أطفال توضيحي','1000000131','أطفال']];for(const [bed,patient,identity,care] of demo){if(target.beds.find(b=>b.id===bed)?.status==='occupied'&&!target.requests.some(r=>r.bed===bed&&r.status==='arrived'))target.requests.push({id:'SEED-'+bed,patient,identity,source:'قسم داخلي',care,priority:'عادي',status:'arrived',bed,receivedAt:new Date().toISOString()})}return target}
-function freshDemoData(){return seedOccupiedExamples(addDemoPatients(structuredClone(initial)))}
+function expandHospitalDemo(target){
+ if(!target.sampleDepartmentsV4){
+  const newBeds=[
+   ['SUR-201','الجراحة','تنويم','ready'],['SUR-202','الجراحة','تنويم','ready'],['SUR-203','الجراحة','تنويم','occupied'],['SUR-204','الجراحة','تنويم','cleaning'],['SUR-205','الجراحة','تنويم','ready'],['SUR-206','الجراحة','تنويم','maintenance'],
+   ['ISO-301','العزل','عزل','ready'],['ISO-302','العزل','عزل','ready'],['ISO-303','العزل','عزل','occupied'],['ISO-304','العزل','عزل','cleaning'],['ISO-305','العزل','عزل','ready'],['ISO-306','العزل','عزل','ready']
+  ];
+  newBeds.forEach(([id,dept,type,status])=>{if(!target.beds.some(b=>b.id===id))target.beds.push({id,dept,type,status,clean:status==='ready',equipment:status!=='maintenance'})});
+  const occupied=[['SUR-203','مريض جراحة توضيحي','1888000203','تنويم'],['ISO-303','مريض عزل توضيحي','1888000303','عزل']];
+  occupied.forEach(([bed,patient,identity,care])=>{if(target.beds.some(b=>b.id===bed&&b.status==='occupied')&&!target.requests.some(r=>r.bed===bed&&r.status==='arrived'))target.requests.push({id:'SEED-'+bed,patient,identity,source:'قسم داخلي',care,priority:'عادي',status:'arrived',bed,receivedAt:new Date().toISOString(),timeline:[]})});
+  target.sampleDepartmentsV4=true;
+ }
+ if(!target.samplePatientsV4){
+  const names=['سارة الشمري','عبدالله العنزي','أمل الحربي','محمد الرشيدي','جواهر المطيري','ماجد العتيبي','شهد الغامدي','يوسف الشمري','خلود العنزي','سلطان الحربي','أروى الرشيدي','عبدالعزيز المطيري','لينا العتيبي','فيصل الشمري','بشاير العنزي','طلال الحربي','غادة المطيري','مشعل الرشيدي','دانة العتيبي','وليد الشمري','هيا العنزي','بدر الحربي','رزان المطيري','نواف الغامدي','ابتسام الرشيدي','زياد العتيبي','مها الشمري','سلمان العنزي','أثير الحربي','إبراهيم المطيري','أسماء الغامدي','راكان الرشيدي','وفاء الشمري','حمد العنزي','مريم الحربي','فارس العتيبي'];
+  const cares=['تنويم','عزل','ملاحظة','أطفال','عناية مركزة','تنويم'];
+  const reasons=['متابعة ما بعد الجراحة','تقييم الحالة','مراقبة العلامات الحيوية','متابعة أطفال','ملاحظة سريرية','استكمال خطة العلاج'];
+  const sources=['الطوارئ','قسم داخلي','مستشفى آخر','الهلال الأحمر السعودي'];
+  names.forEach((patient,i)=>{const identity='1777'+String(i+100000).slice(-6),rid='DEMO4-'+String(i+1).padStart(3,'0');if(target.requests.some(r=>r.id===rid||r.identity===identity))return;const source=sources[i%4],care=cares[i%cares.length],priority=i%9===0?'حرج':i%3===0?'عاجل':'عادي';target.requests.push({id:rid,patient,identity,source,care,priority,status:i%7===0?'accepted':'pending',bed:'',caseReason:reasons[i%reasons.length],fromHospital:source==='مستشفى آخر'?'مستشفى محوّل افتراضي':'',destinationClinic:care==='عزل'?'قسم العزل':care==='تنويم'?'قسم الجراحة':care==='أطفال'?'قسم الأطفال':care==='عناية مركزة'?'العناية المركزة':'الطوارئ',receivedAt:new Date(Date.now()-(i+1)*37*60000).toISOString(),timeline:[]})});
+  target.samplePatientsV4=true;
+ }
+ return target;
+}
+function freshDemoData(){return expandHospitalDemo(seedOccupiedExamples(addDemoPatients(structuredClone(initial))))}
+db=expandHospitalDemo(db);localStorage.setItem(KEY,JSON.stringify(db));
 let page='dashboard';
 
 const THEME_KEY='hospital-bed-theme';
