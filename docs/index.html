@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#102b49"><title>إدارة الأسرة والطاقة الاستيعابية | Hospital Capacity</title>
 <style>
-:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#172c45;background:#f3f6fb}*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}header{background:#102b49;color:#fff;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}header strong{font-size:19px}header small{display:block;color:#c3d4e5;margin-top:5px}.tag{background:#285477;color:white;border-radius:30px;padding:7px 12px;font-size:12px}.shell{max-width:1350px;margin:auto;padding:18px}.nav{display:flex;gap:7px;overflow:auto;padding-bottom:14px}.nav button{border:1px solid #dce5ee;border-radius:11px;padding:11px 13px;white-space:nowrap;background:white;color:#28425e}.nav button.active{background:#176b91;color:white;border-color:#176b91}.panel{background:white;border:1px solid #e2eaf2;border-radius:16px;padding:18px;margin-bottom:15px;box-shadow:0 5px 20px #12345608}.panel h2{font-size:18px;margin:0 0 15px}.muted{color:#64748b;font-size:13px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.stat b{font-size:29px;display:block;margin:12px 0}.stat small{color:#66798c}.toolbar{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-bottom:13px}input,select,textarea{border:1px solid #cbd7e5;border-radius:10px;padding:10px;background:white;min-width:0;max-width:100%}button.primary{background:#116c93;color:white;border:0;border-radius:10px;padding:10px 14px}button.secondary{background:#edf5f9;color:#115676;border:0;border-radius:10px;padding:10px 13px}button.danger{background:#fff0f0;color:#a92d2d;border:0;border-radius:10px;padding:10px 13px}table{width:100%;border-collapse:collapse;min-width:710px}th,td{text-align:right;padding:11px;border-bottom:1px solid #edf1f6;font-size:13px}th{color:#61758b;background:#f8fafc}.scroll{overflow:auto}.pill{display:inline-block;padding:5px 9px;border-radius:30px;font-size:12px;background:#e9eef5;color:#345}.ready,.approved,.resolved{background:#e3f7ec;color:#16784c}.occupied{background:#e8eefb;color:#315ba3}.reserved,.pending,.warning{background:#fff3d8;color:#966008}.cleaning,.conditional{background:#f0e8fb;color:#7851a2}.maintenance,.critical,.rejected{background:#ffe7e7;color:#a33}.notice{padding:12px 14px;background:#eef7fb;border-radius:11px;color:#23546d;font-size:13px;line-height:1.9;margin:0 0 15px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.card{border:1px solid #e1e9f1;border-radius:14px;padding:15px}.card h3{font-size:15px;margin:0 0 8px}.card p{color:#66788c;font-size:13px;line-height:1.8}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.formgrid label{display:grid;gap:6px;font-size:13px;color:#50657a}.formgrid label.wide{grid-column:1/-1}.formgrid input,.formgrid select,.formgrid textarea{width:100%}dialog{border:0;border-radius:17px;padding:22px;max-width:560px;width:calc(100% - 24px);box-shadow:0 25px 70px #0004;max-height:88vh;overflow:auto}dialog::backdrop{background:#12243d88}.form{display:grid;gap:15px}.footer{color:#8291a2;font-size:12px;text-align:center;padding:20px}.tiny{font-size:11px;color:#64748b}.divider{border:0;border-top:1px solid #e6edf4;margin:16px 0}.statusbar{background:#fff8e7;color:#855c16;padding:10px 18px;font-size:12px}.stack{display:grid;gap:8px}.stack .item{padding:10px 12px;border:1px solid #e8edf3;border-radius:10px}.chartline{background:#edf2f7;border-radius:12px;height:10px;overflow:hidden}.chartline>div{height:100%;background:#19769b}.actions{display:flex;flex-wrap:wrap;gap:5px}.actions button{font-size:12px;padding:7px 9px}.heading{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.hidden{display:none!important}@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr 1fr}.shell{padding:12px}}@media(max-width:550px){.cards,.formgrid{grid-template-columns:1fr}.formgrid label.wide{grid-column:auto}header strong{font-size:15px}.panel{padding:13px}.grid{gap:8px}.stat b{font-size:25px}}
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#172c45;background:#f3f6fb}*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}header{background:#102b49;color:#fff;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}header strong{font-size:19px}header small{display:block;color:#c3d4e5;margin-top:5px}.tag{background:#285477;color:white;border-radius:30px;padding:7px 12px;font-size:12px}.shell{max-width:1350px;margin:auto;padding:18px}.nav{display:flex;gap:7px;overflow:auto;padding-bottom:14px}.nav button{border:1px solid #dce5ee;border-radius:11px;padding:11px 13px;white-space:nowrap;background:white;color:#28425e}.nav button.active{background:#176b91;color:white;border-color:#176b91}.panel{background:white;border:1px solid #e2eaf2;border-radius:16px;padding:18px;margin-bottom:15px;box-shadow:0 5px 20px #12345608}.panel h2{font-size:18px;margin:0 0 15px}.muted{color:#64748b;font-size:13px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.toolbar{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-bottom:13px}input,select,textarea{border:1px solid #cbd7e5;border-radius:10px;padding:10px;background:white;min-width:0;max-width:100%}button.primary{background:#116c93;color:white;border:0;border-radius:10px;padding:10px 14px}button.secondary{background:#edf5f9;color:#115676;border:0;border-radius:10px;padding:10px 13px}button.danger{background:#fff0f0;color:#a92d2d;border:0;border-radius:10px;padding:10px 13px}table{width:100%;border-collapse:collapse;min-width:710px}th,td{text-align:right;padding:11px;border-bottom:1px solid #edf1f6;font-size:13px}th{color:#61758b;background:#f8fafc}.scroll{overflow:auto}.pill{display:inline-block;padding:5px 9px;border-radius:30px;font-size:12px;background:#e9eef5;color:#345}.ready,.approved,.resolved{background:#e3f7ec;color:#16784c}.occupied{background:#e8eefb;color:#315ba3}.reserved,.pending,.warning{background:#fff3d8;color:#966008}.cleaning,.conditional{background:#f0e8fb;color:#7851a2}.maintenance,.critical,.rejected{background:#ffe7e7;color:#a33}.notice{padding:12px 14px;background:#eef7fb;border-radius:11px;color:#23546d;font-size:13px;line-height:1.9;margin:0 0 15px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.card{border:1px solid #e1e9f1;border-radius:14px;padding:15px}.card h3{font-size:15px;margin:0 0 8px}.card p{color:#66788c;font-size:13px;line-height:1.8}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.formgrid label{display:grid;gap:6px;font-size:13px;color:#50657a}.formgrid label.wide{grid-column:1/-1}.formgrid input,.formgrid select,.formgrid textarea{width:100%}dialog{border:0;border-radius:17px;padding:22px;max-width:560px;width:calc(100% - 24px);box-shadow:0 25px 70px #0004;max-height:88vh;overflow:auto}dialog::backdrop{background:#12243d88}.form{display:grid;gap:15px}.footer{color:#8291a2;font-size:12px;text-align:center;padding:20px}.tiny{font-size:11px;color:#64748b}.divider{border:0;border-top:1px solid #e6edf4;margin:16px 0}.statusbar{background:#fff8e7;color:#855c16;padding:10px 18px;font-size:12px}.stack{display:grid;gap:8px}.stack .item{padding:10px 12px;border:1px solid #e8edf3;border-radius:10px}.chartline{background:#edf2f7;border-radius:12px;height:10px;overflow:hidden}.chartline>div{height:100%;background:#19769b}.actions{display:flex;flex-wrap:wrap;gap:5px}.actions button{font-size:12px;padding:7px 9px}.heading{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.hidden{display:none!important}@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr 1fr}.shell{padding:12px}}@media(max-width:550px){.cards,.formgrid{grid-template-columns:1fr}.formgrid label.wide{grid-column:auto}header strong{font-size:15px}.panel{padding:13px}.grid{gap:8px}}
 .login-screen{min-height:100vh;display:grid;place-items:center;padding:20px;background:linear-gradient(135deg,#0c2b49,#176b91)}.login-card{width:min(440px,100%);background:white;border-radius:22px;padding:30px;box-shadow:0 22px 70px #061a3055}.login-card h1{font-size:24px;margin:12px 0 5px}.login-card p{color:#64748b;line-height:1.7}.login-card label{display:grid;gap:7px;margin:15px 0;color:#415a71;font-size:14px}.login-card input{width:100%}.login-card button{width:100%;padding:13px}.login-icon{font-size:38px}.login-error{color:#b42318;font-size:13px;min-height:20px}.security-hint{background:#fff6e7;color:#795419;padding:11px;border-radius:10px;font-size:12px;line-height:1.7;margin-top:16px}.home-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:20px}.home-tile{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:10px;min-height:132px;background:white;border:1px solid #dfe8f1;border-radius:18px;padding:20px;text-align:right;color:#193651;box-shadow:0 5px 18px #1639560a;transition:transform .15s,box-shadow .15s}.home-tile:active{transform:scale(.98)}.home-tile .tile-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:#eaf4f9;font-size:25px}.home-tile strong{font-size:17px}.home-tile small{color:#697f94;font-size:12px}.section-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 16px}.section-bar h1{font-size:21px;margin:0}.home-intro{margin:4px 0 17px}.home-intro h1{font-size:23px;margin:0 0 6px}.home-intro p{color:#65798d;margin:0;font-size:13px}@media(max-width:850px){.home-nav{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:420px){.home-nav{grid-template-columns:1fr}.home-tile{min-height:94px;flex-direction:row;align-items:center;justify-content:flex-start}.home-tile small{display:none}}/* Hail General Hospital — calm blue grid design */
 :root{background:#eaf5fc;color:#16395a}
 body{background:linear-gradient(180deg,#e2f3fd 0%,#f2f8fc 55%,#eaf5fc 100%)}
@@ -25,14 +25,14 @@ header .header-actions button:hover{background:#ffffff2d}
 .home-tile:after{content:"‹";position:absolute;left:22px;bottom:20px;width:32px;height:32px;border:1px solid #a7c7dc;background:#f7fcff;border-radius:50%;display:grid;place-items:center;color:#215b88;font-size:28px;line-height:1}
 .home-tile:nth-child(3n+1){border-bottom:4px solid #278cc7}.home-tile:nth-child(3n+2){border-bottom:4px solid #22a6bd}.home-tile:nth-child(3n){border-bottom:4px solid #617fc9}
 .panel{border:1px solid #d4e5f1;border-radius:21px;box-shadow:0 7px 20px #225c8212}
-.grid .panel.stat{min-height:145px;background:linear-gradient(140deg,#fff,#f0f9ff);border-color:#c8e2f2;box-shadow:0 5px 14px #23577a18}
-.stat b{color:#123d67;font-size:35px}.stat small{color:#55728a}
-.grid .stat:nth-child(2){background:linear-gradient(140deg,#fff,#eafaf6)}.grid .stat:nth-child(3){background:linear-gradient(140deg,#fff,#edf4ff)}.grid .stat:nth-child(4){background:linear-gradient(140deg,#fff,#fff7e9)}
+
+
+
 .section-bar{background:white;border:1px solid #d9e9f4;border-radius:15px;padding:14px 18px}
 button.primary{background:#146b9d}button.secondary{background:#e7f3fa;color:#15547d}
 .login-screen{background:linear-gradient(130deg,#0b2b51,#287db1)}
 @media(max-width:900px){.home-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.home-tile{min-height:190px}header{min-height:135px}}
-@media(max-width:560px){header{padding:20px 14px;min-height:125px}header:after{display:none}header strong{font-size:18px}header small{font-size:12px}.home-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.home-tile{min-height:165px;padding:14px;border-radius:16px;gap:8px}.home-tile .tile-icon{width:49px;height:49px;font-size:25px;border-radius:13px}.home-tile strong{font-size:16px}.home-tile small{font-size:11px}.home-tile:after{width:23px;height:23px;left:10px;bottom:10px;font-size:21px}.grid .panel.stat{min-height:125px}.stat b{font-size:28px}}
+@media(max-width:560px){header{padding:20px 14px;min-height:125px}header:after{display:none}header strong{font-size:18px}header small{font-size:12px}.home-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.home-tile{min-height:165px;padding:14px;border-radius:16px;gap:8px}.home-tile .tile-icon{width:49px;height:49px;font-size:25px;border-radius:13px}.home-tile strong{font-size:16px}.home-tile small{font-size:11px}.home-tile:after{width:23px;height:23px;left:10px;bottom:10px;font-size:21px}}
 
 /* Compact section navigation + visual bed grid */
 .nav{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:7px;margin-bottom:17px;padding:5px 1px 12px;scrollbar-width:thin}
@@ -110,10 +110,10 @@ header.hospital-hero small{display:block;font-size:clamp(14px,1.7vw,24px);color:
 .workspace.sidebar-collapsed{--side-width:70px}.sidebar-collapsed .side-brand,.sidebar-collapsed .nav-label,.sidebar-collapsed .nav-dot{display:none}.sidebar-collapsed .side-panel{padding-inline:7px}.sidebar-collapsed .side-panel .nav button{justify-content:center;padding:12px 5px}.sidebar-collapsed .side-head{justify-content:center;padding-inline:0}.mobile-toolbar{display:none}
 html[data-theme="dark"]{color-scheme:dark;background:#081726;color:#e9f4ff}
 html[data-theme="dark"] body{background:linear-gradient(180deg,#0a192a,#0e2337 60%,#081726);color:#e9f4ff}
-html[data-theme="dark"] .panel,html[data-theme="dark"] .section-bar,html[data-theme="dark"] .bed-card,html[data-theme="dark"] .login-card,html[data-theme="dark"] dialog{background:#132c44!important;border-color:#2b4b65!important;color:#e9f4ff!important;box-shadow:0 5px 18px #0003}
-html[data-theme="dark"] .grid .panel.stat{background:linear-gradient(140deg,#183b56,#112b43)!important}
-html[data-theme="dark"] .stat b,html[data-theme="dark"] .bed-card-head strong,html[data-theme="dark"] .home-intro h1,html[data-theme="dark"] .panel h2{color:#f2f8ff}
-html[data-theme="dark"] .muted,html[data-theme="dark"] .tiny,html[data-theme="dark"] .stat small,html[data-theme="dark"] .bed-meta,html[data-theme="dark"] .home-intro p,html[data-theme="dark"] .login-card p,html[data-theme="dark"] .card p{color:#b0c5d8}
+html[data-theme="dark"] .panel:not(.stat),html[data-theme="dark"] .section-bar,html[data-theme="dark"] .bed-card,html[data-theme="dark"] .login-card,html[data-theme="dark"] dialog{background:#132c44!important;border-color:#2b4b65!important;color:#e9f4ff!important;box-shadow:0 5px 18px #0003}
+
+html[data-theme="dark"] .bed-card-head strong,html[data-theme="dark"] .home-intro h1,html[data-theme="dark"] .panel h2{color:#f2f8ff}
+html[data-theme="dark"] .muted,html[data-theme="dark"] .tiny,html[data-theme="dark"] .bed-meta,html[data-theme="dark"] .home-intro p,html[data-theme="dark"] .login-card p,html[data-theme="dark"] .card p{color:#b0c5d8}
 html[data-theme="dark"] .notice,html[data-theme="dark"] .demo-role-strip{background:#173c55;border-color:#2d6680;color:#d9f2ff}
 html[data-theme="dark"] .card,html[data-theme="dark"] .stack .item{border-color:#36536a;background:#17334b}
 html[data-theme="dark"] input,html[data-theme="dark"] select,html[data-theme="dark"] textarea{background:#0d253b;color:#e9f4ff;border-color:#3b5b73}
@@ -127,21 +127,21 @@ html[data-theme="dark"] .hero-user-menu button{color:#e6f5ff!important}html[data
 html[data-theme="dark"] button.secondary{background:#24526b;color:#e1f7ff}
 html[data-theme="dark"] .footer{color:#9bb7cb}
 @media(max-width:850px){.workspace{display:block}.workspace .shell{width:100%}.side-panel{position:fixed;top:0;bottom:0;right:0;width:260px!important;z-index:40;overflow-y:auto;transform:translateX(110%);transition:transform .2s;box-shadow:-12px 0 28px #06172d60}.side-panel.mobile-open{transform:translateX(0)}.mobile-toolbar{display:flex;margin-bottom:12px}.workspace.sidebar-collapsed .side-brand,.workspace.sidebar-collapsed .nav-label{display:initial}.workspace.sidebar-collapsed .side-panel .nav button{justify-content:flex-start;padding:12px}.workspace.sidebar-collapsed .side-panel{padding:16px 10px}}
-@media print{.side-panel,.mobile-toolbar,.theme-toggle{display:none!important}.workspace{display:block}}
+@media print{.side-panel,.skip-link,.theme-toggle{display:none!important}.workspace{display:block}}
 .sidebar-svg{display:block;width:23px;height:23px;flex-shrink:0}.side-panel .nav button.active .sidebar-svg{color:#fff}.side-panel .nav button:not(.active) .sidebar-svg{color:#a8d9f2}.nav-icon{display:flex;align-items:center;justify-content:center}
-/* Compact pages and request cards */.workspace .shell{padding:13px clamp(10px,1.7vw,23px)}.panel{padding:13px;margin-bottom:10px;border-radius:14px}.panel h2{font-size:16px;margin-bottom:9px}.grid{gap:9px}.grid .panel.stat{min-height:102px;padding:12px}.stat b{font-size:27px;margin:5px 0}.stat small{font-size:11px}.toolbar,.notice{margin-bottom:9px}.workflow-strip,.demo-role-strip{padding:9px;margin-bottom:10px}.dept-line{display:grid;grid-template-columns:minmax(90px,1fr) minmax(70px,2fr) 45px minmax(100px,1.2fr);align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #7893a633;font-size:13px}.dept-line:last-child{border:0}.dept-line small{color:#8baec5;font-size:11px}.dept-meter{height:9px;background:#47617b55;border-radius:10px;overflow:hidden}.dept-meter span{display:block;height:100%;background:#1eb9af}.request-list{display:grid;gap:9px}.request-card{border:1px solid #7e9eb345;border-radius:12px;padding:12px;background:#719cba0a}.request-top,.request-main,.request-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px}.request-top b{font-size:12px;color:#61b8e7}.request-main{margin:8px 0;font-size:13px}.request-meta{display:flex;gap:6px;flex-wrap:wrap}.request-meta span{background:#4388a81c;border-radius:7px;padding:5px 8px;font-size:12px}.request-bottom{justify-content:flex-end;margin-top:9px}@media(min-width:1000px){.request-list{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.dept-line{grid-template-columns:100px minmax(60px,1fr) 38px;gap:7px}.dept-line small{grid-column:1/-1}.request-main{align-items:flex-start;flex-direction:column;gap:4px}}
+/* Compact pages and request cards */.workspace .shell{padding:13px clamp(10px,1.7vw,23px)}.panel{padding:13px;margin-bottom:10px;border-radius:14px}.panel h2{font-size:16px;margin-bottom:9px}.grid{gap:9px}.toolbar,.notice{margin-bottom:9px}.workflow-strip,.demo-role-strip{padding:9px;margin-bottom:10px}.dept-line{display:grid;grid-template-columns:minmax(90px,1fr) minmax(70px,2fr) 45px minmax(100px,1.2fr);align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #7893a633;font-size:13px}.dept-line:last-child{border:0}.dept-line small{color:#8baec5;font-size:11px}.dept-meter{height:9px;background:#47617b55;border-radius:10px;overflow:hidden}.dept-meter span{display:block;height:100%;background:#1eb9af}.request-list{display:grid;gap:9px}.request-card{border:1px solid #7e9eb345;border-radius:12px;padding:12px;background:#719cba0a}.request-top,.request-main,.request-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px}.request-top b{font-size:12px;color:#61b8e7}.request-main{margin:8px 0;font-size:13px}.request-meta{display:flex;gap:6px;flex-wrap:wrap}.request-meta span{background:#4388a81c;border-radius:7px;padding:5px 8px;font-size:12px}.request-bottom{justify-content:flex-end;margin-top:9px}@media(min-width:1000px){.request-list{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.dept-line{grid-template-columns:100px minmax(60px,1fr) 38px;gap:7px}.dept-line small{grid-column:1/-1}.request-main{align-items:flex-start;flex-direction:column;gap:4px}}
 
 /* Compact Medical Navy across all modules */
 .header-svg{width:23px;height:23px;display:block}.hero-icon-button{display:inline-flex;align-items:center;justify-content:center}
-.workspace .shell{padding:12px clamp(10px,1.7vw,22px)}.panel{padding:13px;margin-bottom:10px;border-radius:14px}.panel h2{font-size:16px;margin:0 0 10px}.panel .notice{padding:8px 11px;font-size:12px;line-height:1.65}.toolbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:9px}.toolbar button,.actions button{font-size:12px;padding:7px 10px;min-height:34px}.formgrid{gap:10px}.formgrid label{font-size:12px}.formgrid input,.formgrid select{padding:9px}.scroll{overflow-x:auto;max-width:100%;border-radius:10px}.scroll table{width:100%;border-collapse:collapse;font-size:12px}.scroll th,.scroll td{padding:9px 8px;white-space:normal;min-width:70px}.scroll th:first-child,.scroll td:first-child{min-width:110px}.scroll .actions{display:flex;gap:5px;flex-wrap:wrap}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:9px}.cards .card{padding:13px;min-height:0}.cards .card h3{font-size:14px;margin:0 0 8px}.cards .card p{font-size:12px;line-height:1.6}.integration-icon{display:inline-flex;vertical-align:middle;color:#52bdd2;margin-left:5px}.integration-icon .sidebar-svg{width:19px;height:19px}.item{padding:9px 0}.grid{gap:9px}.grid .panel.stat{min-height:95px;padding:12px}.stat b{font-size:27px}.report-visual-grid{gap:10px}.request-card{padding:10px}.request-meta span{font-size:11px}.bed-card{padding:11px}.bed-grid{gap:9px}
-@media(max-width:650px){.hero-icon-button{width:42px;height:42px}.hero-tools{gap:5px}.panel{padding:11px}.panel h2{font-size:15px}.scroll table{min-width:560px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.cards .card{padding:10px}.cards .card h3{font-size:12px}.cards .card p{font-size:11px}.grid .panel.stat{min-height:90px}.toolbar button{flex:0 1 auto}.hero-title strong{font-size:clamp(17px,5vw,25px)}}
+.workspace .shell{padding:12px clamp(10px,1.7vw,22px)}.panel{padding:13px;margin-bottom:10px;border-radius:14px}.panel h2{font-size:16px;margin:0 0 10px}.panel .notice{padding:8px 11px;font-size:12px;line-height:1.65}.toolbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:9px}.toolbar button,.actions button{font-size:12px;padding:7px 10px;min-height:34px}.formgrid{gap:10px}.formgrid label{font-size:12px}.formgrid input,.formgrid select{padding:9px}.scroll{overflow-x:auto;max-width:100%;border-radius:10px}.scroll table{width:100%;border-collapse:collapse;font-size:12px}.scroll th,.scroll td{padding:9px 8px;white-space:normal;min-width:70px}.scroll th:first-child,.scroll td:first-child{min-width:110px}.scroll .actions{display:flex;gap:5px;flex-wrap:wrap}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:9px}.cards .card{padding:13px;min-height:0}.cards .card h3{font-size:14px;margin:0 0 8px}.cards .card p{font-size:12px;line-height:1.6}.integration-icon{display:inline-flex;vertical-align:middle;color:#52bdd2;margin-left:5px}.integration-icon .sidebar-svg{width:19px;height:19px}.item{padding:9px 0}.grid{gap:9px}.report-visual-grid{gap:10px}.request-card{padding:10px}.request-meta span{font-size:11px}.bed-card{padding:11px}.bed-grid{gap:9px}
+@media(max-width:650px){.hero-icon-button{width:42px;height:42px}.hero-tools{gap:5px}.panel{padding:11px}.panel h2{font-size:15px}.scroll table{min-width:560px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.cards .card{padding:10px}.cards .card h3{font-size:12px}.cards .card p{font-size:11px}.toolbar button{flex:0 1 auto}.hero-title strong{font-size:clamp(17px,5vw,25px)}}
 .action-dialog{border:1px solid #47708a;border-radius:17px;padding:0;max-width:min(92vw,470px);width:100%;background:#132d46;color:#f4f9ff;box-shadow:0 20px 60px #0007}.action-dialog::backdrop{background:#051625b5}.action-dialog-inner{padding:20px;display:grid;gap:14px}.action-dialog h3{margin:0;font-size:18px}.action-options{display:grid;gap:8px;max-height:55vh;overflow:auto}.action-options button{width:100%;text-align:right;padding:12px;border-radius:10px}.request-filters{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 13px}.request-filters input{flex:2 1 190px}.request-filters select{flex:1 1 115px}.request-card[hidden]{display:none!important}@media(max-width:650px){.request-filters{display:grid;grid-template-columns:1fr 1fr}.request-filters input{grid-column:1/-1;width:100%}.request-filters select{min-width:0}}
-html:not([data-theme="dark"]) .action-dialog{background:#fff;color:#17324b;border-color:#b5d0e1}html:not([data-theme="dark"]) .action-dialog .secondary{background:#e9f3fa;color:#173d59}.action-dialog button:focus-visible,.request-filters input:focus-visible{outline:3px solid #42bcd0;outline-offset:2px}.request-filters select,.request-filters input,#bedSearch,#filterState{min-height:37px;border-radius:9px}.request-filters{align-items:center}
+html:not([data-theme="dark"]) .action-dialog{background:#fff;color:#17324b;border-color:#b5d0e1}html:not([data-theme="dark"]) .action-dialog .secondary{background:#e9f3fa;color:#173d59}.request-filters select,.request-filters input,#bedSearch,#filterState{min-height:37px;border-radius:9px}.request-filters{align-items:center}
 .timeline-event{display:grid;gap:4px;text-align:right;padding:10px 5px;border-bottom:1px solid #829eb444}.timeline-event small{color:#91b6cc}.inline-ack,.inline-accept,.request-timeline-button{min-height:36px;touch-action:manipulation}.request-bottom{flex-wrap:wrap;gap:6px}
-.stat-clickable{display:block;width:100%;text-align:right;font:inherit;color:inherit;cursor:pointer;transition:border-color .16s,transform .16s,background .16s;touch-action:manipulation}.stat-clickable:hover,.stat-clickable:focus-visible{border-color:#48b4d6;transform:translateY(-2px);outline:none}html[data-theme="dark"] .grid .panel.stat.stat-clickable[aria-pressed="true"]{background:linear-gradient(135deg,#087d91,#07536e)!important;border:2px solid #65e3ef!important;box-shadow:0 0 0 3px #35d6e833,0 10px 24px #0005!important;color:#fff!important}html[data-theme="dark"] .grid .panel.stat.stat-clickable[aria-pressed="true"] small,html[data-theme="dark"] .grid .panel.stat.stat-clickable[aria-pressed="true"] b{color:#fff!important}html[data-theme="dark"] .grid .panel.stat.stat-clickable[aria-pressed="false"]{background:linear-gradient(140deg,#183b56,#112b43)!important}.stat-clickable[aria-pressed="true"]{background:linear-gradient(135deg,#087d91,#07536e)!important;border:2px solid #65e3ef!important;box-shadow:0 0 0 3px #35d6e833,0 10px 24px #0003;color:#fff!important;transform:translateY(-2px)}.stat-clickable[aria-pressed="true"] small,.stat-clickable[aria-pressed="true"] b{color:#fff!important}.stat-clickable[aria-pressed="true"]:focus-visible{outline:3px solid #a0f4ff;outline-offset:3px}.dashboard-filter-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}.dashboard-filter-head h2{margin:0}.dashboard-filter-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}.dashboard-filter-bed{border:1px solid #7897af55;border-radius:12px;padding:13px;display:grid;gap:9px}.dashboard-filter-bed .secondary{width:100%}@media(max-width:650px){.dashboard-filter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-filter-bed{padding:10px}.dashboard-filter-bed .secondary{font-size:12px}}
+.dashboard-filter-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}.dashboard-filter-head h2{margin:0}.dashboard-filter-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}.dashboard-filter-bed{border:1px solid #7897af55;border-radius:12px;padding:13px;display:grid;gap:9px}.dashboard-filter-bed .secondary{width:100%}@media(max-width:650px){.dashboard-filter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-filter-bed{padding:10px}.dashboard-filter-bed .secondary{font-size:12px}}
 /* Real hospital photo with unobtrusive transparent Ministry of Health symbol */
 header.hospital-hero{background:#082239!important}
-header.hospital-hero .hero-art{inset:0;z-index:-2;background-image:linear-gradient(270deg,#06172df0 0%,#09283dd9 28%,#09283d60 58%,#0822399a 100%),url("https://cdn2.advanceinfotech.org/ksa.directory/1200x675/business/116/hail-general-hospital-2-1667286500.webp");background-size:cover;background-position:center 48%}
+header.hospital-hero .hero-art{inset:0;z-index:-2;background-image:linear-gradient(270deg,#06172df0 0%,#09283dd9 28%,#09283d60 58%,#0822399a 100%),var(--hospital-image);background-size:cover;background-position:center 48%}
 header.hospital-hero .hero-art:after{background:linear-gradient(0deg,#041d3290,transparent 50%,#071b2c3a)}
 header.hospital-hero .hero-ecg{left:33%;bottom:5%;opacity:.75}
 .hero-title{max-width:63%;gap:18px}
@@ -151,15 +151,279 @@ header.hospital-hero .hero-ecg{left:33%;bottom:5%;opacity:.75}
 @media(max-width:700px){.moh-symbol{width:50px;height:52px;flex-basis:50px}.hero-title{max-width:100%;gap:10px}header.hospital-hero .hero-art{background-position:42% center}}
 .portal-stats{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}.portal-stats span{padding:10px 13px;background:#3a8aa71b;border:1px solid #5799ad40;border-radius:10px}.portal-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:14px}.portal-card{border:1px solid #6796ac55;border-radius:13px;padding:14px;display:grid;gap:10px;align-content:start}.portal-card-head{display:flex;justify-content:space-between;align-items:center;gap:8px}.portal-card .primary{min-height:42px;touch-action:manipulation}.demo-steps{display:grid;gap:12px;margin-top:14px}.demo-step{border:1px solid #5799ad55;border-radius:12px;padding:14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}.demo-step b{min-width:180px}.demo-step code{direction:ltr;unicode-bidi:isolate;padding:6px 9px;border-radius:7px;background:#428baf20}.demo-step span{flex:1 1 260px}@media(max-width:650px){.portal-cards{grid-template-columns:1fr 1fr;gap:8px}.portal-card{padding:10px}.portal-card .primary{font-size:12px}.demo-step{display:grid}}
 .login-card select{width:100%;min-height:46px;padding:10px 12px;border:1px solid #a3b6c9;border-radius:9px;background:var(--input-bg,#fff);color:var(--text,#172c45);margin-top:7px}.login-card select:disabled{opacity:.6}.login-card label{display:block;margin-top:12px}
+
+/* Capacity workspace */
+:root {
+  --canvas: #f4f7fb;
+  --hospital-image: url("assets/hail-general-hospital.webp");
+  --surface: #fff;
+  --ink: #172c45;
+  --quiet: #50647a;
+  --line: #d8e2ed;
+  --tint: #edf5fa;
+  --brand: #102b49;
+  --primary: #0e7490;
+  --focus: #087b9a;
+  --control-line: #7a8da2;
+  --radius: 12px;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--canvas);
+}
+:root[lang="ar"] { font-family: "Noto Sans Arabic", system-ui, sans-serif; }
+html[data-theme="dark"] {
+  --canvas: #0c1b2c;
+  --surface: #14283e;
+  --ink: #edf5ff;
+  --quiet: #b8cce1;
+  --line: #35516c;
+  --tint: #1d3953;
+  --focus: #69d6f4;
+  --control-line: #829bb1;
+}
+body { line-height: 1.5; }
+:where(button, input, select, textarea, a):focus-visible,
+.stat-clickable:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+button:not(:disabled) { transition: background-color 150ms, border-color 150ms; }
+#content :is(input, select, textarea), .login-card :is(input, select) { border-color: var(--control-line); }
+button.primary { background: var(--primary); color: #fff; }
+button.primary:hover { background: #095a72; }
+button.secondary { background: var(--tint); color: var(--ink); }
+:where(.toolbar, .request-filters, .login-card, .formgrid) :is(button,input,select,textarea),
+#bedSearch, #filterState, #filterDept, .bed-actions button, .language-toggle {
+  min-block-size: 44px;
+}
+header.hospital-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-block-size: 76px;
+  block-size: auto;
+  padding: 10px clamp(12px, 2.2vw, 32px);
+  gap: 12px;
+  background: var(--brand);
+  box-shadow: none;
+}
+header.hospital-hero::before, header.hospital-hero::after, .hero-ecg { display: none; }
+header.hospital-hero .hero-art { opacity: .55; }
+.hero-title { max-inline-size: none; gap: 10px; min-inline-size: 0; }
+.hero-title .moh-symbol { inline-size: 44px; block-size: 44px; flex: 0 0 44px; }
+.moh-symbol svg { width: 32px; height: 32px; }
+header.hospital-hero strong { font-size: clamp(17px, 1.7vw, 23px); }
+header.hospital-hero small { font-size: 12px; margin-block-start: 0; }
+.hero-controls {
+  position: static;
+  direction: inherit;
+  align-items: center;
+  gap: 12px;
+}
+.hero-tools { align-items: center; gap: 6px; flex-wrap: wrap; }
+.hero-datetime { direction: inherit; gap: 3px; font-size: 12px; }
+.hero-user-menu { left: auto; right: auto; inset-inline-end: 0; }
+.language-toggle { border: 1px solid currentColor; border-radius: 8px; padding-inline: 10px; }
+.hero-tools .language-toggle { color: #fff; background: #102b49; }
+.workspace { --side-width: 208px; min-height: calc(100vh - 76px); }
+.side-panel { background: var(--brand); box-shadow: none; padding-block: 10px; }
+.side-head { padding-block-end: 8px; margin-block-end: 8px; }
+.side-panel .nav { gap: 2px; }
+.side-panel .nav button {
+  min-block-size: 44px;
+  border-radius: 8px;
+  padding: 6px 10px;
+  text-align: start;
+}
+.side-panel .nav button.active, .side-panel .nav button.active:hover {
+  background: #155573;
+  border-color: #64bbcb;
+}
+.nav-group + .nav-group { border-block-start: 1px solid #ffffff30; margin-block-start: 6px; padding-block-start: 6px; }
+header.hospital-hero :focus-visible, .side-panel :focus-visible { outline-color: #91e7ff; }
+.mobile-nav-toggle { display: none; }
+.skip-link {
+  position: fixed;
+  z-index: 50;
+  inset-block-start: 8px;
+  inset-inline-start: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+.skip-link:not(:focus) { clip-path: inset(50%); }
+@media (min-width: 851px) {
+  .side-panel {
+    position: sticky;
+    inset-block-start: 0;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    max-block-size: calc(100vh - 76px);
+    max-block-size: calc(100dvh - 76px);
+  }
+  #nav {
+    min-block-size: 0;
+    overflow-y: auto;
+    padding: 4px;
+    overscroll-behavior-y: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #7da3bf var(--brand);
+    scroll-padding-block: 4px;
+  }
+  .side-head { flex-shrink: 0; }
+}
+.workspace .shell { padding: 14px clamp(12px, 1.8vw, 30px); }
+.panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: none;
+}
+.panel h2 { font-size: 17px; }
+.page-heading { margin: 0 0 12px; font-size: clamp(20px, 2vw, 26px); }
+#content .demo-role-strip { margin-block-start: 12px; }
+#content .dashboard-kpis { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; margin-block-end: 12px; }
+#content .grid .stat {
+  min-height: 0;
+  height: auto;
+  margin: 0;
+  padding: 9px 12px;
+  text-align: start;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: none;
+}
+#content .stat b { display: block; margin: 1px 0; color: var(--ink); font-size: clamp(23px, 2.5vw, 32px); line-height: 1.2; }
+#content .stat small { font-size: 12px; color: var(--quiet); }
+#content .stat-clickable { border-color: var(--control-line); touch-action: manipulation; }
+#content .stat-clickable:hover { background: var(--tint); }
+#content .stat-clickable[aria-pressed="true"] {
+  background: var(--tint);
+  border-color: var(--focus);
+  box-shadow: inset 0 0 0 1px var(--focus);
+}
+.kpi-selected { visibility: hidden; display: block; float: inline-end; margin-inline-start: 4px; }
+[aria-pressed="true"] .kpi-selected { visibility: visible; }
+.percent { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.capacity-layout { display: grid; gap: 12px; }
+.capacity-layout .panel { margin-block-end: 12px; }
+.dept-line small { color: var(--quiet); }
+.dept-meter { background: var(--tint); }
+.bed-summary { align-items: center; margin-block: 8px 12px; }
+.bed-summary span, html[data-theme="dark"] .bed-summary span { background: var(--tint); color: var(--ink); }
+.bed-grid { grid-template-columns: repeat(auto-fill,minmax(min(100%, 218px),1fr)); gap: 10px; }
+#bedTable .bed-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-inline-start: 4px solid var(--status);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  gap: 7px;
+  box-shadow: none;
+}
+#bedTable .bed-card:hover, #bedTable .bed-card:focus-within { border-block-color: var(--status); }
+#bedTable .bed-card.is-selected { box-shadow: inset 0 0 0 2px var(--focus); }
+.bed-card[data-status="ready"] { --status: #16815c; }
+.bed-card[data-status="occupied"] { --status: #2867b7; }
+.bed-card[data-status="reserved"] { --status: #a36213; }
+.bed-card[data-status="cleaning"] { --status: #7647a6; }
+.bed-card[data-status="maintenance"] { --status: #b74646; }
+.bed-card-head strong, html[data-theme="dark"] .bed-card-head strong { font-size: 16px; color: var(--ink); }
+.bed-meta, html[data-theme="dark"] .bed-meta { font-size: 13px; color: var(--quiet); line-height: 1.5; }
+.bed-checks span, html[data-theme="dark"] .bed-checks span { background: var(--tint); color: var(--ink); font-size: 12px; }
+.bed-card-head .pill { font-size: 12px; max-inline-size: 60%; white-space: normal; text-align: center; }
+.bed-actions { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.bed-actions button { flex: 1 1 auto; font-size: 12px; }
+.bed-actions .primary { width: auto; }
+.bed-controls { align-items: end; }
+.bed-controls button, .toolbar button, .portal-card button { min-height: 44px; }
+.bed-controls label, .request-filters label { display: grid; gap: 4px; font-size: 13px; font-weight: 650; }
+.bed-controls label:first-of-type { flex: 1 1 190px; }
+.bed-controls :is(input,select), .request-filters :is(input,select) { width: 100%; min-width: 0; }
+.bed-details-list { display: grid; grid-template-columns: auto 1fr; gap: 8px 12px; margin: 0; }
+.bed-details-list dd { margin: 0; }
+.scroll { max-inline-size: 100%; }
+.scroll :is(th,td) { text-align: start; }
+.action-options button { text-align: start; }
+.dialog-surface { max-height: 90dvh; overflow: auto; }
+.login-screen {
+  min-block-size: 100svh;
+  background: var(--brand);
+  background-image: linear-gradient(120deg,#102b49e8,#102b4975), var(--hospital-image);
+  background-position: center;
+  background-size: cover;
+}
+.login-card { position: relative; padding: 24px; border-radius: 16px; }
+.login-card .login-brand { color: var(--quiet); margin: 6px 0; font-weight: 700; }
+.login-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 10px; color: #fff; background: var(--brand); }
+.login-icon svg { width: 28px; height: 28px; }
+.login-card .language-toggle { position: absolute; inset-block-start: 24px; inset-inline-end: 24px; width: auto; }
+.sidebar-backdrop { display: none; }
+#content:focus { outline: none; }
+@media (min-width: 650px) {
+  #content .dashboard-kpis { grid-template-columns: repeat(4,minmax(0,1fr)); }
+}
+@media (min-width: 1000px) {
+  .capacity-layout { grid-template-columns: minmax(0,1.55fr) minmax(0,1fr); }
+}
+@media (min-width: 1600px) {
+  .bed-grid { grid-template-columns: repeat(5,minmax(0,1fr)); }
+}
+@media (max-width: 850px) {
+  .mobile-nav-toggle {
+    display: inline-grid;
+    place-items: center;
+    min-inline-size: 44px;
+    min-block-size: 44px;
+    background: var(--brand);
+    color: #fff;
+    border: 1px solid #95afc6;
+    border-radius: 8px;
+  }
+  .side-panel { inset-inline-start: 0; inset-inline-end: auto; transform: translateX(-110%); visibility: hidden; }
+  [dir="rtl"] .side-panel { transform: translateX(110%); }
+  [dir] .side-panel.mobile-open { transform: none; visibility: visible; }
+  .sidebar-backdrop:not(.hidden) { display: block; position: fixed; inset: 0; z-index: 35; background: #07182b80; }
+}
+@media (max-width: 650px) {
+  header.hospital-hero { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 6px 8px; padding-block: 6px; }
+  .hero-controls { grid-column: 1 / -1; flex-wrap: wrap; gap: 4px 8px; }
+  .hero-datetime { order: 1; display: flex; flex-wrap: wrap; gap: 4px 8px; padding: 0; }
+  .hero-tools { gap: 8px; }
+  header.hospital-hero :is(.hero-icon-button,.hero-user-toggle) { min-width: 44px; min-height: 44px; padding: 5px 8px !important; }
+  .hero-title .moh-symbol { inline-size: 36px; block-size: 36px; flex-basis: 36px; }
+  .bed-summary { gap: 4px; margin-block: 4px 8px; }
+  .bed-summary span { padding: 2px 7px; line-height: 1.45; }
+  .bed-controls label { flex: 1 1 120px; }
+}
+@media (max-width: 440px) {
+  .login-card { padding: 16px; }
+  .login-card .language-toggle { inset-block-start: 16px; inset-inline-end: 16px; }
+  .bed-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
 </style></head><body>
-<section class="login-screen" id="loginScreen"><div class="login-card"><div class="login-icon">🏥</div><h1>تسجيل الدخول</h1><p>نظام إدارة الأسرة والطاقة الاستيعابية</p><form id="loginForm"><label>الإدارة / الجهة<select name="group" id="loginGroup" required><option value="">اختر الإدارة أو القسم</option><option value="admin">الإدارة الرئيسية</option><option value="tech">الدعم الفني</option><option value="nursing">التمريض</option><option value="coord">تنسيق المرضى</option><option value="cleaning">النظافة</option><option value="maintenance">الصيانة</option></select></label><label>المستخدم / محطة التمريض<select name="username" id="loginUser" required disabled><option value="">اختر الإدارة أولاً</option></select></label><label>كلمة المرور<input name="password" type="password" autocomplete="current-password" required placeholder="كلمة المرور"></label><div class="login-error" id="loginError" role="alert"></div><button type="submit" class="primary">دخول إلى النظام</button></form><p class="muted" style="margin-top:15px">حساب العرض: <b>الإدارة الرئيسية ← مدير الأسرة</b> · كلمة المرور <b>123456</b></p><div class="security-hint">تنبيه أمني: تسجيل الدخول للعرض المحلي فقط، ولا يحمي البيانات فعلياً. لا تستخدم بيانات مرضى حقيقية.</div></div></section>
-<div id="appShell" class="hidden"><header class="hospital-hero">
+<section class="login-screen" id="loginScreen"><div class="login-card"><div class="login-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8m-4-4h8"/></svg></div><button type="button" class="language-toggle secondary" onclick="toggleLanguage()">English</button><p class="login-brand">مستشفى حايل العام</p><h1>تسجيل الدخول</h1><p>نظام إدارة الأسرة والطاقة الاستيعابية</p><form id="loginForm"><label>الإدارة / الجهة<select name="group" id="loginGroup" required><option value="">اختر الإدارة أو القسم</option><option value="admin">الإدارة الرئيسية</option><option value="tech">الدعم الفني</option><option value="nursing">التمريض</option><option value="coord">تنسيق المرضى</option><option value="cleaning">النظافة</option><option value="maintenance">الصيانة</option></select></label><label>المستخدم / محطة التمريض<select name="username" id="loginUser" required disabled><option value="">اختر الإدارة أولاً</option></select></label><label>كلمة المرور<input name="password" type="password" autocomplete="current-password" required placeholder="كلمة المرور"></label><div class="login-error" id="loginError" role="alert"></div><button type="submit" class="primary">دخول إلى النظام</button></form><p class="muted" style="margin-top:15px">حساب العرض: <b>الإدارة الرئيسية ← مدير الأسرة</b> · كلمة المرور <b>123456</b></p><div class="security-hint">تنبيه أمني: تسجيل الدخول للعرض المحلي فقط، ولا يحمي البيانات فعلياً. لا تستخدم بيانات مرضى حقيقية.</div></div></section>
+<div id="appShell" class="hidden"><a class="skip-link" href="#content">تجاوز القائمة إلى المحتوى</a><header class="hospital-hero">
 <div class="hero-art" aria-hidden="true"><div class="hero-ecg"><svg viewBox="0 0 360 70" preserveAspectRatio="none"><path d="M0 38 H102 L117 31 L131 44 L148 5 L165 64 L181 38 H210 L222 26 L235 46 L248 38 H360" fill="none" stroke="#c6faff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
-<div class="hero-title"><div class="moh-symbol" aria-label="رمز وزارة الصحة السعودية"><img src="https://www.moh.gov.sa/_layouts/15/MOH/Internet/New/images/logo.png" alt="رمز وزارة الصحة" loading="eager"></div><div><strong id="hospitalTitle">مستشفى حايل العام</strong><small>نظام إدارة الأسرة والطاقة الاستيعابية</small></div></div>
-<div class="hero-controls"><div class="hero-datetime"><span>▦ <span id="liveDate">—</span></span><span>◷ <span id="liveTime">—</span></span></div><div class="hero-tools"><button class="hero-icon-button theme-toggle" id="themeToggle" type="button" onclick="toggleTheme()" aria-label="تبديل الوضع الليلي والنهاري" title="تبديل الوضع الليلي والنهاري"><svg class="header-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></svg></button><button class="hero-icon-button" onclick="go('alerts')" aria-label="فتح الإشعارات" title="الإشعارات"><svg class="header-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><span id="headerAlertBadge" class="hero-alert-dot hidden"></span></button><div class="hero-user"><button class="hero-user-toggle" onclick="toggleUserMenu()" aria-expanded="false" id="userMenuButton">المدير <span aria-hidden="true">⌄</span></button><div class="hero-user-menu hidden" id="userMenu"><div class="hero-user-caption">وضع العرض المحلي</div><button onclick="go('settings');closeUserMenu()"><svg class="header-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.9 4.9 7 7m10 10 2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg> الإعدادات</button><button onclick="logout();closeUserMenu()"><svg class="header-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 17l5-5-5-5m5 5H3m9-9h6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-6"/></svg> تسجيل الخروج</button></div></div></div></div>
+<div class="hero-title"><div class="moh-symbol" aria-label="رمز وزارة الصحة السعودية"><img src="assets/ministry-of-health.png" alt="رمز وزارة الصحة" loading="eager" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><svg hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8m-4-4h8"/></svg></div><div><strong id="hospitalTitle">مستشفى حايل العام</strong><small>نظام إدارة الأسرة والطاقة الاستيعابية</small></div></div>
+<button class="mobile-nav-toggle" type="button" aria-controls="sidePanel" aria-expanded="false" aria-label="فتح القائمة" onclick="toggleSidebar()"><svg class="header-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+<div class="hero-controls"><div class="hero-datetime"><span>▦ <span id="liveDate">—</span></span><span>◷ <span id="liveTime">—</span></span></div><div class="hero-tools"><button type="button" class="language-toggle" onclick="toggleLanguage()">English</button><button class="hero-icon-button theme-toggle" id="themeToggle" type="button" onclick="toggleTheme()" aria-label="تبديل الوضع الليلي والنهاري" title="تبديل الوضع الليلي والنهاري"><svg class="header-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></svg></button><button class="hero-icon-button" onclick="go('alerts')" aria-label="فتح الإشعارات" title="الإشعارات"><svg class="header-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><span id="headerAlertBadge" class="hero-alert-dot hidden"></span></button><div class="hero-user"><button class="hero-user-toggle" onclick="toggleUserMenu()" aria-expanded="false" id="userMenuButton">المدير <span aria-hidden="true">⌄</span></button><div class="hero-user-menu hidden" id="userMenu"><div class="hero-user-caption">وضع العرض المحلي</div><button onclick="go('settings');closeUserMenu()"><svg class="header-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.9 4.9 7 7m10 10 2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg> الإعدادات</button><button onclick="logout();closeUserMenu()"><svg class="header-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 17l5-5-5-5m5 5H3m9-9h6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-6"/></svg> تسجيل الخروج</button></div></div></div></div>
 </header>
-<div class="workspace" id="workspace"><aside class="side-panel" id="sidePanel" aria-label="القائمة الجانبية"><div class="side-head"><button class="sidebar-toggle" type="button" onclick="toggleSidebar()" aria-label="طي أو توسيع القائمة" title="طي أو توسيع القائمة">☰</button><span class="side-brand">القائمة الرئيسية</span></div><div id="nav"></div></aside><main class="shell"><div class="mobile-toolbar"><button class="secondary" type="button" onclick="toggleSidebar()">☰ القائمة</button></div><div id="content"></div><footer class="footer">نظام إدارة الأسرة والطاقة الاستيعابية</footer></main></div></div>
-<dialog id="dialog"><form id="entryForm" class="form"><h3 id="formTitle"></h3><div class="formgrid" id="fields"></div><div class="toolbar"><button class="primary" type="submit">حفظ</button><button class="secondary" type="button" onclick="document.getElementById('dialog').close()">إلغاء</button></div></form></dialog><dialog id="actionDialog" class="action-dialog"><div class="action-dialog-inner"><h3 id="actionTitle"></h3><div id="actionOptions" class="action-options"></div><button type="button" class="secondary" id="actionCancel">إلغاء</button></div></dialog>
+<div class="workspace" id="workspace"><div id="sidebarBackdrop" class="sidebar-backdrop hidden" aria-hidden="true" onclick="toggleSidebar()"></div><aside class="side-panel" id="sidePanel" aria-label="القائمة الجانبية"><div class="side-head"><button class="sidebar-toggle" type="button" aria-controls="sidePanel" aria-expanded="true" onclick="toggleSidebar()" aria-label="طي أو توسيع القائمة" title="طي أو توسيع القائمة">☰</button><span class="side-brand">القائمة الرئيسية</span></div><div id="nav"></div></aside><main class="shell"><div id="content" tabindex="-1"></div><footer class="footer">نظام إدارة الأسرة والطاقة الاستيعابية</footer></main></div></div>
+<dialog id="dialog" class="dialog-surface" aria-labelledby="formTitle"><form id="entryForm" class="form"><h3 id="formTitle"></h3><div class="formgrid" id="fields"></div><div class="toolbar"><button class="primary" type="submit">حفظ</button><button class="secondary" type="button" onclick="document.getElementById('dialog').close()">إلغاء</button></div></form></dialog><dialog id="actionDialog" class="action-dialog" aria-labelledby="actionTitle"><div class="action-dialog-inner"><h3 id="actionTitle"></h3><div id="actionOptions" class="action-options"></div><button type="button" class="secondary" id="actionCancel">إلغاء</button></div></dialog>
+<dialog id="bedDetails" class="action-dialog" aria-labelledby="bedDetailsTitle">
+  <div class="action-dialog-inner">
+    <h3 id="bedDetailsTitle"></h3>
+    <dl id="bedDetailsFields" class="bed-details-list"></dl>
+    <form method="dialog"><button class="secondary" autofocus>إغلاق</button></form>
+  </div>
+</dialog>
 <script>
 'use strict';
 const KEY='hospital-bed-ipad-v2';
@@ -255,26 +519,402 @@ function freshDemoData(){return repairOccupiedDemoLinks(expandHospitalDemo(seedO
 db=expandHospitalDemo(db);repairOccupiedDemoLinks(db);localStorage.setItem(KEY,JSON.stringify(db));
 let page='dashboard';let dashboardBedFilter='';let requestSearchValue='';let requestStatusValue='';
 
+const LANGUAGE_KEY = 'hospital-bed-language';
+let language = localStorage.getItem(LANGUAGE_KEY) === 'en' ? 'en' : 'ar';
+const english = {
+  "إشغال الأسرة التشغيلية": "Operational bed occupancy",
+  "لا توجد طلبات تطابق الفلاتر الحالية": "No requests match the current filters.",
+  "جديد": "New",
+  "الرعاية:": "Care:",
+  "الأولوية:": "Priority:",
+  "السرير:": "Bed:",
+  "المريض:": "Patient:",
+  "الوصول المتوقع:": "Expected arrival:",
+  "رقم التحويل:": "Transfer ID:",
+  "المستشفى المُحوِّل:": "Referring hospital:",
+  "العيادة / القسم:": "Clinic or department:",
+  "سبب الحالة:": "Reason for admission:",
+  "سجل الطلب": "Request timeline",
+  "إدارة الطلب": "Manage request",
+  "طلب استقبال مريض": "Patient admission request",
+  "اسم المريض": "Patient name",
+  "رقم الهوية (10 أرقام)": "ID number (10 digits)",
+  "لا يوجد مريض مرتبط": "No linked patient",
+  "تسجيل خروج المريض": "Discharge patient",
+  "تأكيد وصول المريض": "Confirm arrival",
+  "بدء المهمة": "Start task",
+  "إنهاء المهمة": "Complete task",
+  "إنهاء التنظيف": "Complete cleaning",
+  "فحص الجاهزية": "Review readiness",
+  "السرير": "Bed",
+  "المعرف": "ID",
+  "الجهاز": "Device",
+  "السرير المرتبط": "Linked bed",
+  "متنقل / غير مرتبط": "Mobile or unassigned",
+  "تحديث / نقل": "Update or move",
+  "رقم التحويل": "Transfer ID",
+  "الجهة المستقبلة": "Receiving facility",
+  "تم الاطلاع": "Acknowledged",
+  "لم يُطّلع عليه": "Unread",
+  "قيد التنظيف": "Cleaning",
+  "غير جاهزة": "Unavailable",
+  "طلبات مفتوحة": "Open requests",
+  "طلبات توضيحية": "Demo requests",
+  "حالات الأسرة حسب القسم": "Bed status by department",
+  "توزيع الأسرة": "Bed distribution",
+  "عمليات حجز مسجلة": "Recorded reservations",
+  "عمليات خروج مسجلة": "Recorded discharges",
+  "طلبات عاجلة مفتوحة": "Open urgent requests",
+  "تنبيهات غير مقروءة": "Unread alerts",
+  "تصدير التقرير": "Export report",
+  "طباعة / حفظ": "Print or save",
+  "تصدير بيانات الأسرة": "Export bed data",
+  "تصدير سجل التدقيق": "Export audit log",
+  "الوقت الفعلي": "Event time",
+  "نوع العملية": "Event type",
+  "الوصف": "Description",
+  "اعتماد المطابقة": "Approve reconciliation",
+  "المستشفيات الأخرى": "Other hospitals",
+  "التجمع الصحي": "Health cluster",
+  "الهلال الأحمر": "Red Crescent",
+  "واجهات API": "APIs",
+  "صلاحيات المستخدمين": "User permissions",
+  "النسخ الاحتياطي": "Backups",
+  "غير متصل": "Disconnected",
+  "اسم المستشفى": "Hospital name",
+  "الدور المعروض (توضيحي)": "Display role (demo)",
+  "الحد الأدنى المقترح للأسرة الجاهزة": "Minimum suggested ready beds",
+  "عتبة الضغط التشغيلي (%)": "Operating pressure threshold (%)",
+  "الدور التوضيحي": "Demo role",
+  "إعادة الفحص": "Run checks again",
+  "اختبار دورة المريض والسرير": "Test patient and bed workflow",
+  "إعادة بيانات العرض": "Reset demo data",
+  "لم تُكتشف تعارضات في الفحوص المحددة": "The checks found no conflicts",
+  "وضع المناقشة الجامعية — رحلة الجراحة": "University demonstration · Surgical patient journey",
+  "أطفال": "Pediatrics",
+  "عزل": "Isolation",
+  "إخراج للصيانة": "Take out of service for maintenance",
+  "إلغاء الجاهزية للتنظيف": "Mark for cleaning",
+  "تأكيد خروج المريض وبدء التنظيف": "Confirm discharge and start cleaning",
+  "إلغاء الحجز بعد التحقق": "Cancel verified reservation",
+  "إنهاء الصيانة (بانتظار التنظيف)": "Complete maintenance and queue cleaning",
+  "هل تؤكد الخروج الفعلي للمريض وبدء تنظيف السرير؟": "Confirm the patient has left and start bed cleaning?",
+  "هل تأكدت من عدم وصول المريض وعدم وجود نقل جارٍ؟": "Confirm the patient has not arrived and no transfer is in progress?",
+  "هل اكتملت أعمال التنظيف فعلياً في هذه المحاكاة؟": "Confirm cleaning is complete in this demo?",
+  "هل تعتمد جاهزية السرير التشغيلية بعد التحقق؟": "Approve this bed as operationally ready?",
+  'مستشفى حايل العام':'Hail General Hospital',
+  'نظام إدارة الأسرة والطاقة الاستيعابية':'Bed & Capacity Management',
+  'تسجيل الدخول':'Sign in',
+  'الإدارة / الجهة':'Team or department',
+  'اختر الإدارة أو القسم':'Select a team or department',
+  'الإدارة الرئيسية':'Hospital administration',
+  'الدعم الفني':'Technical support',
+  'التمريض':'Nursing',
+  'تنسيق المرضى':'Patient coordination',
+  'النظافة':'Cleaning',
+  'الصيانة':'Maintenance',
+  'المستخدم / محطة التمريض':'Account or nursing station',
+  'اختر الإدارة أولاً':'Select a team first',
+  'اختر المستخدم أو محطة التمريض':'Select an account or nursing station',
+  'كلمة المرور':'Password',
+  'دخول إلى النظام':'Sign in',
+  'اسم المستخدم أو كلمة المرور غير صحيحة':'Incorrect account or password',
+  'حساب العرض:':'Demo account:',
+  'الإدارة الرئيسية ← مدير الأسرة':'Administration → Bed manager',
+  '· كلمة المرور':'· Password',
+  'تنبيه أمني: تسجيل الدخول للعرض المحلي فقط، ولا يحمي البيانات فعلياً. لا تستخدم بيانات مرضى حقيقية.':'Local demonstration only. Use synthetic patient data.',
+  'مدير الأسرة':'Bed manager',
+  'المسؤول التقني':'Technical administrator',
+  'قسم النظافة':'Housekeeping',
+  'قسم الصيانة':'Maintenance team',
+  'المدير':'Manager',
+  'وضع العرض المحلي':'Local demo',
+  'تسجيل الخروج':'Sign out',
+  'رمز وزارة الصحة':'Ministry of Health emblem',
+  'رمز وزارة الصحة السعودية':'Saudi Ministry of Health emblem',
+  'القائمة الجانبية':'Sidebar',
+  'القائمة الرئيسية':'Main navigation',
+  'طي أو توسيع القائمة':'Toggle sidebar',
+  'فتح القائمة':'Open navigation',
+  'تجاوز القائمة إلى المحتوى':'Skip to content',
+  'فتح الإشعارات':'Open alerts',
+  'تفعيل الوضع النهاري':'Switch to light theme',
+  'تفعيل الوضع الليلي':'Switch to dark theme',
+  'محطات التمريض':'Nursing stations',
+  'مهام النظافة':'Cleaning tasks',
+  'بلاغات الصيانة':'Maintenance tickets',
+  'مركز العمليات':'Operations center',
+  'سيناريو العرض':'University demo',
+  'لوحة التحكم':'Capacity dashboard',
+  'الأسرة':'Beds',
+  'طلبات المرضى':'Patient requests',
+  'التنظيف والصيانة':'Cleaning and maintenance',
+  'المعدات':'Equipment',
+  'التحويلات':'Transfers',
+  'الإشعارات':'Alerts',
+  'التقارير':'Reports',
+  'التعافي':'Recovery',
+  'التكاملات':'Integrations',
+  'الإعدادات':'Settings',
+  'الحساب:':'Account:',
+  'غير مسجل':'Signed out',
+  'الصلاحيات مرتبطة بحساب الدخول':'Actions depend on the signed-in account',
+  'إجمالي الأسرة':'Total beds',
+  'جميع أنواع الرعاية':'All care types',
+  'جاهزة':'Ready',
+  'جاهزة تشغيلياً':'Operationally ready',
+  'مشغولة':'Occupied',
+  'محجوزة':'Reserved',
+  'الحجز لا يعني الإشغال':'Reservations awaiting arrival',
+  'الأقسام والطاقة الاستيعابية':'Department capacity',
+  'مراقبة الضغط التشغيلي':'Operating pressure',
+  'ضمن العتبة التوضيحية':'Within demo threshold',
+  'ضغط مرتفع':'High pressure',
+  'أحدث النشاطات':'Recent activity',
+  'لا توجد عمليات مسجلة بعد':'No activity yet',
+  'جميع الأسرة':'All beds',
+  'الأسرة الجاهزة':'Ready beds',
+  'الأسرة المشغولة':'Occupied beds',
+  'الأسرة المحجوزة':'Reserved beds',
+  'إظهار بقية اللوحة':'Clear dashboard filter',
+  'عرض في إدارة الأسرة':'View in bed management',
+  'لا توجد أسرة ضمن هذه الحالة حالياً':'No beds in this status',
+  'إدارة الأسرة':'Bed management',
+  'تُفصل حالة الإشغال عن جاهزية التنظيف والمعدات. لا يجوز تحويل السرير المشغول مباشرة إلى جاهز.':'Cleaning and equipment readiness are tracked separately. An occupied bed requires discharge before it can become ready.',
+  'بحث برقم السرير':'Search by bed ID',
+  'الحالة':'Status',
+  'كل الحالات':'All statuses',
+  'جميع الحالات':'All statuses',
+  'القسم':'Department',
+  'جميع الأقسام':'All departments',
+  '+ إضافة سرير':'+ Add bed',
+  'إضافة سرير':'Add bed',
+  'رقم السرير':'Bed ID',
+  'نوع الرعاية':'Care type',
+  'الأسرة المعروضة':'Beds shown',
+  'لا توجد أسرة تطابق الفلاتر الحالية':'No beds match the current filters.',
+  'إعادة ضبط الفلاتر':'Clear filters',
+  'إدارة السرير':'Manage bed',
+  'التفاصيل':'Details',
+  'تفاصيل السرير':'Bed details',
+  'النظافة مكتملة':'Cleaning complete',
+  'النظافة غير مكتملة':'Cleaning incomplete',
+  'المعدات متوفرة':'Equipment ready',
+  'المعدات ناقصة':'Equipment missing',
+  'مكتمل':'Complete',
+  'غير مكتمل':'Incomplete',
+  'متوفرة':'Available',
+  'ناقصة':'Missing',
+  'جاهز':'Ready',
+  'مشغول':'Occupied',
+  'محجوز':'Reserved',
+  'بانتظار التنظيف':'Cleaning',
+  'خارج الخدمة':'Maintenance',
+  'قيد التقييم':'Under review',
+  'مقبول':'Accepted',
+  'قبول مشروط':'Conditional',
+  'مرفوض':'Rejected',
+  'وصل':'Arrived',
+  'مغلق':'Closed',
+  'مرسل':'Sent',
+  'معتمد':'Approved',
+  'تمت المعالجة':'Resolved',
+  'العناية المركزة':'Intensive care',
+  'عناية مركزة':'Intensive care',
+  'الجراحة':'Surgery',
+  'الأطفال':'Pediatrics',
+  'الباطنية':'Internal medicine',
+  'الطوارئ':'Emergency',
+  'النساء والولادة':'Obstetrics and gynecology',
+  'العزل':'Isolation',
+  'تنويم':'Inpatient care',
+  'التنويم':'Inpatient ward',
+  'ملاحظة':'Observation',
+  'حفظ':'Save',
+  'إلغاء':'Cancel',
+  'إغلاق':'Close',
+  'لا توجد سجلات للعرض':'No records to display',
+  'بحث عن مريض أو طلب أو مستشفى':'Search by patient, request, or hospital',
+  'حالة الطلب':'Request status',
+  'طلبات استقبال المرضى':'Patient admissions',
+  'مصدر الطلب':'Request source',
+  'قسم داخلي':'Internal department',
+  'مستشفى آخر':'Another hospital',
+  'الهلال الأحمر السعودي':'Saudi Red Crescent',
+  'اسم المستشفى المُحوِّل':'Referring hospital name',
+  'العيادة أو القسم المحوّل إليه':'Receiving clinic or department',
+  'سبب الحالة أو البلاغ':'Reason for admission or referral',
+  'وقت الوصول المتوقع':'Expected arrival time',
+  'عادي':'Routine',
+  'عاجل':'Urgent',
+  'حرج':'Critical',
+  'تجهيزات':'Equipment',
+  'بانتظار الاستلام':'Awaiting pickup',
+  'مكتملة':'Complete',
+  'لا توجد مهام حالياً':'No active tasks',
+  'تهيئة سيناريو العرض مع نسخة احتياطية':'Prepare demo scenario and back up data',
+  'تهيئة السيناريو متاحة لمدير الأسرة فقط.':'Only the bed manager can prepare the demo scenario.',
+  'الإشعارات محلية داخل المتصفح فقط، ولا تصل إلى موظفين آخرين أو أجهزة أخرى.':'Alerts stay in this browser.',
+  'اختر حساب التمريض الخاص بالقسم لتسجيل الوصول أو الخروج. تُرسل مهمة تنظيف تلقائياً عند خروج المريض.':'Sign in to the department nursing station to confirm arrival or discharge. Discharge creates a cleaning task.',
+  'تبدأ المهمة عند خروج المريض، ثم تُرفع لاعتماد جاهزية السرير بعد إنجاز التنظيف.':'Tasks start after discharge. Operational readiness is reviewed after cleaning.',
+  'بعد إتمام الصيانة، يُرسل السرير تلقائياً إلى قسم النظافة.':'Completing maintenance queues the bed for cleaning.',
+  'اكتمال التنظيف لا يعني جاهزية السرير تلقائياً؛ تُراجع التجهيزات وحالة الإشغال قبل اعتماده.':'Confirm equipment and occupancy before approving a cleaned bed for use.',
+
+  '+ طلب استقبال':'+ Admission request',
+  'طلب وارد من الهلال الأحمر':'Incoming Red Crescent request',
+  'قبول الطلب':'Accept request',
+  'محطات التمريض — إدارة حركة المرضى':'Nursing stations · Patient movements',
+  'قسم النظافة — مهام الأسرة':'Housekeeping · Bed tasks',
+  'قسم الصيانة — بلاغات الأسرة':'Maintenance · Bed tickets',
+  'مركز العمليات — سجل جميع الأقسام':'Operations center · All departments',
+  'التنظيف والصيانة واعتماد الجاهزية':'Cleaning, maintenance and readiness',
+  'إدارة المعدات الطبية':'Medical equipment management',
+  'التحويلات بين المستشفيات — محاكاة':'Interhospital transfers · Demo',
+  'الإشعارات داخل النظام':'System alerts',
+  'توزيع الحالات':'Bed status distribution',
+  'استمرارية التشغيل والتعافي — إجراءات توضيحية':'Operational continuity and recovery · Demo',
+  'الربط الخارجي — عرض توضيحي فقط':'External integrations · Demo',
+  'إعدادات المستشفى التوضيحي':'Hospital demo settings',
+  'إدارة البيانات التوضيحية':'Demo data management',
+  'سجل التدقيق التوضيحي':'Demo audit log',
+  'فحص اتساق البيانات':'Data consistency check',
+  'المهام:':'Tasks:',
+  'قيد الانتظار:':'Waiting:',
+  'قيد التنفيذ:':'In progress:',
+  'طلب جديد':'New request',
+  'خروج وتنظيف':'Discharge and cleaning',
+  'إجراء':'Action',
+  'الإجراءات':'Actions',
+  'التاريخ':'Date',
+  'الأولوية':'Priority',
+  'الرسالة':'Message',
+  'الوقت':'Time',
+  'العملية':'Activity',
+  'حالة المراجعة':'Review status',
+  'تصدير CSV':'Export CSV',
+  'تصدير سجل التدقيق CSV':'Export audit CSV',
+  'حفظ الإعدادات':'Save settings',
+  'تصدير نسخة JSON':'Export JSON',
+  'استيراد نسخة JSON':'Import JSON',
+  'إعادة ضبط التجربة':'Reset demo',
+  'إقرار جميع الإشعارات':'Acknowledge all alerts',
+  'إقرار':'Acknowledge'
+};
+function ui(value) {
+  if (language !== 'en' || typeof value !== 'string') return value;
+  if (Object.hasOwn(english, value)) return english[value];
+  if (value.startsWith('تمريض ')) return 'Nursing · '+ui(value.slice(6));
+  return value;
+}
+
+const originalText = new WeakMap();
+function translateInterface(root, reversible = false) {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    if (reversible && node.parentElement.closest('#content')) continue;
+    if (node.parentElement.closest('#hospitalTitle,#liveDate,#liveTime,.language-toggle,#loginUser,#loginError')) continue;
+    const source = originalText.get(node) ?? node.data;
+    const translated = ui(source.trim());
+    if (reversible && translated !== source.trim()) originalText.set(node, source);
+    node.data = source.replace(source.trim(), () => translated);
+  }
+  for (const element of root.querySelectorAll('[title],[aria-label],[placeholder],[alt]')) {
+    for (const name of ['title','aria-label','placeholder','alt']) {
+      const value = element.getAttribute(name);
+      if (value === null) continue;
+      const originals = originalText.get(element) ?? {};
+      const source = originals[name] ?? value;
+      const translated = ui(source);
+      if (reversible && translated !== source) {
+        originals[name] = source;
+        originalText.set(element, originals);
+      }
+      element.setAttribute(name, translated);
+    }
+  }
+}
+function applyLanguage() {
+  document.documentElement.lang = language;
+  document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+  document.title = ui('نظام إدارة الأسرة والطاقة الاستيعابية');
+  for (const button of document.querySelectorAll('.language-toggle')) {
+    button.textContent = language === 'ar' ? 'English' : 'العربية';
+    button.lang = language === 'ar' ? 'en' : 'ar';
+  }
+  for (const selector of ['#loginScreen','.skip-link','header','#workspace','.action-dialog','#dialog']) {
+    for (const element of document.querySelectorAll(selector)) translateInterface(element, true);
+  }
+}
+function toggleLanguage() {
+  const loginUser = document.getElementById('loginUser');
+  const selectedUser = loginUser.value;
+  language = language === 'ar' ? 'en' : 'ar';
+  localStorage.setItem(LANGUAGE_KEY, language);
+  const loginError = document.getElementById('loginError');
+  const hadError = !!loginError.textContent;
+  const filters = ['bedSearch','filterState','filterDept'].map(id => document.getElementById(id)?.value ?? '');
+  applyLanguage();
+  applyTheme();
+  refreshLoginUsers();
+  loginUser.value = selectedUser;
+  if (hadError) loginError.textContent = ui('اسم المستخدم أو كلمة المرور غير صحيحة');
+  render();
+  if (page === 'beds') {
+    ['bedSearch','filterState','filterDept'].forEach((id,i) => { document.getElementById(id).value = filters[i]; });
+    drawBeds();
+  }
+}
+
 const THEME_KEY='hospital-bed-theme';
 const SIDEBAR_KEY='hospital-bed-sidebar-collapsed';
 let currentTheme=localStorage.getItem(THEME_KEY)==='dark'?'dark':'light';
 let sidebarCollapsed=localStorage.getItem(SIDEBAR_KEY)==='true';
-function applyTheme(){document.documentElement.dataset.theme=currentTheme;const b=document.getElementById('themeToggle');if(b){b.innerHTML=currentTheme==='dark'?"<svg class=\"header-svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4\"/></svg>":"<svg class=\"header-svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z\"/></svg>";b.title=currentTheme==='dark'?'تفعيل الوضع النهاري':'تفعيل الوضع الليلي';b.setAttribute('aria-label',b.title)}document.querySelector('meta[name="theme-color"]')?.setAttribute('content',currentTheme==='dark'?'#081726':'#102b49')}
+function applyTheme(){document.documentElement.dataset.theme=currentTheme;const b=document.getElementById('themeToggle');if(b){b.innerHTML=currentTheme==='dark'?"<svg class=\"header-svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4\"/></svg>":"<svg class=\"header-svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z\"/></svg>";b.title=ui(currentTheme==='dark'?'تفعيل الوضع النهاري':'تفعيل الوضع الليلي');b.setAttribute('aria-label',b.title)}document.querySelector('meta[name="theme-color"]')?.setAttribute('content',currentTheme==='dark'?'#081726':'#102b49')}
 function toggleTheme(){currentTheme=currentTheme==='dark'?'light':'dark';localStorage.setItem(THEME_KEY,currentTheme);applyTheme()}
-function applySidebar(){const w=document.getElementById('workspace');if(w)w.classList.toggle('sidebar-collapsed',sidebarCollapsed);document.getElementById('sidePanel')?.classList.toggle('mobile-open',mobileSidebarOpen)}
-let mobileSidebarOpen=false;
-function toggleSidebar(){if(window.matchMedia('(max-width:850px)').matches){mobileSidebarOpen=!mobileSidebarOpen}else{sidebarCollapsed=!sidebarCollapsed;localStorage.setItem(SIDEBAR_KEY,String(sidebarCollapsed))}applySidebar()}
+const mobileLayout = window.matchMedia('(max-width:850px)');
+function applySidebar() {
+  const sidebar = document.getElementById('sidePanel');
+  const open = mobileLayout.matches && mobileSidebarOpen;
+  document.getElementById('workspace').classList.toggle('sidebar-collapsed', sidebarCollapsed);
+  sidebar.classList.toggle('mobile-open', open);
+  document.getElementById('sidebarBackdrop').classList.toggle('hidden', !open);
+  document.querySelector('.sidebar-toggle').setAttribute('aria-expanded', mobileLayout.matches ? open : !sidebarCollapsed);
+  document.querySelector('.mobile-nav-toggle').setAttribute('aria-expanded', open);
+  document.querySelector('.skip-link').inert = open;
+  document.querySelector('main').inert = open;
+  document.querySelector('header').inert = open;
+}
+let mobileSidebarOpen = false;
+function toggleSidebar() {
+  if (mobileLayout.matches) {
+    mobileSidebarOpen = !mobileSidebarOpen;
+    applySidebar();
+    document.querySelector(mobileSidebarOpen ? '.sidebar-toggle' : '.mobile-nav-toggle').focus();
+    return;
+  }
+  sidebarCollapsed = !sidebarCollapsed;
+  localStorage.setItem(SIDEBAR_KEY, String(sidebarCollapsed));
+  applySidebar();
+}
+mobileLayout.addEventListener('change', () => {
+  mobileSidebarOpen = false;
+  applySidebar();
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && mobileSidebarOpen) toggleSidebar();
+});
 
 const DEMO_ACCOUNTS={admin:{password:'123456',role:'manager',label:'مدير الأسرة'},tech:{password:'Tech2026',role:'tech',label:'المسؤول التقني'},coord:{password:'Coord2026',role:'coord',label:'تنسيق المرضى'},nurse_icu:{password:'Nurse2026',role:'nurse',label:'تمريض العناية المركزة',dept:'العناية المركزة'},nurse_surgery:{password:'Nurse2026',role:'nurse',label:'تمريض الجراحة',dept:'الجراحة'},nurse_peds:{password:'Nurse2026',role:'nurse',label:'تمريض الأطفال',dept:'الأطفال'},clean:{password:'Clean2026',role:'cleaner',label:'قسم النظافة'},maint:{password:'Maint2026',role:'maintenance',label:'قسم الصيانة'}};
 // Nursing stations are generated from the departments present in this demo.
 const NURSING_STATIONS=[...new Set(db.beds.map(b=>b.dept))];
 NURSING_STATIONS.forEach((dept,i)=>{if(!Object.values(DEMO_ACCOUNTS).some(a=>a.role==='nurse'&&a.dept===dept)){DEMO_ACCOUNTS['nurse_station_'+i]={password:'Nurse2026',role:'nurse',label:'تمريض '+dept,dept}}});
 const LOGIN_GROUPS={admin:['admin'],tech:['tech'],nursing:Object.keys(DEMO_ACCOUNTS).filter(k=>DEMO_ACCOUNTS[k].role==='nurse'),coord:['coord'],cleaning:['clean'],maintenance:['maint']};
-function refreshLoginUsers(){const group=document.getElementById('loginGroup').value,select=document.getElementById('loginUser');select.replaceChildren();const placeholder=document.createElement('option');placeholder.value='';placeholder.textContent=group?'اختر المستخدم أو محطة التمريض':'اختر الإدارة أولاً';select.appendChild(placeholder);(LOGIN_GROUPS[group]||[]).forEach(key=>{const opt=document.createElement('option');opt.value=key;opt.textContent=DEMO_ACCOUNTS[key].label;select.appendChild(opt)});select.disabled=!(LOGIN_GROUPS[group]||[]).length;document.getElementById('loginError').textContent=''}
+function refreshLoginUsers(){const group=document.getElementById('loginGroup').value,select=document.getElementById('loginUser');select.replaceChildren();const placeholder=document.createElement('option');placeholder.value='';placeholder.textContent=ui(group?'اختر المستخدم أو محطة التمريض':'اختر الإدارة أولاً');select.appendChild(placeholder);(LOGIN_GROUPS[group]||[]).forEach(key=>{const opt=document.createElement('option');opt.value=key;opt.textContent=ui(DEMO_ACCOUNTS[key].label);select.appendChild(opt)});select.disabled=!(LOGIN_GROUPS[group]||[]).length;document.getElementById('loginError').textContent=''}
 document.getElementById('loginGroup').addEventListener('change',refreshLoginUsers);
 const LOGIN_KEY='hospital-bed-view-session';
 function updateAuth(){const account=DEMO_ACCOUNTS[sessionStorage.getItem('hospital-demo-account')];const ok=sessionStorage.getItem(LOGIN_KEY)==='yes'&&!!account;if(ok){demoRole=account.role;sessionStorage.setItem('hospital-demo-role',demoRole)}else{sessionStorage.removeItem(LOGIN_KEY)}document.getElementById('loginScreen').classList.toggle('hidden',ok);document.getElementById('appShell').classList.toggle('hidden',!ok)}
-document.getElementById('loginForm').addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget;const username=f.elements.username.value.trim();const group=f.elements.group.value;const password=f.elements.password.value;const account=DEMO_ACCOUNTS[username];if(account&&(LOGIN_GROUPS[group]||[]).includes(username)&&account.password===password){sessionStorage.setItem('hospital-demo-account',username);demoRole=account.role;sessionStorage.setItem('hospital-demo-role',demoRole);sessionStorage.setItem(LOGIN_KEY,'yes');document.getElementById('loginError').textContent='';f.reset();refreshLoginUsers();page=account.role==='nurse'?'nursing':account.role==='cleaner'?'housekeeping':account.role==='maintenance'?'maintenancePortal':'dashboard';updateAuth();render()}else{document.getElementById('loginError').textContent='اسم المستخدم أو كلمة المرور غير صحيحة'}});
+document.getElementById('loginForm').addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget;const username=f.elements.username.value.trim();const group=f.elements.group.value;const password=f.elements.password.value;const account=DEMO_ACCOUNTS[username];if(account&&(LOGIN_GROUPS[group]||[]).includes(username)&&account.password===password){sessionStorage.setItem('hospital-demo-account',username);demoRole=account.role;sessionStorage.setItem('hospital-demo-role',demoRole);sessionStorage.setItem(LOGIN_KEY,'yes');document.getElementById('loginError').textContent='';f.reset();refreshLoginUsers();page=account.role==='nurse'?'nursing':account.role==='cleaner'?'housekeeping':account.role==='maintenance'?'maintenancePortal':'dashboard';updateAuth();render()}else{document.getElementById('loginError').textContent=ui('اسم المستخدم أو كلمة المرور غير صحيحة')}});
 function logout(){sessionStorage.removeItem('hospital-demo-account');sessionStorage.removeItem('hospital-demo-role');sessionStorage.removeItem(LOGIN_KEY);page='dashboard';document.getElementById('loginForm').reset();refreshLoginUsers();updateAuth()}
 const tabs=[['nursing','محطات التمريض'],['housekeeping','مهام النظافة'],['maintenancePortal','بلاغات الصيانة'],['operations','مركز العمليات'],['demoGuide','سيناريو العرض'],['dashboard','لوحة التحكم'],['beds','الأسرة'],['requests','طلبات المرضى'],['cleaning','التنظيف والصيانة'],['equipment','المعدات'],['transfers','التحويلات'],['alerts','الإشعارات'],['reports','التقارير'],['recovery','التعافي'],['integrations','التكاملات'],['settings','الإعدادات']];
 const labels={ready:'جاهز',occupied:'مشغول',reserved:'محجوز',cleaning:'بانتظار التنظيف',maintenance:'خارج الخدمة',pending:'قيد التقييم',accepted:'مقبول',conditional:'قبول مشروط',rejected:'مرفوض',arrived:'وصل',closed:'مغلق',sent:'مرسل',approved:'معتمد',resolved:'تمت المعالجة'};
@@ -283,21 +923,23 @@ const attr=x=>esc(x).replace(/'/g,'&#39;');const id=()=>Date.now().toString(36)+
 const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify(db))}catch{alert('تعذر حفظ البيانات محلياً. قد تكون مساحة التخزين ممتلئة.')}};
 const audit=(action,detail)=>{const account=DEMO_ACCOUNTS[sessionStorage.getItem('hospital-demo-account')];db.logs.unshift({id:id(),time:new Date().toISOString(),actor:account?.label||'النظام',action,detail});db.logs=db.logs.slice(0,500);persist()};
 const notify=(text,severity='warning')=>{db.alerts.unshift({id:id(),time:new Date().toISOString(),text,severity,ack:false});db.alerts=db.alerts.slice(0,150);persist()};
-const stamp=t=>new Date(t).toLocaleString('ar-SA');const count=s=>db.beds.filter(b=>b.status===s).length;
-const pill=s=>'<span class="pill '+attr(s)+'">'+esc(labels[s]||s)+'</span>';
-const stat=(name,value,sub,filter)=>filter?'<button type="button" class="panel stat stat-clickable" data-dashboard-filter="'+filter+'" aria-pressed="'+(dashboardBedFilter===filter)+'"><small>'+name+'</small><b>'+value+'</b><small>'+sub+'</small></button>':'<div class="panel stat"><small>'+name+'</small><b>'+value+'</b><small>'+sub+'</small></div>';
+const stamp=t=>new Date(t).toLocaleString(language === 'ar' ? 'ar-SA' : 'en-GB');const count=s=>db.beds.filter(b=>b.status===s).length;
+const pill=s=>'<span class="pill '+attr(s)+'">'+esc(ui(labels[s]||s))+'</span>';
+// Keep the Latin digits and percent sign together inside surrounding RTL text.
+const percent = value => '<bdi class="percent" dir="ltr">'+Math.round(value)+'%</bdi>';
+const stat=(name,value,sub,filter)=>filter?'<button type="button" class="panel stat stat-clickable" data-dashboard-filter="'+filter+'" aria-pressed="'+(dashboardBedFilter===filter)+'"><span class="kpi-selected" aria-hidden="true">✓</span><small>'+name+'</small><b>'+value+'</b><small>'+sub+'</small></button>':'<div class="panel stat"><small>'+name+'</small><b>'+value+'</b><small>'+sub+'</small></div>';
 const panel=(title,body)=>'<section class="panel"><h2>'+title+'</h2>'+body+'</section>';
 const note=t=>'<div class="notice">'+t+'</div>';
-const table=(heads,rows)=>'<div class="scroll"><table><thead><tr>'+heads.map(h=>'<th>'+h+'</th>').join('')+'</tr></thead><tbody>'+rows.join('')+'</tbody></table></div>';
+const table=(heads,rows)=>rows.length ? '<div class="scroll"><table><thead><tr>'+heads.map(h=>'<th scope="col">'+h+'</th>').join('')+'</tr></thead><tbody>'+rows.join('')+'</tbody></table></div>' : note(ui('لا توجد سجلات للعرض'));
 const tr=items=>'<tr>'+items.map(v=>'<td>'+v+'</td>').join('')+'</tr>';
 const btn=(text,call,cls='secondary')=>'<button class="'+cls+'" onclick="'+call+'">'+text+'</button>';
 const field=(label,name,type='text',options=[],required=true)=>'<label>'+label+(type==='select'?'<select name="'+name+'" '+(required?'required':'')+'>'+options.map(o=>'<option value="'+attr(o[0])+'">'+esc(o[1])+'</option>').join('')+'</select>':type==='textarea'?'<textarea name="'+name+'" rows="3"></textarea>':'<input name="'+name+'" type="'+type+'" maxlength="120" '+(required?'required':'')+'>')+'</label>';
-function showForm(title,fields,handler){document.getElementById('formTitle').textContent=title;document.getElementById('fields').innerHTML=fields;let form=document.getElementById('entryForm');form.onsubmit=e=>{e.preventDefault();let values=Object.fromEntries(new FormData(form));if(handler(values)!==false){document.getElementById('dialog').close();render()}};form.reset();document.getElementById('dialog').showModal()}
-function chooseAction(title,options){return new Promise(resolve=>{const d=document.getElementById('actionDialog'),box=document.getElementById('actionOptions');document.getElementById('actionTitle').textContent=title;box.replaceChildren();let done=false;const finish=v=>{if(done)return;done=true;d.close();resolve(v)};options.forEach(o=>{let b=document.createElement('button');b.type='button';b.className='secondary';b.textContent=o;b.onclick=()=>finish(o);box.appendChild(b)});document.getElementById('actionCancel').onclick=()=>finish(null);d.oncancel=e=>{e.preventDefault();finish(null)};d.showModal()})}
+function showForm(title,fields,handler){document.getElementById('formTitle').textContent=title;document.getElementById('fields').innerHTML=fields;translateInterface(document.getElementById('dialog'));let form=document.getElementById('entryForm');form.onsubmit=e=>{e.preventDefault();let values=Object.fromEntries(new FormData(form));if(handler(values)!==false){document.getElementById('dialog').close();render()}};form.reset();document.getElementById('dialog').showModal()}
+function chooseAction(title,options){return new Promise(resolve=>{const d=document.getElementById('actionDialog'),box=document.getElementById('actionOptions');document.getElementById('actionTitle').textContent=title;box.replaceChildren();let done=false;const finish=v=>{if(done)return;done=true;d.close();resolve(v)};options.forEach(o=>{let b=document.createElement('button');b.type='button';b.className='secondary';b.textContent=ui(o);b.onclick=()=>finish(o);box.appendChild(b)});document.getElementById('actionCancel').onclick=()=>finish(null);d.oncancel=e=>{e.preventDefault();finish(null)};translateInterface(d);d.showModal()})}
 function bedAvailable(b){return b&&b.status==='ready'&&b.clean&&b.equipment}
 function compatible(b,r){return bedAvailable(b)&&(!r.care||b.type===r.care)}
 function departments(){return [...new Set(db.beds.map(b=>b.dept))]}
-function updateHero(){const now=new Date();const d=document.getElementById('liveDate'),t=document.getElementById('liveTime');if(d)d.textContent=new Intl.DateTimeFormat('ar-SA-u-ca-gregory',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Riyadh'}).format(now);if(t)t.textContent=new Intl.DateTimeFormat('ar-SA',{hour:'2-digit',minute:'2-digit',hour12:true,timeZone:'Asia/Riyadh'}).format(now);const badge=document.getElementById('headerAlertBadge');if(badge)badge.classList.toggle('hidden',!db.alerts.some(a=>!a.ack));}
+function updateHero(){const now=new Date(), locale=language==='ar'?'ar-SA':'en-GB';const d=document.getElementById('liveDate'),t=document.getElementById('liveTime');if(d)d.textContent=new Intl.DateTimeFormat(locale+'-u-ca-gregory',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Riyadh'}).format(now);if(t)t.textContent=new Intl.DateTimeFormat(locale,{hour:'2-digit',minute:'2-digit',hour12:true,timeZone:'Asia/Riyadh'}).format(now);const badge=document.getElementById('headerAlertBadge');if(badge)badge.classList.toggle('hidden',!db.alerts.some(a=>!a.ack));}
 function toggleUserMenu(){const menu=document.getElementById('userMenu'),button=document.getElementById('userMenuButton');const opening=menu.classList.contains('hidden');menu.classList.toggle('hidden',!opening);button.setAttribute('aria-expanded',String(opening));}
 function closeUserMenu(){document.getElementById('userMenu')?.classList.add('hidden');document.getElementById('userMenuButton')?.setAttribute('aria-expanded','false');}
 document.addEventListener('click',e=>{if(!e.target.closest('.hero-user'))closeUserMenu()});
@@ -316,7 +958,7 @@ let demoRole=sessionStorage.getItem('hospital-demo-role')||'manager';
 if(!demoRoles[demoRole])demoRole='manager';
 function setDemoRole(role){return false;}
 function demoCan(action){const username=sessionStorage.getItem('hospital-demo-account');const account=DEMO_ACCOUNTS[username];return !!(sessionStorage.getItem(LOGIN_KEY)==='yes'&&account&&demoRoles[account.role]?.actions.includes(action))}
-function rolePanel(){const username=sessionStorage.getItem('hospital-demo-account');const account=DEMO_ACCOUNTS[username];return '<div class="demo-role-strip"><strong>الحساب: '+esc(account?.label||'غير مسجل')+'</strong><span>الصلاحيات مرتبطة بحساب الدخول</span></div>'}
+function rolePanel(){const username=sessionStorage.getItem('hospital-demo-account');const account=DEMO_ACCOUNTS[username];return '<div class="demo-role-strip"><strong>الحساب: '+esc(ui(account?.label||'غير مسجل'))+'</strong><span>الصلاحيات مرتبطة بحساب الدخول</span></div>'}
 function requestFlow(){const phases=[['pending','طلب جديد'],['accepted','مقبول'],['reserved','محجوز'],['arrived','مشغول'],['closed','خروج وتنظيف']];return '<div class="workflow-strip">'+phases.map((p,i)=>'<span><b>'+(i+1)+'</b>'+p[1]+'</span>').join('<i>←</i>')+'</div>'}
 function reportCharts(){const all=db.beds.length;const colors=['#2e9f8d','#2f74b6','#db9b34','#815fbd','#d46363'];let html='<div class="report-visual-grid"><div class="panel"><h2>حالات الأسرة حسب القسم</h2>'+departments().map(dept=>{const beds=db.beds.filter(b=>b.dept===dept);return '<div class="report-dept"><div><b>'+esc(dept)+'</b><span>'+beds.filter(b=>b.status==='occupied').length+' / '+beds.length+' مشغول</span></div><div class="report-track"><div style="width:'+(beds.length?100*beds.filter(b=>b.status==='occupied').length/beds.length:0)+'%"></div></div></div>'}).join('')+'</div><div class="panel"><h2>توزيع الأسرة</h2><div class="report-donut" style="background:conic-gradient('+['ready','occupied','reserved','cleaning','maintenance'].map((s,i)=>colors[i]+' '+(all?100*['ready','occupied','reserved','cleaning','maintenance'].slice(0,i).reduce((sum,k)=>sum+count(k),0)/all:0)+'% '+(all?100*['ready','occupied','reserved','cleaning','maintenance'].slice(0,i+1).reduce((sum,k)=>sum+count(k),0)/all:0)+'%').join(',')+')"><div>'+all+'<small>سرير</small></div></div><div class="report-legend">'+['ready','occupied','reserved','cleaning','maintenance'].map((s,i)=>'<span><i style="background:'+colors[i]+'"></i>'+labels[s]+': '+count(s)+'</span>').join('')+'</div></div></div>';const arrivals=db.logs.filter(l=>/وصول|حجز سرير/.test(l.action)).length,discharges=db.logs.filter(l=>/خروج/.test(l.action)).length;html+='<div class="grid">'+stat('عمليات حجز مسجلة',arrivals,'وفق سجل النشاط المحلي')+stat('عمليات خروج مسجلة',discharges,'وفق سجل النشاط المحلي')+stat('طلبات عاجلة مفتوحة',db.requests.filter(r=>['عاجل','حرج'].includes(r.priority)&&!['closed','rejected'].includes(r.status)).length,'تحتاج متابعة')+stat('تنبيهات غير مقروءة',db.alerts.filter(a=>!a.ack).length,'محلية في هذا المتصفح')+'</div>';html+=panel('تصدير التقرير','<div class="toolbar">'+btn('طباعة / حفظ PDF','window.print()','primary')+btn('تصدير بيانات الأسرة CSV','exportBeds()')+btn('تصدير سجل التدقيق CSV','exportAudit()')+'</div>'+note('مؤشرات هذا التقرير مبنية على البيانات المحلية، ولا تمثل إحصاءات مستشفى حقيقية.'));return html}
 function runDemoChecks(){return validateDemoState(db)}
@@ -331,18 +973,26 @@ function checkOperationalAlerts(){const now=Date.now();let active=new Set(db.ale
 function currentDemoAccount(){return DEMO_ACCOUNTS[sessionStorage.getItem('hospital-demo-account')]||null}
 function canSeeDepartment(dept){const a=currentDemoAccount();return a&&(!a.dept||a.dept===dept)}
 function portalTaskList(){if(!Array.isArray(db.departmentTasks))db.departmentTasks=[];return db.departmentTasks}
-function createDepartmentTask(kind,bed,reason){const tasks=portalTaskList();let task=tasks.find(t=>t.kind===kind&&t.bed===bed&&t.status!=='done');if(task)return task;task={id:'TASK-'+id().slice(0,8),kind,bed,reason:reason||'',status:'pending',createdAt:new Date().toISOString(),updatedAt:new Date().toISOString(),owner:''};tasks.unshift(task);return task}
+function createDepartmentTask(kind,bed,reason){const tasks=portalTaskList();let task=tasks.find(t=>t.kind===kind&&t.bed===bed&&t.status!=='done');if(task)return task;task={id:'TASK-'+id(),kind,bed,reason:reason||'',status:'pending',createdAt:new Date().toISOString(),updatedAt:new Date().toISOString(),owner:''};tasks.unshift(task);return task}
 function appendPortalRequestEvent(r,label){if(typeof appendRequestEvent==='function')appendRequestEvent(r,label)}
 function dischargeFromNursing(bedId){if(!demoCan('nurseDischarge'))return alert('هذا الإجراء مخصص للتمريض');const b=db.beds.find(x=>x.id===bedId);if(!b||!canSeeDepartment(b.dept)||b.status!=='occupied')return alert('السرير غير متاح للإخلاء من هذا القسم');const linked=db.requests.filter(r=>r.bed===b.id&&r.status==='arrived');if(linked.length!==1)return alert('يجب وجود مريض واحد مرتبط بهذا السرير قبل تسجيل الخروج');const r=linked[0];r.status='closed';r.bed='';appendPortalRequestEvent(r,'خروج المريض من محطة تمريض '+b.dept);b.status='cleaning';b.clean=false;createDepartmentTask('cleaning',b.id,'خروج مريض من '+b.dept);audit('تمريض: خروج مريض',b.id+' — '+r.id);notify('مهمة تنظيف جديدة للسرير '+b.id,'warning');render()}
 function arrivalFromNursing(bedId){if(!demoCan('nurseArrival'))return alert('هذا الإجراء مخصص للتمريض');const b=db.beds.find(x=>x.id===bedId);if(!b||!canSeeDepartment(b.dept)||b.status!=='reserved')return alert('السرير غير محجوز لهذا القسم');const linked=db.requests.filter(r=>r.bed===b.id&&r.status==='reserved');if(linked.length!==1)return alert('يجب وجود حجز واحد مطابق');linked[0].status='arrived';appendPortalRequestEvent(linked[0],'تأكيد الوصول من محطة تمريض '+b.dept);b.status='occupied';b.clean=false;audit('تمريض: وصول مريض',b.id+' — '+linked[0].id);render()}
-function cleaningTaskAction(taskId){if(!demoCan('cleaningAction'))return alert('هذا الإجراء مخصص لفريق النظافة');const t=portalTaskList().find(x=>x.id===taskId&&x.kind==='cleaning');if(!t||t.status==='done')return;const b=db.beds.find(x=>x.id===t.bed);if(!b||b.status!=='cleaning')return alert('حالة السرير لم تعد تسمح بالتنظيف');if(t.status==='pending'){t.status='working';t.owner=currentDemoAccount().label;audit('بدء تنظيف سرير',t.bed)}else if(t.status==='working'){t.status='done';b.clean=true;audit('اكتمال تنظيف سرير',t.bed);notify('السرير '+t.bed+' ينتظر اعتماد الجاهزية','warning')}t.updatedAt=new Date().toISOString();persist();render()}
-function maintenanceTaskAction(taskId){if(!demoCan('maintenanceAction'))return alert('هذا الإجراء مخصص للصيانة');const t=portalTaskList().find(x=>x.id===taskId&&x.kind==='maintenance');if(!t||t.status==='done')return;const b=db.beds.find(x=>x.id===t.bed);if(!b||b.status!=='maintenance')return alert('السرير ليس في حالة صيانة');if(t.status==='pending'){t.status='working';t.owner=currentDemoAccount().label;audit('بدء معالجة بلاغ صيانة',t.bed)}else{t.status='done';b.equipment=true;b.status='cleaning';b.clean=false;createDepartmentTask('cleaning',b.id,'تنظيف بعد الصيانة');audit('إغلاق بلاغ الصيانة',t.bed);notify('انتهت صيانة '+t.bed+' وأُرسلت مهمة تنظيف','warning')}t.updatedAt=new Date().toISOString();persist();render()}
+function cleaningTaskAction(taskId,bedId){if(!demoCan('cleaningAction'))return alert('هذا الإجراء مخصص لفريق النظافة');if(!taskId||!bedId)return;
+  const t=portalTaskList().find(task=>task.id===taskId&&task.bed===bedId&&task.kind==='cleaning'&&
+    (task.status==='pending'||task.status==='working'));
+  if(!t)return;
+  const b=db.beds.find(x=>x.id===t.bed);if(!b||b.status!=='cleaning')return alert('حالة السرير لم تعد تسمح بالتنظيف');if(t.status==='pending'){t.status='working';t.owner=currentDemoAccount().label;audit('بدء تنظيف سرير',t.bed)}else if(t.status==='working'){t.status='done';b.clean=true;audit('اكتمال تنظيف سرير',t.bed);notify('السرير '+t.bed+' ينتظر اعتماد الجاهزية','warning')}t.updatedAt=new Date().toISOString();persist();render()}
+function maintenanceTaskAction(taskId,bedId){if(!demoCan('maintenanceAction'))return alert('هذا الإجراء مخصص للصيانة');if(!taskId||!bedId)return;
+  const t=portalTaskList().find(task=>task.id===taskId&&task.bed===bedId&&task.kind==='maintenance'&&
+    (task.status==='pending'||task.status==='working'));
+  if(!t)return;
+  const b=db.beds.find(x=>x.id===t.bed);if(!b||b.status!=='maintenance')return alert('السرير ليس في حالة صيانة');if(t.status==='pending'){t.status='working';t.owner=currentDemoAccount().label;audit('بدء معالجة بلاغ صيانة',t.bed)}else{t.status='done';b.equipment=true;b.status='cleaning';b.clean=false;createDepartmentTask('cleaning',b.id,'تنظيف بعد الصيانة');audit('إغلاق بلاغ الصيانة',t.bed);notify('انتهت صيانة '+t.bed+' وأُرسلت مهمة تنظيف','warning')}t.updatedAt=new Date().toISOString();persist();render()}
 function openMaintenanceTicket(bedId){if(!demoCan('manageBed')&&!demoCan('maintenanceAction'))return alert('لا تملك صلاحية فتح البلاغ');const b=db.beds.find(x=>x.id===bedId);if(!b||!['ready','maintenance'].includes(b.status))return alert('لا يمكن إخراج سرير مشغول أو محجوز للصيانة');b.status='maintenance';b.equipment=false;createDepartmentTask('maintenance',b.id,'بلاغ فحص وتجهيز');audit('فتح بلاغ صيانة',b.id);render()}
 function seedPortalTasks(){portalTaskList();db.beds.filter(b=>b.status==='cleaning'&&!b.clean).forEach(b=>createDepartmentTask('cleaning',b.id,'سرير ينتظر التنظيف'));db.beds.filter(b=>b.status==='maintenance').forEach(b=>createDepartmentTask('maintenance',b.id,'سرير خارج الخدمة'));persist()}
 function portalPage(k){
 const a=currentDemoAccount();
-if(k==='nursing'){const beds=db.beds.filter(b=>canSeeDepartment(b.dept));return panel('محطات التمريض — إدارة حركة المرضى',note('اختر حساب التمريض الخاص بالقسم لتسجيل الوصول أو الخروج. تُرسل مهمة تنظيف تلقائياً عند خروج المريض.')+'<div class="portal-stats"><span>الأسرة المعروضة: <b>'+beds.length+'</b></span><span>مشغولة: <b>'+beds.filter(b=>b.status==='occupied').length+'</b></span><span>محجوزة: <b>'+beds.filter(b=>b.status==='reserved').length+'</b></span></div><div class="portal-cards">'+beds.map(b=>{const r=db.requests.find(x=>x.bed===b.id&&['arrived','reserved'].includes(x.status));return '<article class="portal-card"><div class="portal-card-head"><strong>'+esc(b.id)+'</strong>'+pill(b.status)+'</div><div>'+esc(b.dept)+' · '+esc(b.type)+'</div><div class="tiny">'+(r?'المريض: '+esc(r.patient)+' · الطلب '+esc(r.id):'لا يوجد مريض مرتبط')+'</div>'+(a?.role==='nurse'&&a.dept===b.dept&&b.status==='occupied'?'<button type="button" class="primary" data-portal-action="discharge" data-bed="'+attr(b.id)+'">تسجيل خروج المريض</button>':'')+(a?.role==='nurse'&&a.dept===b.dept&&b.status==='reserved'?'<button type="button" class="primary" data-portal-action="arrival" data-bed="'+attr(b.id)+'">تأكيد وصول المريض</button>':'')+'</article>'}).join('')+'</div>')}
-if(k==='housekeeping'||k==='maintenancePortal'){const kind=k==='housekeeping'?'cleaning':'maintenance';const tasks=portalTaskList().filter(t=>t.kind===kind);return panel(kind==='cleaning'?'قسم النظافة — مهام الأسرة':'قسم الصيانة — بلاغات الأسرة',note(kind==='cleaning'?'تبدأ المهمة عند خروج المريض، ثم تُرفع لاعتماد جاهزية السرير بعد إنجاز التنظيف.':'بعد إتمام الصيانة، يُرسل السرير تلقائياً إلى قسم النظافة.')+'<div class="portal-stats"><span>المهام: <b>'+tasks.length+'</b></span><span>قيد الانتظار: <b>'+tasks.filter(t=>t.status==='pending').length+'</b></span><span>قيد التنفيذ: <b>'+tasks.filter(t=>t.status==='working').length+'</b></span><span>مكتملة: <b>'+tasks.filter(t=>t.status==='done').length+'</b></span></div><div class="portal-cards">'+(tasks.length?tasks.map(t=>'<article class="portal-card"><div class="portal-card-head"><strong>'+esc(t.bed)+'</strong><span class="pill">'+esc({pending:'بانتظار الاستلام',working:'قيد التنفيذ',done:'مكتملة'}[t.status])+'</span></div><div>'+esc(db.beds.find(b=>b.id===t.bed)?.dept||'')+'</div><div class="tiny">'+esc(t.reason)+'</div><div class="tiny">آخر تحديث: '+esc(stamp(t.updatedAt))+'</div>'+(t.status!=='done'&&demoCan(kind==='cleaning'?'cleaningAction':'maintenanceAction')?'<button type="button" class="primary" data-portal-action="'+(kind==='cleaning'?'clean':'maint')+'" data-task="'+attr(t.id)+'">'+(t.status==='pending'?'بدء المهمة':'إنهاء المهمة')+'</button>':'')+'</article>').join(''):note('لا توجد مهام حالياً'))+'</div>')}
+if(k==='nursing'){const beds=db.beds.filter(b=>canSeeDepartment(b.dept));return panel('محطات التمريض — إدارة حركة المرضى',note('اختر حساب التمريض الخاص بالقسم لتسجيل الوصول أو الخروج. تُرسل مهمة تنظيف تلقائياً عند خروج المريض.')+'<div class="portal-stats"><span>الأسرة المعروضة: <b>'+beds.length+'</b></span><span>مشغولة: <b>'+beds.filter(b=>b.status==='occupied').length+'</b></span><span>محجوزة: <b>'+beds.filter(b=>b.status==='reserved').length+'</b></span></div><div class="portal-cards">'+beds.map(b=>{const r=db.requests.find(x=>x.bed===b.id&&['arrived','reserved'].includes(x.status));return '<article class="portal-card"><div class="portal-card-head"><strong>'+esc(b.id)+'</strong>'+pill(b.status)+'</div><div>'+esc(ui(b.dept))+' · '+esc(ui(b.type))+'</div><div class="tiny">'+(r?'المريض: '+esc(r.patient)+' · الطلب '+esc(r.id):'لا يوجد مريض مرتبط')+'</div>'+(a?.role==='nurse'&&a.dept===b.dept&&b.status==='occupied'?'<button type="button" class="primary" data-portal-action="discharge" data-bed="'+attr(b.id)+'">تسجيل خروج المريض</button>':'')+(a?.role==='nurse'&&a.dept===b.dept&&b.status==='reserved'?'<button type="button" class="primary" data-portal-action="arrival" data-bed="'+attr(b.id)+'">تأكيد وصول المريض</button>':'')+'</article>'}).join('')+'</div>')}
+if(k==='housekeeping'||k==='maintenancePortal'){const kind=k==='housekeeping'?'cleaning':'maintenance';const tasks=portalTaskList().filter(t=>t.kind===kind);return panel(kind==='cleaning'?'قسم النظافة — مهام الأسرة':'قسم الصيانة — بلاغات الأسرة',note(kind==='cleaning'?'تبدأ المهمة عند خروج المريض، ثم تُرفع لاعتماد جاهزية السرير بعد إنجاز التنظيف.':'بعد إتمام الصيانة، يُرسل السرير تلقائياً إلى قسم النظافة.')+'<div class="portal-stats"><span>المهام: <b>'+tasks.length+'</b></span><span>قيد الانتظار: <b>'+tasks.filter(t=>t.status==='pending').length+'</b></span><span>قيد التنفيذ: <b>'+tasks.filter(t=>t.status==='working').length+'</b></span><span>مكتملة: <b>'+tasks.filter(t=>t.status==='done').length+'</b></span></div><div class="portal-cards">'+(tasks.length?tasks.map(t=>'<article class="portal-card"><div class="portal-card-head"><strong>'+esc(t.bed)+'</strong><span class="pill">'+esc({pending:'بانتظار الاستلام',working:'قيد التنفيذ',done:'مكتملة'}[t.status])+'</span></div><div>'+esc(db.beds.find(b=>b.id===t.bed)?.dept||'')+'</div><div class="tiny">'+esc(t.reason)+'</div><div class="tiny">آخر تحديث: '+esc(stamp(t.updatedAt))+'</div>'+(t.status!=='done'&&demoCan(kind==='cleaning'?'cleaningAction':'maintenanceAction')?'<button type="button" class="primary" data-portal-action="'+(kind==='cleaning'?'clean':'maint')+'" data-task="'+attr(t.id)+'" data-bed="'+attr(t.bed)+'">'+(t.status==='pending'?'بدء المهمة':'إنهاء المهمة')+'</button>':'')+'</article>').join(''):note('لا توجد مهام حالياً'))+'</div>')}
 if(k==='operations')return panel('مركز العمليات — سجل جميع الأقسام',note('كل تغيير في حالة السرير يُسجل مع اسم الحساب الذي نفذه. هذه محاكاة محلية داخل المتصفح.')+'<div class="portal-stats"><span>عدد الأسرة: <b>'+db.beds.length+'</b></span><span>مهام النظافة: <b>'+portalTaskList().filter(t=>t.kind==='cleaning'&&t.status!=='done').length+'</b></span><span>بلاغات الصيانة: <b>'+portalTaskList().filter(t=>t.kind==='maintenance'&&t.status!=='done').length+'</b></span></div>'+table(['الوقت','الجهة','العملية','التفاصيل'],db.logs.slice(0,80).map(l=>tr([stamp(l.time),esc(l.actor),esc(l.action),esc(l.detail)]))));
 if(k==='demoGuide')return panel('وضع المناقشة الجامعية — رحلة الجراحة SUR-203',
 note('مسار اختُبر عملياً: خروج REQ-1001، تنظيف SUR-203، اعتماد الجاهزية، حجز DEMO-002، تأكيد الوصول. جميع البيانات تجريبية ومخزنة في هذا المتصفح.')
@@ -359,64 +1009,164 @@ note('مسار اختُبر عملياً: خروج REQ-1001، تنظيف SUR-203
 ].map(([n,who,where,desc])=>'<article class="demo-step"><b>'+n+' — '+who+'</b><code>'+where+'</code><span>'+desc+'</span></article>').join('')+'</div>'
 +note('تسلسل العرض المقترح 12–13 دقيقة مع مقدمة وخاتمة. لتبديل الحساب: سجّل الخروج ثم اختر الجهة والمستخدم من شاشة الدخول. كلمة مرور التمريض Nurse2026، النظافة Clean2026، التنسيق Coord2026، الإدارة 123456.'));
 return ''}
-function bindPortalActions(){document.querySelectorAll('[data-portal-action]').forEach(b=>b.addEventListener('click',()=>{const action=b.dataset.portalAction;if(action==='discharge')dischargeFromNursing(b.dataset.bed);if(action==='arrival')arrivalFromNursing(b.dataset.bed);if(action==='clean')cleaningTaskAction(b.dataset.task);if(action==='maint')maintenanceTaskAction(b.dataset.task)}))}
+function bindPortalActions(){document.querySelectorAll('[data-portal-action]').forEach(b=>b.addEventListener('click',()=>{const action=b.dataset.portalAction;if(action==='discharge')dischargeFromNursing(b.dataset.bed);if(action==='arrival')arrivalFromNursing(b.dataset.bed);if(action==='clean')cleaningTaskAction(b.dataset.task,b.dataset.bed);if(action==='maint')maintenanceTaskAction(b.dataset.task,b.dataset.bed)}))}
 
-function render(){document.getElementById('hospitalTitle').textContent=db.settings.hospital;const user=sessionStorage.getItem('hospital-demo-account');const u=document.getElementById('userMenuButton');if(u&&user&&DEMO_ACCOUNTS[user])u.innerHTML=esc(DEMO_ACCOUNTS[user].label)+' <span aria-hidden="true">⌄</span>';updateHero();
+function render(){document.getElementById('hospitalTitle').textContent=ui(db.settings.hospital);const user=sessionStorage.getItem('hospital-demo-account');const u=document.getElementById('userMenuButton');if(u&&user&&DEMO_ACCOUNTS[user])u.innerHTML=esc(ui(DEMO_ACCOUNTS[user].label))+' <span aria-hidden="true">⌄</span>';updateHero();
 checkOperationalAlerts();const nav=document.getElementById('nav');
 const iconPaths={"nursing":"<path d=\"M12 3v18M3 12h18M4 18h4m8 0h4\"/>","housekeeping":"<path d=\"m4 20 9-9m-3-3 6-6 6 6-6 6\"/>","maintenancePortal":"<path d=\"M14 7a5 5 0 0 0 6 6l-9 9-5-5 9-9\"/>","operations":"<path d=\"M3 12h4l3-6 4 12 3-6h4\"/>","demoGuide":"<path d=\"M4 4h16v16H4zM8 9h8M8 13h8M8 17h5\"/>","dashboard":"<rect x=\"3\" y=\"3\" width=\"7\" height=\"9\" rx=\"1\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"5\" rx=\"1\"/><rect x=\"14\" y=\"12\" width=\"7\" height=\"9\" rx=\"1\"/><rect x=\"3\" y=\"16\" width=\"7\" height=\"5\" rx=\"1\"/>","beds":"<path d=\"M3 18v-7m18 7v-7M3 14h18M5 14V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6M3 18h18M7 10h4m2 0h4\"/>","requests":"<rect x=\"5\" y=\"4\" width=\"14\" height=\"18\" rx=\"2\"/><rect x=\"9\" y=\"2\" width=\"6\" height=\"4\" rx=\"1\"/><path d=\"M9 11h6M9 15h6M9 19h4\"/>","cleaning":"<path d=\"m4 20 9-9m-3-3 6-6 6 6-6 6m-9 3 3 3m-6-1 3 3M12 12l-3-3\"/>","equipment":"<path d=\"M6 3v5a4 4 0 0 0 8 0V3M6 3H4m10 0h2M10 12v3a5 5 0 0 0 10 0v-2\"/><circle cx=\"20\" cy=\"11\" r=\"2\"/>","transfers":"<path d=\"M4 17V8a2 2 0 0 1 2-2h9v11M4 17h16v-6l-3-3h-2M8 6V3h5v3M9 10v5m-2-2h4\"/><circle cx=\"7\" cy=\"18\" r=\"2\"/><circle cx=\"17\" cy=\"18\" r=\"2\"/>","alerts":"<path d=\"M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4\"/>","reports":"<path d=\"M4 20V11m5 9V5m5 15v-8m5 8V3M2 20h20\"/>","recovery":"<path d=\"M3 12a9 9 0 0 1 15-6l3 3M21 3v6h-6M21 12a9 9 0 0 1-15 6l-3-3M3 21v-6h6\"/>","integrations":"<path d=\"M10 13a5 5 0 0 0 7 .4l3-3a5 5 0 0 0-7-7l-1.7 1.7M14 11a5 5 0 0 0-7-.4l-3 3a5 5 0 0 0 7 7l1.7-1.7\"/>","settings":"<path d=\"M12 2l1.6 2.7 3.1-.2.9 3 2.8 1.5-1 3 1 3-2.8 1.5-.9 3-3.1-.2L12 22l-1.6-2.7-3.1.2-.9-3L3.6 15l1-3-1-3 2.8-1.5.9-3 3.1.2z\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/>"};
 const sidebarIcon=k=>'<svg class="sidebar-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(iconPaths[k]||iconPaths.dashboard)+'</svg>';
 const subtitles={nursing:'خروج ووصول المرضى حسب القسم',housekeeping:'استلام وتنفيذ مهام التنظيف',maintenancePortal:'متابعة الأعطال والإصلاحات',operations:'آخر العمليات من جميع الأقسام',demoGuide:'عرض متكامل خطوة بخطوة',beds:'حالة الأسرة وجاهزيتها',requests:'القبول والحجوزات',cleaning:'التجهيز والصيانة',equipment:'الأجهزة ومواقعها',transfers:'طلبات التحويل',alerts:'التنبيهات الداخلية',reports:'المؤشرات والإحصائيات',recovery:'مطابقة العمليات',integrations:'الجهات والربط',settings:'إعدادات النظام'};
-nav.innerHTML='<div class="nav" role="navigation" aria-label="القائمة الرئيسية">'+tabs.map(([k,v])=>'<button title="'+esc(v)+'" aria-label="'+esc(v)+'" class="'+(page===k?'active':'')+'" onclick="go(\''+k+'\')"><span class="nav-icon" aria-hidden="true">'+sidebarIcon(k)+'</span><span class="nav-label">'+esc(v)+'</span>'+(k==='alerts'&&db.alerts.some(a=>!a.ack)?'<span class="nav-dot">●</span>':'')+'</button>').join('')+'</div>';
+const navGroups = [
+  ['dashboard','beds','requests','operations'],
+  ['nursing','housekeeping','maintenancePortal','cleaning','equipment','transfers'],
+  ['alerts','reports','recovery','integrations','settings','demoGuide']
+];
+const viewNames = Object.fromEntries(tabs);
+nav.innerHTML = '<nav class="nav" aria-label="'+attr(ui('القائمة الرئيسية'))+'">'+navGroups.map(group=>
+  '<div class="nav-group">'+group.map(k=>{
+    const label = attr(ui(viewNames[k]));
+    return '<button type="button" data-view="'+k+'" title="'+label+'" aria-label="'+label+'" '+(page===k?'class="active" aria-current="page"':'')+' onclick="go(\''+k+'\')"><span class="nav-icon" aria-hidden="true">'+sidebarIcon(k)+'</span><span class="nav-label">'+label+'</span>'+(k==='alerts'&&db.alerts.some(a=>!a.ack)?'<span class="nav-dot" aria-hidden="true">●</span>':'')+'</button>';
+  }).join('')+'</div>'
+).join('')+'</nav>';
 let html='';
 if(['nursing','housekeeping','maintenancePortal','operations','demoGuide'].includes(page))html=portalPage(page);
-if(page==='dashboard'){let all=db.beds.length,oper=all-count('maintenance'),occ=count('occupied');html='<div class="grid">'+stat('إجمالي الأسرة',all,'جميع أنواع الرعاية','all')+stat('جاهزة',db.beds.filter(bedAvailable).length,'جاهزة تشغيلياً','ready')+stat('مشغولة',occ,'إشغال الأسرة التشغيلية '+(oper?Math.round(occ/oper*100):0)+'٪','occupied')+stat('محجوزة',count('reserved'),'الحجز لا يعني الإشغال','reserved')+'</div>';
+if(page==='dashboard'){let all=db.beds.length,oper=all-count('maintenance'),occ=count('occupied');html='<h1 class="page-heading">'+ui('لوحة التحكم')+'</h1><div class="grid dashboard-kpis">'+stat('إجمالي الأسرة',all,'جميع أنواع الرعاية','all')+stat('جاهزة',db.beds.filter(bedAvailable).length,'جاهزة تشغيلياً','ready')+stat('مشغولة',occ,ui('إشغال الأسرة التشغيلية')+' '+percent(oper?occ/oper*100:0),'occupied')+stat('محجوزة',count('reserved'),'الحجز لا يعني الإشغال','reserved')+'</div>';
 
-if(dashboardBedFilter){const filtered=db.beds.filter(b=>dashboardBedFilter==='all'||(dashboardBedFilter==='ready'?bedAvailable(b):b.status===dashboardBedFilter));const titles={all:'جميع الأسرة',ready:'الأسرة الجاهزة',occupied:'الأسرة المشغولة',reserved:'الأسرة المحجوزة'};html+='<section class="panel dashboard-filter-panel"><div class="dashboard-filter-head"><h2>'+titles[dashboardBedFilter]+' ('+filtered.length+')</h2><button type="button" class="secondary" id="clearDashboardFilter">إظهار بقية اللوحة</button></div><div class="dashboard-filter-grid">'+(filtered.length?filtered.map(b=>{const linked=db.requests.find(r=>r.bed===b.id&&['reserved','arrived'].includes(r.status));return '<article class="dashboard-filter-bed"><strong>'+esc(b.id)+'</strong>'+pill(b.status)+'<div class="tiny">'+esc(b.dept)+' · '+esc(b.type)+'</div>'+(linked?'<div class="tiny">المريض: '+esc(linked.patient)+'</div>':'')+'<button type="button" class="secondary dashboard-bed-open" data-bed-id="'+attr(b.id)+'">عرض في إدارة الأسرة</button></article>'}).join(''):'<div class="notice">لا توجد أسرة ضمن هذه الحالة حالياً</div>')+'</div></section>'}else{html+=panel('الأقسام والطاقة الاستيعابية','<div class="dept-compact">'+departments().map(d=>{let b=db.beds.filter(x=>x.dept===d),occ=b.filter(x=>x.status==='occupied').length,p=b.length?Math.round(occ/b.length*100):0;return '<div class="dept-line"><strong>'+esc(d)+'</strong><div class="dept-meter"><span style="width:'+p+'%"></span></div><b>'+p+'٪</b><small>'+occ+'/'+b.length+' مشغول · '+b.filter(bedAvailable).length+' جاهز</small></div>'}).join('')+'</div>');
-let pressure=oper?occ/oper*100:0;html+=panel('مراقبة الضغط التشغيلي',note('نسبة الإشغال الحالية: <b>'+Math.round(pressure)+'٪</b> من الأسرة التشغيلية. عتبة التنبيه التوضيحية: '+db.settings.threshold+'٪. الاحتياطي المقترح: '+db.settings.reserveMin+' سرير جاهز. الملاءمة الطبية تختلف حسب نوع الرعاية.')+(pressure>=db.settings.threshold?'<p class="pill critical">ضغط مرتفع</p>':'<p class="pill ready">ضمن العتبة التوضيحية</p>'));
-html+=panel('أحدث النشاطات',db.logs.length?db.logs.slice(0,6).map(l=>'<div class="item"><span class="tiny">'+stamp(l.time)+'</span> — '+esc(l.action)+' <span class="muted">'+esc(l.detail)+'</span></div>').join(''):note('لا توجد عمليات مسجلة بعد'))}}
-if(page==='beds'){html=panel('إدارة الأسرة',note('تُفصل حالة الإشغال عن جاهزية التنظيف والمعدات. لا يجوز تحويل السرير المشغول مباشرة إلى جاهز.')+'<div class="toolbar">'+btn('+ إضافة سرير','addBed()','primary')+'<input id="bedSearch" type="search" placeholder="بحث برقم السرير" oninput="drawBeds()"><select id="filterState" onchange="drawBeds()"><option value="">كل الحالات</option><option value="ready">جاهز</option><option value="occupied">مشغول</option><option value="reserved">محجوز</option><option value="cleaning">تنظيف</option><option value="maintenance">صيانة</option></select><select id="filterDept" onchange="drawBeds()"><option value="">جميع الأقسام</option>'+departments().map(d=>'<option>'+esc(d)+'</option>').join('')+'</select></div><div id="bedTable"></div>')}
-if(page==='requests'){html=panel('طلبات استقبال المرضى','<div class="toolbar">'+btn('+ طلب استقبال','addRequest()','primary')+btn('طلب وارد من الهلال الأحمر','simulateRedCrescent()','secondary')+'</div><div class="request-filters"><input id="requestSearch" type="search" placeholder="بحث عن مريض أو طلب أو مستشفى" oninput="filterRequestCards()"><select id="requestStatus" onchange="filterRequestCards()"><option value="">جميع الحالات</option><option value="pending">جديد</option><option value="accepted">مقبول</option><option value="reserved">محجوز</option><option value="arrived">وصل</option><option value="closed">مغلق</option></select></div><div class="request-list">'+db.requests.map(r=>'<div class="request-card"><div class="request-top"><b>'+esc(r.id)+'</b>'+pill(r.status)+'</div><div class="request-main"><strong>'+esc(r.patient)+'</strong><span>'+esc(r.source)+'</span></div><div class="request-meta"><span>الرعاية: '+esc(r.care)+'</span><span>الأولوية: '+esc(r.priority)+'</span><span>السرير: '+esc(r.bed||'—')+'</span>'+(r.eta?'<span>الوصول المتوقع: '+esc(stamp(r.eta))+'</span>':'')+(r.transferId?'<span>رقم التحويل: '+esc(r.transferId)+'</span>':'')+(r.fromHospital?'<span>المستشفى المُحوِّل: '+esc(r.fromHospital)+'</span>':'')+(r.destinationClinic?'<span>العيادة / القسم: '+esc(r.destinationClinic)+'</span>':'')+(r.caseReason?'<span>سبب الحالة: '+esc(r.caseReason)+'</span>':'')+'</div><div class="request-bottom">' +(demoCan('manageRequest')&&['pending','conditional'].includes(r.status)?'<button type="button" class="primary inline-accept" data-request-id="'+attr(r.id)+'">قبول الطلب</button>':'')+'<button type="button" class="secondary request-timeline-button" data-request-id="'+attr(r.id)+'">سجل الطلب</button>'+btn('إدارة الطلب','manageRequest(&#39;'+attr(r.id)+'&#39;)')+'</div></div>').join('')+'</div>')}
+if(dashboardBedFilter){const filtered=db.beds.filter(b=>dashboardBedFilter==='all'||(dashboardBedFilter==='ready'?bedAvailable(b):b.status===dashboardBedFilter));const titles={all:'جميع الأسرة',ready:'الأسرة الجاهزة',occupied:'الأسرة المشغولة',reserved:'الأسرة المحجوزة'};html+='<section class="panel dashboard-filter-panel"><div class="dashboard-filter-head"><h2>'+ui(titles[dashboardBedFilter])+' ('+filtered.length+')</h2><button type="button" class="secondary" id="clearDashboardFilter">إظهار بقية اللوحة</button></div><div class="dashboard-filter-grid">'+(filtered.length?filtered.map(b=>{return '<article class="dashboard-filter-bed"><strong>'+esc(b.id)+'</strong>'+pill(b.status)+'<div class="tiny">'+esc(b.dept)+' · '+esc(b.type)+'</div><button type="button" class="secondary dashboard-bed-open" data-bed-id="'+attr(b.id)+'">عرض في إدارة الأسرة</button></article>'}).join(''):'<div class="notice">لا توجد أسرة ضمن هذه الحالة حالياً</div>')+'</div></section>'}else{html+='<div class="capacity-layout"><div>'+panel('الأقسام والطاقة الاستيعابية','<div class="dept-compact">'+departments().map(d=>{let b=db.beds.filter(x=>x.dept===d),occ=b.filter(x=>x.status==='occupied').length,p=b.length?Math.round(occ/b.length*100):0;return '<div class="dept-line"><strong>'+esc(d)+'</strong><div class="dept-meter"><span style="width:'+p+'%"></span></div><b>'+percent(p)+'</b><small>'+occ+'/'+b.length+' مشغول · '+b.filter(bedAvailable).length+' جاهز</small></div>'}).join('')+'</div>');
+let pressure=oper?occ/oper*100:0;html+='</div><div>'+panel('مراقبة الضغط التشغيلي',note(language==='ar'
+  ? 'نسبة الإشغال الحالية: <b>'+percent(pressure)+'</b> من الأسرة التشغيلية. عتبة التنبيه التوضيحية: '+percent(db.settings.threshold)+'. الاحتياطي المقترح: '+db.settings.reserveMin+' سرير جاهز. الملاءمة الطبية تختلف حسب نوع الرعاية.'
+  : 'Current occupancy: <b>'+percent(pressure)+'</b> of operational beds. Demo alert threshold: '+percent(db.settings.threshold)+'. Suggested reserve: '+db.settings.reserveMin+' ready beds. Clinical suitability depends on care type.')+(pressure>=db.settings.threshold?'<p class="pill critical">ضغط مرتفع</p>':'<p class="pill ready">ضمن العتبة التوضيحية</p>'));
+html+=panel('أحدث النشاطات',db.logs.length?db.logs.slice(0,6).map(l=>'<div class="item"><span class="tiny">'+stamp(l.time)+'</span> — '+esc(l.action)+' <span class="muted">'+esc(l.detail)+'</span></div>').join(''):note('لا توجد عمليات مسجلة بعد'))+'</div></div>'}}
+if(page==='beds'){
+  html=panel('إدارة الأسرة',note('تُفصل حالة الإشغال عن جاهزية التنظيف والمعدات. لا يجوز تحويل السرير المشغول مباشرة إلى جاهز.')+
+    '<div class="toolbar bed-controls"><label><span>بحث برقم السرير</span><input id="bedSearch" type="search" oninput="drawBeds()"></label>'+
+    '<label><span>الحالة</span><select id="filterState" onchange="drawBeds()"><option value="">كل الحالات</option>'+
+    ['ready','occupied','reserved','cleaning','maintenance'].map(status=>'<option value="'+status+'">'+esc(ui(labels[status]))+'</option>').join('')+'</select></label>'+
+    '<label><span>القسم</span><select id="filterDept" onchange="drawBeds()"><option value="">جميع الأقسام</option>'+
+    departments().map(d=>'<option value="'+attr(d)+'">'+esc(ui(d))+'</option>').join('')+'</select></label>'+
+    btn('+ إضافة سرير','addBed()','primary')+'</div><div id="bedResultCount" class="muted" role="status"></div><div id="bedTable"></div>');
+}
+if(page==='requests'){html=panel('طلبات استقبال المرضى','<div class="toolbar">'+btn('+ طلب استقبال','addRequest()','primary')+btn('طلب وارد من الهلال الأحمر','simulateRedCrescent()','secondary')+'</div><div class="request-filters"><input id="requestSearch" type="search" aria-label="بحث عن مريض أو طلب أو مستشفى" placeholder="بحث عن مريض أو طلب أو مستشفى" oninput="filterRequestCards()"><select id="requestStatus" aria-label="حالة الطلب" onchange="filterRequestCards()"><option value="">جميع الحالات</option><option value="pending">جديد</option><option value="accepted">مقبول</option><option value="reserved">محجوز</option><option value="arrived">وصل</option><option value="closed">مغلق</option></select></div><p id="requestEmpty" class="notice hidden" role="status">لا توجد طلبات تطابق الفلاتر الحالية</p><div class="request-list">'+db.requests.map(r=>'<div class="request-card"><div class="request-top"><b>'+esc(r.id)+'</b>'+pill(r.status)+'</div><div class="request-main"><strong>'+esc(r.patient)+'</strong><span>'+esc(r.source)+'</span></div><div class="request-meta"><span>الرعاية: '+esc(r.care)+'</span><span>الأولوية: '+esc(r.priority)+'</span><span>السرير: '+esc(r.bed||'—')+'</span>'+(r.eta?'<span>الوصول المتوقع: '+esc(stamp(r.eta))+'</span>':'')+(r.transferId?'<span>رقم التحويل: '+esc(r.transferId)+'</span>':'')+(r.fromHospital?'<span>المستشفى المُحوِّل: '+esc(r.fromHospital)+'</span>':'')+(r.destinationClinic?'<span>العيادة / القسم: '+esc(r.destinationClinic)+'</span>':'')+(r.caseReason?'<span>سبب الحالة: '+esc(r.caseReason)+'</span>':'')+'</div><div class="request-bottom">' +(demoCan('manageRequest')&&['pending','conditional'].includes(r.status)?'<button type="button" class="primary inline-accept" data-request-id="'+attr(r.id)+'">قبول الطلب</button>':'')+'<button type="button" class="secondary request-timeline-button" data-request-id="'+attr(r.id)+'">سجل الطلب</button>'+btn('إدارة الطلب','manageRequest(&#39;'+attr(r.id)+'&#39;)')+'</div></div>').join('')+'</div>')}
 if(page==='cleaning'){let rows=db.beds.filter(b=>['cleaning','maintenance'].includes(b.status)||!b.clean||!b.equipment);html=panel('التنظيف والصيانة واعتماد الجاهزية',note('اكتمال التنظيف لا يعني جاهزية السرير تلقائياً؛ تُراجع التجهيزات وحالة الإشغال قبل اعتماده.')+table(['السرير','القسم','الحالة','النظافة','المعدات','الإجراءات'],rows.map(b=>tr([esc(b.id),esc(b.dept),pill(b.status),b.clean?'مكتمل':'غير مكتمل',b.equipment?'متوفرة':'ناقصة','<div class="actions">'+btn('إنهاء التنظيف','finishCleaning(\''+attr(b.id)+'\')')+btn('فحص الجاهزية','approveBed(\''+attr(b.id)+'\')')+'</div>']))))}
 if(page==='equipment'){html=panel('إدارة المعدات الطبية',note('نقل الأجهزة وتغيير حالتها مسؤولية فريق الأجهزة الطبية والصيانة وفق قرار المشروع. هنا تُحاكى العملية مع تسجيلها في سجل التدقيق.')+'<div class="toolbar">'+btn('+ إضافة جهاز','addEquipment()','primary')+'</div>'+table(['المعرف','الجهاز','القسم','السرير المرتبط','الحالة','إجراء'],db.equipment.map(e=>tr([esc(e.id),esc(e.name),esc(e.dept),esc(e.bed||'متنقل / غير مرتبط'),pill(e.status),'<div class="actions">'+btn('تحديث / نقل','editEquipment(\''+attr(e.id)+'\')')+'</div>']))))}
 if(page==='transfers'){html=panel('التحويلات بين المستشفيات — محاكاة',note('لا يتم إرسال أي طلب فعلي. المستشفى المستقبل والتجمع الصحي والهلال الأحمر جهات افتراضية للعرض. القبول لا يعني تخصيص سرير أو وصول المريض.')+'<div class="toolbar">'+btn('+ طلب تحويل توضيحي','addTransfer()','primary')+'</div>'+table(['رقم التحويل','الجهة المستقبلة','الحالة','نوع الرعاية','الأولوية','الإجراء'],db.transfers.map(t=>tr([esc(t.id),esc(t.target),pill(t.status),esc(t.care),esc(t.priority)+(t.requestId?'<div class="tiny">طلب: '+esc(t.requestId)+'</div>':''),btn('تحديث محاكاة','manageTransfer(\''+attr(t.id)+'\')')]))))}
-if(page==='alerts'){html=panel('الإشعارات داخل النظام',note('الإشعارات محلية داخل المتصفح فقط، ولا تصل إلى موظفين آخرين أو أجهزة أخرى.')+'<div class="toolbar">'+'<button type="button" class="secondary" id="ackAllInline">إقرار جميع الإشعارات</button>'+'</div>'+table(['التاريخ','الأولوية','الرسالة','الحالة','إجراء'],db.alerts.map(a=>tr([stamp(a.time),pill(a.severity),esc(a.text),a.ack?'تم الاطلاع':'لم يُطّلع عليه',a.ack?'—':'<button type="button" class="primary inline-ack" data-alert-id="'+attr(a.id)+'">إقرار</button>']))))}
-if(page==='reports'){let all=db.beds.length,oper=all-count('maintenance'),occ=count('occupied');html='<div class="grid">'+stat('إشغال الأسرة التشغيلية',oper?Math.round(occ/oper*100)+'٪':'0٪','المقام: غير الخارجة من الخدمة')+stat('جاهزة',db.beds.filter(bedAvailable).length,'تشغيلياً')+stat('قيد التنظيف',count('cleaning'),'غير جاهزة')+stat('طلبات مفتوحة',db.requests.filter(r=>!['closed','rejected'].includes(r.status)).length,'طلبات توضيحية')+'</div>';
+if(page==='alerts'){html=panel('الإشعارات داخل النظام',note('الإشعارات محلية داخل المتصفح فقط، ولا تصل إلى موظفين آخرين أو أجهزة أخرى.')+'<div class="toolbar">'+'<button type="button" class="secondary" id="ackAllInline">إقرار جميع الإشعارات</button>'+'</div>'+table(['التاريخ','الأولوية','الرسالة','الحالة','إجراء'],db.alerts.map(a=>tr([stamp(a.time),pill(a.severity),a.code==='capacity'?esc(a.text).replace(/(\d+)٪/g,(_,value)=>percent(Number(value))):esc(a.text),a.ack?'تم الاطلاع':'لم يُطّلع عليه',a.ack?'—':'<button type="button" class="primary inline-ack" data-alert-id="'+attr(a.id)+'">إقرار</button>']))))}
+if(page==='reports'){let all=db.beds.length,oper=all-count('maintenance'),occ=count('occupied');html='<div class="grid">'+stat('إشغال الأسرة التشغيلية',percent(oper?occ/oper*100:0),'المقام: غير الخارجة من الخدمة')+stat('جاهزة',db.beds.filter(bedAvailable).length,'تشغيلياً')+stat('قيد التنظيف',count('cleaning'),'غير جاهزة')+stat('طلبات مفتوحة',db.requests.filter(r=>!['closed','rejected'].includes(r.status)).length,'طلبات توضيحية')+'</div>';
 html+=panel('توزيع الحالات',Object.keys({ready:1,occupied:1,reserved:1,cleaning:1,maintenance:1}).map(k=>'<div style="margin:15px 0"><div class="heading"><span>'+labels[k]+'</span><b>'+count(k)+'</b></div><div class="chartline"><div style="width:'+(all?count(k)/all*100:0)+'%"></div></div></div>').join('')+'<div class="toolbar">'+btn('تصدير CSV','exportBeds()')+btn('تصدير سجل التدقيق CSV','exportAudit()')+'</div>')}
 if(page==='recovery'){html=panel('استمرارية التشغيل والتعافي — إجراءات توضيحية',note('عند توقف الخادم الحقيقي تُستخدم النماذج الورقية المعتمدة. هذه النسخة لا توفر خادماً أو استعادة مؤسسية؛ يمكن تسجيل العمليات الورقية بعد عودة النظام للمراجعة.')+'<div class="toolbar">'+btn('+ إدخال حدث ورقي للمطابقة','addRecovery()','primary')+'</div>'+table(['الوقت الفعلي','نوع العملية','السرير','الوصف','حالة المراجعة','إجراء'],db.recovery.map(r=>tr([esc(r.happened),esc(r.type),esc(r.bed),esc(r.description),pill(r.status),r.status==='pending'?btn('اعتماد المطابقة','approveRecovery(\''+attr(r.id)+'\')'):'—'])))+note('اعتماد المطابقة هنا تسجيل توضيحي فقط؛ لا تُعدل حالة السرير تلقائياً بناءً على نموذج ورقي دون تنفيذ العملية التشغيلية الصحيحة.'))}
 if(page==='integrations'){html=panel('الربط الخارجي — عرض توضيحي فقط',note('لا يوجد أي اتصال فعلي أو تبادل بيانات مع الجهات أدناه. لا تُستخدم معلومات مرضى حقيقية.')+'<div class="cards">'+[['beds','المستشفيات الأخرى','طلبات تحويل ومشاركة السعة وفق الموافقات المتبادلة'],['dashboard','التجمع الصحي','مؤشرات وتقارير واطلاع تشغيلي محدود بالصلاحيات'],['transfers','الهلال الأحمر','احتياجات الحالة الطبية والوقت المتوقع للوصول'],['integrations','واجهات API','تكاملات آمنة مستقبلية وخوادم مستقلة'],['settings','صلاحيات المستخدمين','أدوار معتمدة وMFA وسجلات تدقيق في التشغيل الفعلي'],['recovery','النسخ الاحتياطي','نسخ مشفرة واستعادة واختبارات على بنية خوادم لاحقة']].map(x=>'<div class="card"><h3><span class="integration-icon">'+sidebarIcon(x[0])+'</span> '+x[1]+'</h3><p>'+x[2]+'</p>'+pill('غير متصل')+'</div>').join('')+'</div>')}
 if(page==='settings'){html=panel('إعدادات المستشفى التوضيحي',note('تُحفظ هذه الإعدادات في هذا المتصفح فقط. تغيير اسم الدور لا يفرض صلاحيات أمنية فعلية.')+'<div class="formgrid">'+field('اسم المستشفى','hospital')+field('الدور المعروض (توضيحي)','actor')+field('الحد الأدنى المقترح للأسرة الجاهزة','reserveMin','number')+field('عتبة الضغط التشغيلي (%)','threshold','number')+'</div><div class="toolbar" style="margin-top:12px">'+btn('حفظ الإعدادات','saveSettings()','primary')+'</div>')+panel('إدارة البيانات التوضيحية','<div class="toolbar">'+btn('تصدير نسخة JSON','exportJson()')+btn('استيراد نسخة JSON','importJson()')+btn('إعادة ضبط التجربة','resetDemo()','danger')+'</div>'+note('تُخزن البيانات في هذا المتصفح فقط. مسح بيانات المتصفح قد يؤدي إلى فقدانها؛ احفظ نسخة JSON عند الحاجة.'))+panel('سجل التدقيق التوضيحي',table(['الوقت','الدور التوضيحي','العملية','التفاصيل'],db.logs.slice(0,100).map(l=>tr([stamp(l.time),esc(l.actor),esc(l.action),esc(l.detail)]))))}
-if(page==='dashboard')html=requestFlow()+html+validationPanel();if(page==='reports')html+=reportCharts();if(page==='requests')html=requestFlow()+html;document.getElementById('content').innerHTML=rolePanel()+html;if(page==='beds')drawBeds();if(page==='requests'){const q=document.getElementById('requestSearch'),s=document.getElementById('requestStatus');if(q)q.value=requestSearchValue;if(s)s.value=requestStatusValue;filterRequestCards()}bindInlineActions();bindDashboardFilters();bindPortalActions();if(page==='settings'){for(const k of ['hospital','actor','reserveMin','threshold'])document.querySelector('[name="'+k+'"]').value=db.settings[k]}}
-function bindDashboardFilters(){document.querySelectorAll('[data-dashboard-filter]').forEach(button=>button.addEventListener('click',()=>{const filter=button.dataset.dashboardFilter;dashboardBedFilter=dashboardBedFilter===filter?'':filter;render()}));document.getElementById('clearDashboardFilter')?.addEventListener('click',()=>{dashboardBedFilter='';render()});document.querySelectorAll('.dashboard-bed-open').forEach(button=>button.addEventListener('click',()=>{page='beds';render();const input=document.getElementById('bedSearch');if(input){input.value=button.dataset.bedId;drawBeds()}}))}
+if(page==='dashboard')html+=requestFlow()+validationPanel();if(page==='reports')html+=reportCharts();if(page==='requests')html=requestFlow()+html;document.getElementById('content').innerHTML=html+rolePanel();translateInterface(document.getElementById('content'));if(page==='beds')drawBeds();if(page==='requests'){const q=document.getElementById('requestSearch'),s=document.getElementById('requestStatus');if(q)q.value=requestSearchValue;if(s)s.value=requestStatusValue;filterRequestCards()}bindInlineActions();bindDashboardFilters();bindPortalActions();if(page==='settings'){for(const k of ['hospital','actor','reserveMin','threshold'])document.querySelector('[name="'+k+'"]').value=db.settings[k]}}
+function bindDashboardFilters() {
+  const focusKpi = filter => document.querySelector('[data-dashboard-filter="'+filter+'"]')?.focus();
+  document.querySelectorAll('[data-dashboard-filter]').forEach(button => button.addEventListener('click', () => {
+    const filter = button.dataset.dashboardFilter;
+    dashboardBedFilter = dashboardBedFilter === filter ? '' : filter;
+    render();
+    focusKpi(filter);
+  }));
+  document.getElementById('clearDashboardFilter')?.addEventListener('click', () => {
+    const filter = dashboardBedFilter;
+    dashboardBedFilter = '';
+    render();
+    focusKpi(filter);
+  });
+  document.querySelectorAll('.dashboard-bed-open').forEach(button => button.addEventListener('click', () => {
+    page = 'beds';
+    render();
+    const input = document.getElementById('bedSearch');
+    input.value = button.dataset.bedId;
+    drawBeds();
+    input.focus();
+  }));
+}
 function appendRequestEvent(r,action){if(!Array.isArray(r.timeline))r.timeline=[];r.timeline.push({time:new Date().toISOString(),action,actor:DEMO_ACCOUNTS[sessionStorage.getItem('hospital-demo-account')]?.label||'النظام'});r.timeline=r.timeline.slice(-40)}
 function acceptRequestInline(key){if(!demoCan('manageRequest'))return;const r=db.requests.find(x=>x.id===key);if(!r||!['pending','conditional'].includes(r.status))return;r.status='accepted';appendRequestEvent(r,'قبول الطلب');audit('قبول طلب استقبال',r.id);render()}
-function showRequestTimeline(key){const r=db.requests.find(x=>x.id===key);if(!r)return;const events=[{time:r.receivedAt||'',action:'إنشاء الطلب',actor:r.source},...(r.timeline||[])];document.getElementById('actionTitle').textContent='سجل الطلب '+r.id;document.getElementById('actionOptions').innerHTML=events.map(e=>'<div class="timeline-event"><b>'+esc(e.action)+'</b><small>'+esc(e.time?stamp(e.time):'غير محدد')+' · '+esc(e.actor||'')+'</small></div>').join('');const d=document.getElementById('actionDialog');document.getElementById('actionCancel').onclick=()=>d.close();d.oncancel=null;d.showModal()}
+function showRequestTimeline(key){const r=db.requests.find(x=>x.id===key);if(!r)return;const events=[{time:r.receivedAt||'',action:'إنشاء الطلب',actor:r.source},...(r.timeline||[])];document.getElementById('actionTitle').textContent=ui('سجل الطلب')+' '+r.id;document.getElementById('actionOptions').innerHTML=events.map(e=>'<div class="timeline-event"><b>'+esc(e.action)+'</b><small>'+esc(e.time?stamp(e.time):'غير محدد')+' · '+esc(e.actor||'')+'</small></div>').join('');const d=document.getElementById('actionDialog');document.getElementById('actionCancel').onclick=()=>d.close();d.oncancel=null;d.showModal()}
 function bindInlineActions(){document.querySelectorAll('.inline-ack').forEach(b=>b.addEventListener('click',()=>ackAlert(b.dataset.alertId)));document.getElementById('ackAllInline')?.addEventListener('click',ackAll);document.querySelectorAll('.inline-accept').forEach(b=>b.addEventListener('click',()=>acceptRequestInline(b.dataset.requestId)));document.querySelectorAll('.request-timeline-button').forEach(b=>b.addEventListener('click',()=>showRequestTimeline(b.dataset.requestId)))}
-function filterRequestCards(){const q=(document.getElementById('requestSearch')?.value||'').trim().toLowerCase(),s=document.getElementById('requestStatus')?.value||'';requestSearchValue=q;requestStatusValue=s;document.querySelectorAll('.request-card').forEach(e=>{const id=e.querySelector('.request-top b')?.textContent;const r=db.requests.find(x=>x.id===id);e.hidden=!!((q&&!([r?.patient,r?.id,r?.source,r?.fromHospital,r?.destinationClinic].join(' ').toLowerCase().includes(q)))||(s&&r?.status!==s))})}
-function go(k){if(k!=='requests'){requestSearchValue='';requestStatusValue=''}page=k;mobileSidebarOpen=false;applySidebar();render()}
-function drawBeds(){
- const el=document.getElementById('bedTable');if(!el)return;
- const d=document.getElementById('filterDept').value;
- const term=(document.getElementById('bedSearch')?.value||'').trim().toLowerCase(),state=document.getElementById('filterState')?.value||'';const beds=db.beds.filter(b=>(!d||b.dept===d)&&(!state||b.status===state)&&(!term||b.id.toLowerCase().includes(term)));
- const states=['ready','occupied','reserved','cleaning','maintenance'];
- const summary=states.map(s=>'<span>'+labels[s]+': <b>'+beds.filter(b=>b.status===s).length+'</b></span>').join('');
- const cards=beds.map(b=>{
-  const action=demoCan('manageBed')?'<button class="primary bed-manage-button" data-bed-id="'+attr(b.id)+'">إدارة السرير</button>':'';
-  return '<article class="bed-card" data-status="'+attr(b.status)+'"><div class="bed-card-head"><strong>'+esc(b.id)+'</strong><span class="bed-symbol" aria-hidden="true">▤</span></div><div>'+pill(b.status)+'</div><div class="bed-meta"><div><b>القسم:</b> '+esc(b.dept)+'</div><div><b>نوع الرعاية:</b> '+esc(b.type)+'</div></div><div class="bed-checks"><span>النظافة: '+(b.clean?'✓ مكتملة':'✕ غير مكتملة')+'</span><span>المعدات: '+(b.equipment?'✓ متوفرة':'✕ ناقصة')+'</span></div>'+action+'</article>';
- }).join('');
- el.innerHTML='<div class="bed-summary">'+summary+'</div><div class="bed-grid">'+cards+'</div>';
- el.querySelectorAll('.bed-manage-button').forEach(button=>button.addEventListener('click',()=>manageBed(button.dataset.bedId)));
+function filterRequestCards(){const q=(document.getElementById('requestSearch')?.value||'').trim().toLowerCase(),s=document.getElementById('requestStatus')?.value||'';requestSearchValue=q;requestStatusValue=s;document.querySelectorAll('.request-card').forEach(e=>{const id=e.querySelector('.request-top b')?.textContent;const r=db.requests.find(x=>x.id===id);e.hidden=!!((q&&!([r?.patient,r?.id,r?.source,r?.fromHospital,r?.destinationClinic].join(' ').toLowerCase().includes(q)))||(s&&r?.status!==s))});
+document.getElementById('requestEmpty')?.classList.toggle('hidden', !!document.querySelector('.request-card:not([hidden])'));
 }
+function go(k){
+  if(k!=='requests'){requestSearchValue='';requestStatusValue=''}
+  page=k;
+  mobileSidebarOpen=false;
+  applySidebar();
+  render();
+  window.scrollTo(0,0);
+  document.getElementById('content').focus({preventScroll:true});
+}
+function drawBeds() {
+  const el = document.getElementById('bedTable');
+  if (!el) return;
+  const department = document.getElementById('filterDept').value;
+  const term = document.getElementById('bedSearch').value.trim().toLowerCase();
+  const state = document.getElementById('filterState').value;
+  const beds = db.beds.filter(b => (!department || b.dept === department) &&
+    (!state || b.status === state) && (!term || b.id.toLowerCase().includes(term)));
+  const states = ['ready','occupied','reserved','cleaning','maintenance'];
+  const summary = states.map(status => '<span>'+esc(ui(labels[status]))+': <b>'+
+    beds.filter(b => b.status === status).length+'</b></span>').join('');
+  const canManage = demoCan('manageBed');
+  const cards = beds.map(b => {
+    const key = attr(b.id);
+    const checks = [
+      ui(b.clean ? 'النظافة مكتملة' : 'النظافة غير مكتملة'),
+      ui(b.equipment ? 'المعدات متوفرة' : 'المعدات ناقصة')
+    ];
+    return '<article class="bed-card" data-status="'+attr(b.status)+'">'+
+      '<div class="bed-card-head"><strong><bdi>'+esc(b.id)+'</bdi></strong>'+pill(b.status)+'</div>'+
+      '<div class="bed-meta"><bdi>'+esc(ui(b.dept))+'</bdi>'+ (ui(b.dept)===ui(b.type)?'':' · <bdi>'+esc(ui(b.type))+'</bdi>')+'</div>'+
+      '<div class="bed-checks">'+checks.map(check=>'<span>'+esc(check)+'</span>').join('')+'</div>'+
+      '<div class="bed-actions"><button type="button" class="secondary bed-detail-button" data-bed-id="'+key+
+      '" aria-label="'+attr(ui('تفاصيل السرير')+' '+b.id)+'">'+ui('التفاصيل')+'</button>'+
+      (canManage?'<button type="button" class="primary bed-manage-button" data-bed-id="'+key+
+      '" aria-label="'+attr(ui('إدارة السرير')+' '+b.id)+'">'+ui('إدارة السرير')+'</button>':'')+'</div></article>';
+  }).join('');
+  document.getElementById('bedResultCount').textContent = ui('الأسرة المعروضة')+': '+beds.length;
+  el.innerHTML = '<div class="bed-summary">'+summary+'</div>'+
+    (cards ? '<div class="bed-grid">'+cards+'</div>' :
+      '<div class="notice">'+ui('لا توجد أسرة تطابق الفلاتر الحالية')+
+      ' <button type="button" class="secondary" id="clearBedFilters">'+ui('إعادة ضبط الفلاتر')+'</button></div>');
+  document.getElementById('clearBedFilters')?.addEventListener('click', () => {
+    for (const id of ['bedSearch','filterDept','filterState']) document.getElementById(id).value = '';
+    drawBeds();
+    document.getElementById('bedSearch').focus();
+  });
+  el.querySelectorAll('.bed-detail-button').forEach(button =>
+    button.addEventListener('click', () => showBedDetails(button)));
+  el.querySelectorAll('.bed-manage-button').forEach(button =>
+    button.addEventListener('click', () => manageBed(button.dataset.bedId)));
+}
+function showBedDetails(button) {
+  const bed = db.beds.find(b => b.id === button.dataset.bedId);
+  if (!bed) return;
+  const dialog = document.getElementById('bedDetails');
+  const card = button.closest('.bed-card');
+  document.getElementById('bedDetailsTitle').textContent = ui('تفاصيل السرير')+' '+bed.id;
+  document.getElementById('bedDetailsFields').innerHTML = [
+    ['القسم',bed.dept], ['نوع الرعاية',bed.type], ['الحالة',labels[bed.status]],
+    ['النظافة',bed.clean?'مكتمل':'غير مكتمل'], ['المعدات',bed.equipment?'متوفرة':'ناقصة']
+  ].map(([label,value])=>'<dt>'+esc(ui(label))+'</dt><dd><bdi>'+esc(ui(value))+'</bdi></dd>').join('');
+  card.classList.add('is-selected');
+  dialog.addEventListener('close', () => {
+    card.classList.remove('is-selected');
+    button.focus();
+  }, {once:true});
+  dialog.showModal();
+}
+
 function addBed(){if(!demoCan('addBed'))return alert('هذا الإجراء غير متاح للدور التوضيحي الحالي: '+demoRoles[demoRole].name);showForm('إضافة سرير',field('رقم السرير','id')+field('القسم','dept')+field('نوع الرعاية','type','select',[['تنويم','تنويم'],['عناية مركزة','عناية مركزة'],['ملاحظة','ملاحظة'],['أطفال','أطفال'],['عزل','عزل']]),v=>{if(db.beds.some(b=>b.id===v.id))return alert('رقم السرير موجود'),false;db.beds.push({id:v.id,dept:v.dept,type:v.type,status:'cleaning',clean:false,equipment:true});audit('إضافة سرير',v.id)})}
-async function manageBed(key){if(!demoCan('manageBed'))return alert('هذا الإجراء غير متاح للدور التوضيحي الحالي: '+demoRoles[demoRole].name);let b=db.beds.find(x=>x.id===key);if(!b)return;let options=b.status==='ready'?['إخراج للصيانة','إلغاء الجاهزية للتنظيف']:b.status==='occupied'?['تأكيد خروج المريض وبدء التنظيف']:b.status==='reserved'?['إلغاء الحجز بعد التحقق']:b.status==='cleaning'?['إنهاء التنظيف','إخراج للصيانة']:['إنهاء الصيانة (بانتظار التنظيف)'];let originalStatus=b.status;let a=await chooseAction('إدارة السرير '+b.id+' — '+labels[b.status],options);if(!a)return;if(b.status!==originalStatus)return alert('تغيرت حالة السرير أثناء اختيار الإجراء');
-if(a.includes('خروج')){let linked=db.requests.filter(r=>r.bed===b.id&&r.status==='arrived');if(linked.length!==1)return alert('السرير مشغول لكن لا يوجد طلب وصول واحد مطابق له؛ راجع البيانات');let r=linked[0];if(!confirm('هل تؤكد الخروج الفعلي للمريض وبدء تنظيف السرير؟'))return;if(r){r.status='closed';r.bed='';appendPortalRequestEvent(r,'خروج المريض من إدارة الأسرة')}b.status='cleaning';b.clean=false;createDepartmentTask('cleaning',b.id,'خروج مريض — إدارة الأسرة')}
-else if(a.includes('إلغاء الحجز')){if(!confirm('هل تأكدت من عدم وصول المريض وعدم وجود نقل جارٍ؟'))return;let linked=db.requests.filter(r=>r.bed===b.id&&r.status==='reserved');if(linked.length!==1)return alert('السرير محجوز لكن لا يوجد طلب حجز واحد مطابق له');let r=linked[0];if(r){r.bed='';r.status='accepted'}b.status=b.clean&&b.equipment?'ready':'cleaning'}
+async function manageBed(key){if(!demoCan('manageBed'))return alert('هذا الإجراء غير متاح للدور التوضيحي الحالي: '+demoRoles[demoRole].name);let b=db.beds.find(x=>x.id===key);if(!b)return;let options=b.status==='ready'?['إخراج للصيانة','إلغاء الجاهزية للتنظيف']:b.status==='occupied'?['تأكيد خروج المريض وبدء التنظيف']:b.status==='reserved'?['إلغاء الحجز بعد التحقق']:b.status==='cleaning'?['إنهاء التنظيف','إخراج للصيانة']:['إنهاء الصيانة (بانتظار التنظيف)'];let originalStatus=b.status;let a=await chooseAction(ui('إدارة السرير')+' '+b.id+' — '+ui(labels[b.status]),options);if(!a)return;if(b.status!==originalStatus)return alert('تغيرت حالة السرير أثناء اختيار الإجراء');
+if(a.includes('خروج')){let linked=db.requests.filter(r=>r.bed===b.id&&r.status==='arrived');if(linked.length!==1)return alert('السرير مشغول لكن لا يوجد طلب وصول واحد مطابق له؛ راجع البيانات');let r=linked[0];if(!confirm(ui('هل تؤكد الخروج الفعلي للمريض وبدء تنظيف السرير؟')))return;if(r){r.status='closed';r.bed='';appendPortalRequestEvent(r,'خروج المريض من إدارة الأسرة')}b.status='cleaning';b.clean=false;createDepartmentTask('cleaning',b.id,'خروج مريض — إدارة الأسرة')}
+else if(a.includes('إلغاء الحجز')){if(!confirm(ui('هل تأكدت من عدم وصول المريض وعدم وجود نقل جارٍ؟')))return;let linked=db.requests.filter(r=>r.bed===b.id&&r.status==='reserved');if(linked.length!==1)return alert('السرير محجوز لكن لا يوجد طلب حجز واحد مطابق له');let r=linked[0];if(r){r.bed='';r.status='accepted'}b.status=b.clean&&b.equipment?'ready':'cleaning'}
 else if(a.includes('إنهاء التنظيف')){finishCleaning(b.id);return}
 else if(a.includes('إنهاء الصيانة')){b.status='cleaning';b.clean=false;b.equipment=true;portalTaskList().filter(t=>t.bed===b.id&&t.kind==='maintenance'&&t.status!=='done').forEach(t=>{t.status='done';t.updatedAt=new Date().toISOString()});createDepartmentTask('cleaning',b.id,'تنظيف بعد الصيانة')}
 else if(a==='إخراج للصيانة'){b.status='maintenance';b.equipment=false;createDepartmentTask('maintenance',b.id,'بلاغ صيانة من إدارة الأسرة');notify('خرج السرير '+b.id+' من الخدمة','warning')}
 else{b.status='cleaning';b.clean=false}
 audit('تغيير حالة سرير',b.id+' ← '+labels[b.status]);render()}
-function finishCleaning(key){if(!demoCan('finishCleaning'))return alert('هذا الإجراء غير متاح للدور التوضيحي الحالي: '+demoRoles[demoRole].name);let b=db.beds.find(x=>x.id===key);if(!b||b.status!=='cleaning')return alert('السرير ليس في حالة انتظار التنظيف');if(!confirm('هل اكتملت أعمال التنظيف فعلياً في هذه المحاكاة؟'))return;b.clean=true;portalTaskList().filter(t=>t.bed===key&&t.kind==='cleaning'&&t.status!=='done').forEach(t=>{t.status='done';t.updatedAt=new Date().toISOString()});audit('اكتمال تنظيف','السرير '+key);notify('اكتمل تنظيف '+key+' وينتظر اعتماد الجاهزية','warning');render()}
-function approveBed(key){if(!demoCan('approveBed'))return alert('هذا الإجراء غير متاح للدور التوضيحي الحالي: '+demoRoles[demoRole].name);let b=db.beds.find(x=>x.id===key);if(!b||b.status!=='cleaning'||!b.clean||!b.equipment)return alert('لا يمكن الاعتماد: يجب اكتمال التنظيف وتوفر التجهيزات وعدم وجود إشغال أو صيانة');if(!confirm('هل تعتمد جاهزية السرير التشغيلية بعد التحقق؟'))return;b.status='ready';audit('اعتماد جاهزية سرير',key);render()}
+function finishCleaning(key){if(!demoCan('finishCleaning'))return alert('هذا الإجراء غير متاح للدور التوضيحي الحالي: '+demoRoles[demoRole].name);let b=db.beds.find(x=>x.id===key);if(!b||b.status!=='cleaning')return alert('السرير ليس في حالة انتظار التنظيف');if(!confirm(ui('هل اكتملت أعمال التنظيف فعلياً في هذه المحاكاة؟')))return;b.clean=true;portalTaskList().filter(t=>t.bed===key&&t.kind==='cleaning'&&t.status!=='done').forEach(t=>{t.status='done';t.updatedAt=new Date().toISOString()});audit('اكتمال تنظيف','السرير '+key);notify('اكتمل تنظيف '+key+' وينتظر اعتماد الجاهزية','warning');render()}
+function approveBed(key){if(!demoCan('approveBed'))return alert('هذا الإجراء غير متاح للدور التوضيحي الحالي: '+demoRoles[demoRole].name);let b=db.beds.find(x=>x.id===key);if(!b||b.status!=='cleaning'||!b.clean||!b.equipment)return alert('لا يمكن الاعتماد: يجب اكتمال التنظيف وتوفر التجهيزات وعدم وجود إشغال أو صيانة');if(!confirm(ui('هل تعتمد جاهزية السرير التشغيلية بعد التحقق؟')))return;b.status='ready';audit('اعتماد جاهزية سرير',key);render()}
 
 async function simulateRedCrescent(){if(!demoCan('addRequest'))return alert('الإجراء غير متاح لهذا الدور');const reasons=['حادث مروري','إصابة أو سقوط','حالة قلبية','صعوبة تنفس','فقدان وعي','حالة طبية أخرى'];const reason=await chooseAction('نوع البلاغ الوارد من الهلال الأحمر',reasons);if(!reason)return;const details=prompt('تفاصيل إضافية (اختياري)')||'';const serial=db.requests.filter(r=>r.source==='الهلال الأحمر السعودي').length+1;const care=['حالة قلبية','فقدان وعي'].includes(reason)?'عناية مركزة':'ملاحظة';const r={id:'SRC-'+id().slice(0,9),patient:'حالة إسعافية '+serial,identity:'9'+String(Date.now()).slice(-9),source:'الهلال الأحمر السعودي',caseReason:reason+(details.trim()?' — '+details.trim().slice(0,120):''),destinationClinic:care==='عناية مركزة'?'العناية المركزة':'قسم الطوارئ',care,priority:care==='عناية مركزة'?'حرج':'عاجل',status:'pending',bed:'',receivedAt:new Date().toISOString()};db.requests.unshift(r);audit('استقبال بلاغ الهلال الأحمر',r.id+' — '+reason);notify('بلاغ جديد من الهلال الأحمر: '+reason,r.priority==='حرج'?'critical':'warning');page='requests';render()}
 function addRequest(){if(!demoCan('addRequest'))return alert('الإجراء غير متاح لهذا الدور');showForm('طلب استقبال مريض',field('اسم المريض','patient')+field('رقم الهوية (10 أرقام)','identity')+field('مصدر الطلب','source','select',[['الطوارئ','الطوارئ'],['قسم داخلي','قسم داخلي'],['مستشفى آخر','مستشفى آخر'],['الهلال الأحمر السعودي','الهلال الأحمر السعودي']])+field('اسم المستشفى المُحوِّل','fromHospital','text',[],false)+field('العيادة أو القسم المحوّل إليه','destinationClinic','text',[],false)+field('سبب الحالة أو البلاغ','caseReason','text',[],false)+field('وقت الوصول المتوقع','eta','datetime-local',[],false)+field('نوع الرعاية','care','select',[['تنويم','تنويم'],['عناية مركزة','عناية مركزة'],['ملاحظة','ملاحظة'],['أطفال','أطفال'],['عزل','عزل']])+field('الأولوية','priority','select',[['عادي','عادي'],['عاجل','عاجل'],['حرج','حرج']]),v=>{if(!/^[0-9]{10}$/.test(v.identity))return alert('أدخل 10 أرقام للهوية'),false;if(db.requests.some(r=>r.identity===v.identity&&!['closed','rejected'].includes(r.status)))return alert('يوجد طلب نشط لنفس الهوية'),false;if(v.source==='مستشفى آخر'&&(!v.fromHospital.trim()||!v.destinationClinic.trim()))return alert('أدخل المستشفى المُحوِّل والعيادة المستقبلة'),false;if(v.source==='الهلال الأحمر السعودي'&&!v.caseReason.trim())return alert('أدخل سبب الحالة'),false;let r={id:'REQ-'+id().slice(0,9),...v,status:'pending',bed:'',receivedAt:new Date().toISOString(),timeline:[]};db.requests.unshift(r);audit('إنشاء طلب استقبال',r.id);notify('طلب استقبال جديد '+r.id,v.priority==='حرج'?'critical':'warning')})}
@@ -469,5 +1219,5 @@ function prepareUniversityDemo(){
 }
 function resetDemo(){if(!demoCan('resetDemo'))return alert('هذا الإجراء مخصص لدور مدير الأسرة في المحاكاة');if(!confirm('حذف كل تغييرات التجربة وإعادة البيانات الافتراضية؟'))return;db=freshDemoData();seedPortalTasks();db.settings.hospital='مستشفى حايل العام';audit('إعادة ضبط بيانات العرض','استعادة البيانات الأساسية والمرضى التجريبيين');render()}
 function saveSettings(){if(!demoCan('saveSettings'))return alert('هذا الإجراء غير متاح للدور التوضيحي الحالي: '+demoRoles[demoRole].name);let v={};for(const k of ['hospital','actor','reserveMin','threshold'])v[k]=document.querySelector('[name="'+k+'"]').value;if(!v.hospital.trim()||!v.actor.trim())return alert('الاسم والدور مطلوبان');let reserve=Number(v.reserveMin),threshold=Number(v.threshold);if(!Number.isInteger(reserve)||reserve<0||reserve>100||!Number.isInteger(threshold)||threshold<1||threshold>100)return alert('راجع قيم الحدود');db.settings={hospital:v.hospital,actor:v.actor,reserveMin:reserve,threshold};audit('تغيير إعدادات توضيحية',v.hospital);render()}
-seedPortalTasks();applyTheme();applySidebar();updateAuth();render();setInterval(updateHero,30000);
+seedPortalTasks();applyLanguage();applyTheme();applySidebar();updateAuth();render();setInterval(updateHero,30000);
 </script></body></html>
