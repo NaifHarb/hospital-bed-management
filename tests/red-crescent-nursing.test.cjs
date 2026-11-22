@@ -16,7 +16,7 @@ function setup(fixture){
  const context=createContext({structuredClone,localStorage,sessionStorage,alert:m=>alerts.push(m),confirm:()=>true,document:{addEventListener(){},getElementById:()=>({addEventListener(){}})},window:{matchMedia:()=>({addEventListener(){}})},fixture});
  const run=s=>runInContext(s,context);
  run(script.slice(0,startup));
- run('db=fixture;render=()=>{};persist();');
+ run('db=fixture;render=()=>persist();persist();');
  return {run,alerts,read:()=>JSON.parse(localStorage.getItem('hospital-bed-ipad-v2'))};
 }
 function bed(id,status='ready',type='ملاحظة'){return {id,dept:'الطوارئ',type,status,clean:status==='ready',equipment:true}}
