@@ -1027,7 +1027,7 @@ const LOGIN_GROUPS={admin:['admin'],tech:['tech'],nursing:Object.keys(DEMO_ACCOU
 // Group the nursing login choices by clinical department; keep existing account permissions.
 function populateNursingLoginGroups(){
  const group=document.getElementById('loginGroup');
- if(!group||group.querySelector('[value^="nursing:"]'))return;
+ if(!group||typeof group.querySelector!=='function'||group.querySelector('[value^="nursing:"]'))return;
  const nursingOption=group.querySelector('[value="nursing"]');
  if(nursingOption)nursingOption.remove();
  const nursingAccounts=Object.keys(DEMO_ACCOUNTS).filter(key=>DEMO_ACCOUNTS[key].role==='nurse');
