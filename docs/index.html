@@ -596,8 +596,29 @@ function expandHospitalDemo(target){
  }
  return target;
 }
-function freshDemoData(){return repairOccupiedDemoLinks(expandHospitalDemo(seedOccupiedExamples(addDemoPatients(structuredClone(initial)))))}
-db=expandHospitalDemo(db);repairOccupiedDemoLinks(db);localStorage.setItem(KEY,JSON.stringify(db));
+function ensureFortyDemoBeds(target){
+ // Non-destructive, repeatable seed expansion: existing user beds and requests remain intact.
+ const groups=[
+  ['ICU','العناية المركزة','عناية مركزة',15],
+  ['MED','التنويم','تنويم',110],
+  ['ER','الطوارئ','ملاحظة',30],
+  ['PED','الأطفال','أطفال',40],
+  ['SUR','الجراحة','تنويم',210],
+  ['ISO','العزل','عزل',310]
+ ];
+ for(let i=0;target.beds.length<40&&i<500;i++){
+  const [prefix,dept,type,start]=groups[i%groups.length];
+  const id=prefix+'-'+String(start+Math.floor(i/groups.length)).padStart(3,'0');
+  if(target.beds.some(b=>b.id===id))continue;
+  // Keep seeded additional beds ready; request lifecycle tests can move them to other states.
+  const status='ready';
+  target.beds.push({id,dept,type,status,clean:true,equipment:true});
+ }
+ target.sampleBeds40V1=true;
+ return target;
+}
+function freshDemoData(){return ensureFortyDemoBeds(repairOccupiedDemoLinks(expandHospitalDemo(seedOccupiedExamples(addDemoPatients(structuredClone(initial))))))}
+db=expandHospitalDemo(db);repairOccupiedDemoLinks(db);ensureFortyDemoBeds(db);localStorage.setItem(KEY,JSON.stringify(db));
 let page='dashboard';let nursingDeptFilter='';let dashboardBedFilter='';let requestSearchValue='';let requestStatusValue='';
 
 const LANGUAGE_KEY = 'hospital-bed-language';
