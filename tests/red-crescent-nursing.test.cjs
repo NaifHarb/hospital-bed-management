@@ -54,3 +54,55 @@ test('nursing filters and Red Crescent styling are present',()=>{
  assert.match(html,/request-red-crescent/);
  assert.match(html,/isRedCrescent\(r\)/);
 });
+
+test('competing Red Crescent requests cannot occupy the same bed', () => {
+ const first = request('SRC-1');
+ const second = request('SRC-2');
+ const s = setup({beds:[bed('ER-1')], requests:[first, second], alerts:[], logs:[]});
+ s.run("acceptRequestInline('SRC-1')");
+ const afterFirst = s.read();
+ s.run("acceptRequestInline('SRC-2')");
+ assert.deepEqual(s.read(), afterFirst);
+ assert.equal(afterFirst.requests[1].status, 'pending');
+ assert.match(s.alerts[0], /لا يوجد سرير/);
+});
+
+test('rejection and authorization leave occupancy intact', () => {
+ const s = setup({beds:[bed('ER-1')], requests:[request('SRC-1')], alerts:[], logs:[]});
+ const before = s.read();
+ s.run("sessionStorage.setItem('hospital-demo-account','nurse_icu'); acceptRequestInline('SRC-1'); rejectRequest('SRC-1')");
+ assert.deepEqual(s.read(), before);
+ s.run("sessionStorage.setItem('hospital-demo-account','coord'); rejectRequest('SRC-1'); acceptRequestInline('SRC-1')");
+ const result = s.read();
+ assert.equal(result.requests[0].status, 'rejected');
+ assert.equal(result.requests[0].timeline.length, 1);
+ assert.deepEqual(result.beds, before.beds);
+});
+
+test('nursing view only shows eligible actions and tasks in the selected department', () => {
+ const beds = [
+  {...bed('ER-1','cleaning'), dept:'الطوارئ'},
+  {...bed('ER-2','maintenance'), dept:'الطوارئ'},
+  {...bed('ICU-1','reserved'), dept:'العناية المركزة'}
+ ];
+ const tasks = [
+  {bed:'ER-1',kind:'cleaning',status:'pending'},
+  {bed:'ER-2',kind:'maintenance',status:'working'},
+  {bed:'ICU-1',kind:'maintenance',status:'done'}
+ ];
+ const s = setup({beds, requests:[{...request('REQ-1'),bed:'ICU-1',status:'reserved'}], departmentTasks:tasks, alerts:[], logs:[]});
+ const station = s.run("nursingDeptFilter='الطوارئ'; nursingPage()");
+ assert.match(station, /ER-1/);
+ assert.match(station, /بانتظار الاستلام/);
+ assert.match(station, /قيد التنفيذ <b>1/);
+ assert.doesNotMatch(station, /ICU-1|data-portal-action="arrival"/);
+ const nurse = s.run("sessionStorage.setItem('hospital-demo-account','nurse_icu'); nursingPage()");
+ assert.match(nurse, /ICU-1/);
+ assert.match(nurse, /data-portal-action="arrival"/);
+ assert.doesNotMatch(nurse, /ER-1|ER-2/);
+ s.run("arrivalFromNursing('ICU-1'); dischargeFromNursing('ICU-1')");
+ const result = s.read();
+ assert.equal(result.beds[2].status, 'cleaning');
+ assert.equal(result.requests[0].status, 'closed');
+ assert.equal(result.departmentTasks.find(t=>t.bed==='ICU-1'&&t.kind==='cleaning').status, 'pending');
+});
