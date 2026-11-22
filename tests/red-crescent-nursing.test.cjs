@@ -10,7 +10,7 @@ assert.ok(startup>0);
 function storage(){const m=new Map();return {getItem:k=>m.get(k)||null,setItem:(k,v)=>m.set(k,String(v))}}
 function setup(fixture){
  const localStorage=storage(),sessionStorage=storage();
- sessionStorage.setItem('hospital-demo-account','manager');
+ sessionStorage.setItem('hospital-demo-account','admin');
  sessionStorage.setItem('hospital-bed-view-session','yes');
  const alerts=[];
  const context=createContext({structuredClone,localStorage,sessionStorage,alert:m=>alerts.push(m),confirm:()=>true,document:{addEventListener(){},getElementById:()=>({addEventListener(){}})},window:{matchMedia:()=>({addEventListener(){}})},fixture});
