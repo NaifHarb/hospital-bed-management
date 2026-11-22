@@ -255,7 +255,10 @@ def backup(p, browser):
         for reopen in [False, True]:
             with playwright.chromium.launch_persistent_context(profile, **launch) as ctx:
                 q = open_page(ctx)
-                login(q)
+                # Chromium can restore the tab and its sessionStorage with the profile.
+                if q.locator("#loginScreen").is_visible():
+                    login(q)
+                expect(q.locator("#appShell")).to_be_visible()
                 nav(q, "settings")
                 if not reopen:
                     nav(q, "requests")
