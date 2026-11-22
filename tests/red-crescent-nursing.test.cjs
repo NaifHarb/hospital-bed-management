@@ -145,3 +145,16 @@ test('fresh university demo contains forty beds across multiple departments',()=
  assert.equal(data.beds.length,40);
  assert.ok(new Set(data.beds.map(b=>b.dept)).size>=6);
 });
+
+test('report KPIs navigate to bed status and requests',()=>{
+ assert.match(html,/data-report-target/);
+ assert.match(html,/function openReportKpi\(/);
+ assert.match(html,/reportStat\('قيد التنظيف'/);
+ assert.match(html,/reportStat\('طلبات مفتوحة'/);
+});
+test('nursing login departments are dynamically grouped without nursing prefix',()=>{
+ assert.match(html,/function populateNursingLoginGroups\(/);
+ assert.match(html,/LOGIN_GROUPS\[value\]=nursingAccounts.filter/);
+ assert.match(html,/label.replace\(\/\^تمريض/);
+ assert.match(html,/القسم المراد \/ المستخدم/);
+});
