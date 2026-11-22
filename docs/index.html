@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#102b49"><title>إدارة الأسرة والطاقة الاستيعابية | Hospital Capacity</title>
 <style>
-:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#172c45;background:#f3f6fb}*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}header{background:#102b49;color:#fff;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}header strong{font-size:19px}header small{display:block;color:#c3d4e5;margin-top:5px}.tag{background:#285477;color:white;border-radius:30px;padding:7px 12px;font-size:12px}.shell{max-width:1350px;margin:auto;padding:18px}.nav{display:flex;gap:7px;overflow:auto;padding-bottom:14px}.nav button{border:1px solid #dce5ee;border-radius:11px;padding:11px 13px;white-space:nowrap;background:white;color:#28425e}.nav button.active{background:#176b91;color:white;border-color:#176b91}.panel{background:white;border:1px solid #e2eaf2;border-radius:16px;padding:18px;margin-bottom:15px;box-shadow:0 5px 20px #12345608}.panel h2{font-size:18px;margin:0 0 15px}.muted{color:#64748b;font-size:13px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.stat b{font-size:29px;display:block;margin:12px 0}.stat small{color:#66798c}.toolbar{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-bottom:13px}input,select,textarea{border:1px solid #cbd7e5;border-radius:10px;padding:10px;background:white;min-width:0;max-width:100%}button.primary{background:#116c93;color:white;border:0;border-radius:10px;padding:10px 14px}button.secondary{background:#edf5f9;color:#115676;border:0;border-radius:10px;padding:10px 13px}button.danger{background:#fff0f0;color:#a92d2d;border:0;border-radius:10px;padding:10px 13px}table{width:100%;border-collapse:collapse;min-width:710px}th,td{text-align:right;padding:11px;border-bottom:1px solid #edf1f6;font-size:13px}th{color:#61758b;background:#f8fafc}.scroll{overflow:auto}.pill{display:inline-block;padding:5px 9px;border-radius:30px;font-size:12px;background:#e9eef5;color:#345}.ready,.approved,.resolved{background:#e3f7ec;color:#16784c}.occupied{background:#e8eefb;color:#315ba3}.reserved,.pending,.warning{background:#fff3d8;color:#966008}.cleaning,.conditional{background:#f0e8fb;color:#7851a2}.maintenance,.critical,.rejected{background:#ffe7e7;color:#a33}.notice{padding:12px 14px;background:#eef7fb;border-radius:11px;color:#23546d;font-size:13px;line-height:1.9;margin:0 0 15px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.card{border:1px solid #e1e9f1;border-radius:14px;padding:15px}.card h3{font-size:15px;margin:0 0 8px}.card p{color:#66788c;font-size:13px;line-height:1.8}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.formgrid label{display:grid;gap:6px;font-size:13px;color:#50657a}.formgrid label.wide{grid-column:1/-1}.formgrid input,.formgrid select,.formgrid textarea{width:100%}dialog{border:0;border-radius:17px;padding:22px;max-width:560px;width:calc(100% - 24px);box-shadow:0 25px 70px #0004;max-height:88vh;overflow:auto}dialog::backdrop{background:#12243d88}.form{display:grid;gap:15px}.footer{color:#8291a2;font-size:12px;text-align:center;padding:20px}.tiny{font-size:11px;color:#64748b}.divider{border:0;border-top:1px solid #e6edf4;margin:16px 0}.statusbar{background:#fff8e7;color:#855c16;padding:10px 18px;font-size:12px}.stack{display:grid;gap:8px}.stack .item{padding:10px 12px;border:1px solid #e8edf3;border-radius:10px}.chartline{background:#edf2f7;border-radius:12px;height:10px;overflow:hidden}.chartline>div{height:100%;background:#19769b}.actions{display:flex;flex-wrap:wrap;gap:5px}.actions button{font-size:12px;padding:7px 9px}.heading{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.hidden{display:none!important}@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr 1fr}.shell{padding:12px}}@media(max-width:550px){.cards,.formgrid{grid-template-columns:1fr}.formgrid label.wide{grid-column:auto}header strong{font-size:15px}.panel{padding:13px}.grid{gap:8px}.stat b{font-size:25px}}
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#172c45;background:#f3f6fb}*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}header{background:#102b49;color:#fff;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}header strong{font-size:19px}header small{display:block;color:#c3d4e5;margin-top:5px}.tag{background:#285477;color:white;border-radius:30px;padding:7px 12px;font-size:12px}.shell{max-width:1350px;margin:auto;padding:18px}.nav{display:flex;gap:7px;overflow:auto;padding-bottom:14px}.nav button{border:1px solid #dce5ee;border-radius:11px;padding:11px 13px;white-space:nowrap;background:white;color:#28425e}.nav button.active{background:#176b91;color:white;border-color:#176b91}.panel{background:white;border:1px solid #e2eaf2;border-radius:16px;padding:18px;margin-bottom:15px;box-shadow:0 5px 20px #12345608}.panel h2{font-size:18px;margin:0 0 15px}.muted{color:#64748b;font-size:13px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.toolbar{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-bottom:13px}input,select,textarea{border:1px solid #cbd7e5;border-radius:10px;padding:10px;background:white;min-width:0;max-width:100%}button.primary{background:#116c93;color:white;border:0;border-radius:10px;padding:10px 14px}button.secondary{background:#edf5f9;color:#115676;border:0;border-radius:10px;padding:10px 13px}button.danger{background:#fff0f0;color:#a92d2d;border:0;border-radius:10px;padding:10px 13px}table{width:100%;border-collapse:collapse;min-width:710px}th,td{text-align:right;padding:11px;border-bottom:1px solid #edf1f6;font-size:13px}th{color:#61758b;background:#f8fafc}.scroll{overflow:auto}.pill{display:inline-block;padding:5px 9px;border-radius:30px;font-size:12px;background:#e9eef5;color:#345}.ready,.approved,.resolved{background:#e3f7ec;color:#16784c}.occupied{background:#e8eefb;color:#315ba3}.reserved,.pending,.warning{background:#fff3d8;color:#966008}.cleaning,.conditional{background:#f0e8fb;color:#7851a2}.maintenance,.critical,.rejected{background:#ffe7e7;color:#a33}.notice{padding:12px 14px;background:#eef7fb;border-radius:11px;color:#23546d;font-size:13px;line-height:1.9;margin:0 0 15px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.card{border:1px solid #e1e9f1;border-radius:14px;padding:15px}.card h3{font-size:15px;margin:0 0 8px}.card p{color:#66788c;font-size:13px;line-height:1.8}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.formgrid label{display:grid;gap:6px;font-size:13px;color:#50657a}.formgrid label.wide{grid-column:1/-1}.formgrid input,.formgrid select,.formgrid textarea{width:100%}dialog{border:0;border-radius:17px;padding:22px;max-width:560px;width:calc(100% - 24px);box-shadow:0 25px 70px #0004;max-height:88vh;overflow:auto}dialog::backdrop{background:#12243d88}.form{display:grid;gap:15px}.footer{color:#8291a2;font-size:12px;text-align:center;padding:20px}.tiny{font-size:11px;color:#64748b}.divider{border:0;border-top:1px solid #e6edf4;margin:16px 0}.statusbar{background:#fff8e7;color:#855c16;padding:10px 18px;font-size:12px}.stack{display:grid;gap:8px}.stack .item{padding:10px 12px;border:1px solid #e8edf3;border-radius:10px}.chartline{background:#edf2f7;border-radius:12px;height:10px;overflow:hidden}.chartline>div{height:100%;background:#19769b}.actions{display:flex;flex-wrap:wrap;gap:5px}.actions button{font-size:12px;padding:7px 9px}.heading{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.hidden{display:none!important}@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr 1fr}.shell{padding:12px}}@media(max-width:550px){.cards,.formgrid{grid-template-columns:1fr}.formgrid label.wide{grid-column:auto}header strong{font-size:15px}.panel{padding:13px}.grid{gap:8px}}
 .login-screen{min-height:100vh;display:grid;place-items:center;padding:20px;background:linear-gradient(135deg,#0c2b49,#176b91)}.login-card{width:min(440px,100%);background:white;border-radius:22px;padding:30px;box-shadow:0 22px 70px #061a3055}.login-card h1{font-size:24px;margin:12px 0 5px}.login-card p{color:#64748b;line-height:1.7}.login-card label{display:grid;gap:7px;margin:15px 0;color:#415a71;font-size:14px}.login-card input{width:100%}.login-card button{width:100%;padding:13px}.login-icon{font-size:38px}.login-error{color:#b42318;font-size:13px;min-height:20px}.security-hint{background:#fff6e7;color:#795419;padding:11px;border-radius:10px;font-size:12px;line-height:1.7;margin-top:16px}.home-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:20px}.home-tile{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:10px;min-height:132px;background:white;border:1px solid #dfe8f1;border-radius:18px;padding:20px;text-align:right;color:#193651;box-shadow:0 5px 18px #1639560a;transition:transform .15s,box-shadow .15s}.home-tile:active{transform:scale(.98)}.home-tile .tile-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:#eaf4f9;font-size:25px}.home-tile strong{font-size:17px}.home-tile small{color:#697f94;font-size:12px}.section-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 16px}.section-bar h1{font-size:21px;margin:0}.home-intro{margin:4px 0 17px}.home-intro h1{font-size:23px;margin:0 0 6px}.home-intro p{color:#65798d;margin:0;font-size:13px}@media(max-width:850px){.home-nav{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:420px){.home-nav{grid-template-columns:1fr}.home-tile{min-height:94px;flex-direction:row;align-items:center;justify-content:flex-start}.home-tile small{display:none}}/* Hail General Hospital — calm blue grid design */
 :root{background:#eaf5fc;color:#16395a}
 body{background:linear-gradient(180deg,#e2f3fd 0%,#f2f8fc 55%,#eaf5fc 100%)}
@@ -25,14 +25,14 @@ header .header-actions button:hover{background:#ffffff2d}
 .home-tile:after{content:"‹";position:absolute;left:22px;bottom:20px;width:32px;height:32px;border:1px solid #a7c7dc;background:#f7fcff;border-radius:50%;display:grid;place-items:center;color:#215b88;font-size:28px;line-height:1}
 .home-tile:nth-child(3n+1){border-bottom:4px solid #278cc7}.home-tile:nth-child(3n+2){border-bottom:4px solid #22a6bd}.home-tile:nth-child(3n){border-bottom:4px solid #617fc9}
 .panel{border:1px solid #d4e5f1;border-radius:21px;box-shadow:0 7px 20px #225c8212}
-.grid .panel.stat{min-height:145px;background:linear-gradient(140deg,#fff,#f0f9ff);border-color:#c8e2f2;box-shadow:0 5px 14px #23577a18}
-.stat b{color:#123d67;font-size:35px}.stat small{color:#55728a}
-.grid .stat:nth-child(2){background:linear-gradient(140deg,#fff,#eafaf6)}.grid .stat:nth-child(3){background:linear-gradient(140deg,#fff,#edf4ff)}.grid .stat:nth-child(4){background:linear-gradient(140deg,#fff,#fff7e9)}
+
+
+
 .section-bar{background:white;border:1px solid #d9e9f4;border-radius:15px;padding:14px 18px}
 button.primary{background:#146b9d}button.secondary{background:#e7f3fa;color:#15547d}
 .login-screen{background:linear-gradient(130deg,#0b2b51,#287db1)}
 @media(max-width:900px){.home-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.home-tile{min-height:190px}header{min-height:135px}}
-@media(max-width:560px){header{padding:20px 14px;min-height:125px}header:after{display:none}header strong{font-size:18px}header small{font-size:12px}.home-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.home-tile{min-height:165px;padding:14px;border-radius:16px;gap:8px}.home-tile .tile-icon{width:49px;height:49px;font-size:25px;border-radius:13px}.home-tile strong{font-size:16px}.home-tile small{font-size:11px}.home-tile:after{width:23px;height:23px;left:10px;bottom:10px;font-size:21px}.grid .panel.stat{min-height:125px}.stat b{font-size:28px}}
+@media(max-width:560px){header{padding:20px 14px;min-height:125px}header:after{display:none}header strong{font-size:18px}header small{font-size:12px}.home-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.home-tile{min-height:165px;padding:14px;border-radius:16px;gap:8px}.home-tile .tile-icon{width:49px;height:49px;font-size:25px;border-radius:13px}.home-tile strong{font-size:16px}.home-tile small{font-size:11px}.home-tile:after{width:23px;height:23px;left:10px;bottom:10px;font-size:21px}}
 
 /* Compact section navigation + visual bed grid */
 .nav{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:7px;margin-bottom:17px;padding:5px 1px 12px;scrollbar-width:thin}
@@ -110,10 +110,10 @@ header.hospital-hero small{display:block;font-size:clamp(14px,1.7vw,24px);color:
 .workspace.sidebar-collapsed{--side-width:70px}.sidebar-collapsed .side-brand,.sidebar-collapsed .nav-label,.sidebar-collapsed .nav-dot{display:none}.sidebar-collapsed .side-panel{padding-inline:7px}.sidebar-collapsed .side-panel .nav button{justify-content:center;padding:12px 5px}.sidebar-collapsed .side-head{justify-content:center;padding-inline:0}.mobile-toolbar{display:none}
 html[data-theme="dark"]{color-scheme:dark;background:#081726;color:#e9f4ff}
 html[data-theme="dark"] body{background:linear-gradient(180deg,#0a192a,#0e2337 60%,#081726);color:#e9f4ff}
-html[data-theme="dark"] .panel,html[data-theme="dark"] .section-bar,html[data-theme="dark"] .bed-card,html[data-theme="dark"] .login-card,html[data-theme="dark"] dialog{background:#132c44!important;border-color:#2b4b65!important;color:#e9f4ff!important;box-shadow:0 5px 18px #0003}
-html[data-theme="dark"] .grid .panel.stat{background:linear-gradient(140deg,#183b56,#112b43)!important}
-html[data-theme="dark"] .stat b,html[data-theme="dark"] .bed-card-head strong,html[data-theme="dark"] .home-intro h1,html[data-theme="dark"] .panel h2{color:#f2f8ff}
-html[data-theme="dark"] .muted,html[data-theme="dark"] .tiny,html[data-theme="dark"] .stat small,html[data-theme="dark"] .bed-meta,html[data-theme="dark"] .home-intro p,html[data-theme="dark"] .login-card p,html[data-theme="dark"] .card p{color:#b0c5d8}
+html[data-theme="dark"] .panel:not(.stat),html[data-theme="dark"] .section-bar,html[data-theme="dark"] .bed-card,html[data-theme="dark"] .login-card,html[data-theme="dark"] dialog{background:#132c44!important;border-color:#2b4b65!important;color:#e9f4ff!important;box-shadow:0 5px 18px #0003}
+
+html[data-theme="dark"] .bed-card-head strong,html[data-theme="dark"] .home-intro h1,html[data-theme="dark"] .panel h2{color:#f2f8ff}
+html[data-theme="dark"] .muted,html[data-theme="dark"] .tiny,html[data-theme="dark"] .bed-meta,html[data-theme="dark"] .home-intro p,html[data-theme="dark"] .login-card p,html[data-theme="dark"] .card p{color:#b0c5d8}
 html[data-theme="dark"] .notice,html[data-theme="dark"] .demo-role-strip{background:#173c55;border-color:#2d6680;color:#d9f2ff}
 html[data-theme="dark"] .card,html[data-theme="dark"] .stack .item{border-color:#36536a;background:#17334b}
 html[data-theme="dark"] input,html[data-theme="dark"] select,html[data-theme="dark"] textarea{background:#0d253b;color:#e9f4ff;border-color:#3b5b73}
@@ -127,18 +127,18 @@ html[data-theme="dark"] .hero-user-menu button{color:#e6f5ff!important}html[data
 html[data-theme="dark"] button.secondary{background:#24526b;color:#e1f7ff}
 html[data-theme="dark"] .footer{color:#9bb7cb}
 @media(max-width:850px){.workspace{display:block}.workspace .shell{width:100%}.side-panel{position:fixed;top:0;bottom:0;right:0;width:260px!important;z-index:40;overflow-y:auto;transform:translateX(110%);transition:transform .2s;box-shadow:-12px 0 28px #06172d60}.side-panel.mobile-open{transform:translateX(0)}.mobile-toolbar{display:flex;margin-bottom:12px}.workspace.sidebar-collapsed .side-brand,.workspace.sidebar-collapsed .nav-label{display:initial}.workspace.sidebar-collapsed .side-panel .nav button{justify-content:flex-start;padding:12px}.workspace.sidebar-collapsed .side-panel{padding:16px 10px}}
-@media print{.side-panel,.mobile-toolbar,.theme-toggle{display:none!important}.workspace{display:block}}
+@media print{.side-panel,.skip-link,.theme-toggle{display:none!important}.workspace{display:block}}
 .sidebar-svg{display:block;width:23px;height:23px;flex-shrink:0}.side-panel .nav button.active .sidebar-svg{color:#fff}.side-panel .nav button:not(.active) .sidebar-svg{color:#a8d9f2}.nav-icon{display:flex;align-items:center;justify-content:center}
-/* Compact pages and request cards */.workspace .shell{padding:13px clamp(10px,1.7vw,23px)}.panel{padding:13px;margin-bottom:10px;border-radius:14px}.panel h2{font-size:16px;margin-bottom:9px}.grid{gap:9px}.grid .panel.stat{min-height:102px;padding:12px}.stat b{font-size:27px;margin:5px 0}.stat small{font-size:11px}.toolbar,.notice{margin-bottom:9px}.workflow-strip,.demo-role-strip{padding:9px;margin-bottom:10px}.dept-line{display:grid;grid-template-columns:minmax(90px,1fr) minmax(70px,2fr) 45px minmax(100px,1.2fr);align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #7893a633;font-size:13px}.dept-line:last-child{border:0}.dept-line small{color:#8baec5;font-size:11px}.dept-meter{height:9px;background:#47617b55;border-radius:10px;overflow:hidden}.dept-meter span{display:block;height:100%;background:#1eb9af}.request-list{display:grid;gap:9px}.request-card{border:1px solid #7e9eb345;border-radius:12px;padding:12px;background:#719cba0a}.request-top,.request-main,.request-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px}.request-top b{font-size:12px;color:#61b8e7}.request-main{margin:8px 0;font-size:13px}.request-meta{display:flex;gap:6px;flex-wrap:wrap}.request-meta span{background:#4388a81c;border-radius:7px;padding:5px 8px;font-size:12px}.request-bottom{justify-content:flex-end;margin-top:9px}@media(min-width:1000px){.request-list{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.dept-line{grid-template-columns:100px minmax(60px,1fr) 38px;gap:7px}.dept-line small{grid-column:1/-1}.request-main{align-items:flex-start;flex-direction:column;gap:4px}}
+/* Compact pages and request cards */.workspace .shell{padding:13px clamp(10px,1.7vw,23px)}.panel{padding:13px;margin-bottom:10px;border-radius:14px}.panel h2{font-size:16px;margin-bottom:9px}.grid{gap:9px}.toolbar,.notice{margin-bottom:9px}.workflow-strip,.demo-role-strip{padding:9px;margin-bottom:10px}.dept-line{display:grid;grid-template-columns:minmax(90px,1fr) minmax(70px,2fr) 45px minmax(100px,1.2fr);align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #7893a633;font-size:13px}.dept-line:last-child{border:0}.dept-line small{color:#8baec5;font-size:11px}.dept-meter{height:9px;background:#47617b55;border-radius:10px;overflow:hidden}.dept-meter span{display:block;height:100%;background:#1eb9af}.request-list{display:grid;gap:9px}.request-card{border:1px solid #7e9eb345;border-radius:12px;padding:12px;background:#719cba0a}.request-top,.request-main,.request-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px}.request-top b{font-size:12px;color:#61b8e7}.request-main{margin:8px 0;font-size:13px}.request-meta{display:flex;gap:6px;flex-wrap:wrap}.request-meta span{background:#4388a81c;border-radius:7px;padding:5px 8px;font-size:12px}.request-bottom{justify-content:flex-end;margin-top:9px}@media(min-width:1000px){.request-list{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.dept-line{grid-template-columns:100px minmax(60px,1fr) 38px;gap:7px}.dept-line small{grid-column:1/-1}.request-main{align-items:flex-start;flex-direction:column;gap:4px}}
 
 /* Compact Medical Navy across all modules */
 .header-svg{width:23px;height:23px;display:block}.hero-icon-button{display:inline-flex;align-items:center;justify-content:center}
-.workspace .shell{padding:12px clamp(10px,1.7vw,22px)}.panel{padding:13px;margin-bottom:10px;border-radius:14px}.panel h2{font-size:16px;margin:0 0 10px}.panel .notice{padding:8px 11px;font-size:12px;line-height:1.65}.toolbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:9px}.toolbar button,.actions button{font-size:12px;padding:7px 10px;min-height:34px}.formgrid{gap:10px}.formgrid label{font-size:12px}.formgrid input,.formgrid select{padding:9px}.scroll{overflow-x:auto;max-width:100%;border-radius:10px}.scroll table{width:100%;border-collapse:collapse;font-size:12px}.scroll th,.scroll td{padding:9px 8px;white-space:normal;min-width:70px}.scroll th:first-child,.scroll td:first-child{min-width:110px}.scroll .actions{display:flex;gap:5px;flex-wrap:wrap}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:9px}.cards .card{padding:13px;min-height:0}.cards .card h3{font-size:14px;margin:0 0 8px}.cards .card p{font-size:12px;line-height:1.6}.integration-icon{display:inline-flex;vertical-align:middle;color:#52bdd2;margin-left:5px}.integration-icon .sidebar-svg{width:19px;height:19px}.item{padding:9px 0}.grid{gap:9px}.grid .panel.stat{min-height:95px;padding:12px}.stat b{font-size:27px}.report-visual-grid{gap:10px}.request-card{padding:10px}.request-meta span{font-size:11px}.bed-card{padding:11px}.bed-grid{gap:9px}
-@media(max-width:650px){.hero-icon-button{width:42px;height:42px}.hero-tools{gap:5px}.panel{padding:11px}.panel h2{font-size:15px}.scroll table{min-width:560px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.cards .card{padding:10px}.cards .card h3{font-size:12px}.cards .card p{font-size:11px}.grid .panel.stat{min-height:90px}.toolbar button{flex:0 1 auto}.hero-title strong{font-size:clamp(17px,5vw,25px)}}
+.workspace .shell{padding:12px clamp(10px,1.7vw,22px)}.panel{padding:13px;margin-bottom:10px;border-radius:14px}.panel h2{font-size:16px;margin:0 0 10px}.panel .notice{padding:8px 11px;font-size:12px;line-height:1.65}.toolbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:9px}.toolbar button,.actions button{font-size:12px;padding:7px 10px;min-height:34px}.formgrid{gap:10px}.formgrid label{font-size:12px}.formgrid input,.formgrid select{padding:9px}.scroll{overflow-x:auto;max-width:100%;border-radius:10px}.scroll table{width:100%;border-collapse:collapse;font-size:12px}.scroll th,.scroll td{padding:9px 8px;white-space:normal;min-width:70px}.scroll th:first-child,.scroll td:first-child{min-width:110px}.scroll .actions{display:flex;gap:5px;flex-wrap:wrap}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:9px}.cards .card{padding:13px;min-height:0}.cards .card h3{font-size:14px;margin:0 0 8px}.cards .card p{font-size:12px;line-height:1.6}.integration-icon{display:inline-flex;vertical-align:middle;color:#52bdd2;margin-left:5px}.integration-icon .sidebar-svg{width:19px;height:19px}.item{padding:9px 0}.grid{gap:9px}.report-visual-grid{gap:10px}.request-card{padding:10px}.request-meta span{font-size:11px}.bed-card{padding:11px}.bed-grid{gap:9px}
+@media(max-width:650px){.hero-icon-button{width:42px;height:42px}.hero-tools{gap:5px}.panel{padding:11px}.panel h2{font-size:15px}.scroll table{min-width:560px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.cards .card{padding:10px}.cards .card h3{font-size:12px}.cards .card p{font-size:11px}.toolbar button{flex:0 1 auto}.hero-title strong{font-size:clamp(17px,5vw,25px)}}
 .action-dialog{border:1px solid #47708a;border-radius:17px;padding:0;max-width:min(92vw,470px);width:100%;background:#132d46;color:#f4f9ff;box-shadow:0 20px 60px #0007}.action-dialog::backdrop{background:#051625b5}.action-dialog-inner{padding:20px;display:grid;gap:14px}.action-dialog h3{margin:0;font-size:18px}.action-options{display:grid;gap:8px;max-height:55vh;overflow:auto}.action-options button{width:100%;text-align:right;padding:12px;border-radius:10px}.request-filters{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 13px}.request-filters input{flex:2 1 190px}.request-filters select{flex:1 1 115px}.request-card[hidden]{display:none!important}@media(max-width:650px){.request-filters{display:grid;grid-template-columns:1fr 1fr}.request-filters input{grid-column:1/-1;width:100%}.request-filters select{min-width:0}}
-html:not([data-theme="dark"]) .action-dialog{background:#fff;color:#17324b;border-color:#b5d0e1}html:not([data-theme="dark"]) .action-dialog .secondary{background:#e9f3fa;color:#173d59}.action-dialog button:focus-visible,.request-filters input:focus-visible{outline:3px solid #42bcd0;outline-offset:2px}.request-filters select,.request-filters input,#bedSearch,#filterState{min-height:37px;border-radius:9px}.request-filters{align-items:center}
+html:not([data-theme="dark"]) .action-dialog{background:#fff;color:#17324b;border-color:#b5d0e1}html:not([data-theme="dark"]) .action-dialog .secondary{background:#e9f3fa;color:#173d59}.request-filters select,.request-filters input,#bedSearch,#filterState{min-height:37px;border-radius:9px}.request-filters{align-items:center}
 .timeline-event{display:grid;gap:4px;text-align:right;padding:10px 5px;border-bottom:1px solid #829eb444}.timeline-event small{color:#91b6cc}.inline-ack,.inline-accept,.request-timeline-button{min-height:36px;touch-action:manipulation}.request-bottom{flex-wrap:wrap;gap:6px}
-.stat-clickable{display:block;width:100%;text-align:right;font:inherit;color:inherit;cursor:pointer;transition:border-color .16s,transform .16s,background .16s;touch-action:manipulation}.stat-clickable:hover,.stat-clickable:focus-visible{border-color:#48b4d6;transform:translateY(-2px);outline:none}html[data-theme="dark"] .grid .panel.stat.stat-clickable[aria-pressed="true"]{background:linear-gradient(135deg,#087d91,#07536e)!important;border:2px solid #65e3ef!important;box-shadow:0 0 0 3px #35d6e833,0 10px 24px #0005!important;color:#fff!important}html[data-theme="dark"] .grid .panel.stat.stat-clickable[aria-pressed="true"] small,html[data-theme="dark"] .grid .panel.stat.stat-clickable[aria-pressed="true"] b{color:#fff!important}html[data-theme="dark"] .grid .panel.stat.stat-clickable[aria-pressed="false"]{background:linear-gradient(140deg,#183b56,#112b43)!important}.stat-clickable[aria-pressed="true"]{background:linear-gradient(135deg,#087d91,#07536e)!important;border:2px solid #65e3ef!important;box-shadow:0 0 0 3px #35d6e833,0 10px 24px #0003;color:#fff!important;transform:translateY(-2px)}.stat-clickable[aria-pressed="true"] small,.stat-clickable[aria-pressed="true"] b{color:#fff!important}.stat-clickable[aria-pressed="true"]:focus-visible{outline:3px solid #a0f4ff;outline-offset:3px}.dashboard-filter-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}.dashboard-filter-head h2{margin:0}.dashboard-filter-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}.dashboard-filter-bed{border:1px solid #7897af55;border-radius:12px;padding:13px;display:grid;gap:9px}.dashboard-filter-bed .secondary{width:100%}@media(max-width:650px){.dashboard-filter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-filter-bed{padding:10px}.dashboard-filter-bed .secondary{font-size:12px}}
+.dashboard-filter-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}.dashboard-filter-head h2{margin:0}.dashboard-filter-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}.dashboard-filter-bed{border:1px solid #7897af55;border-radius:12px;padding:13px;display:grid;gap:9px}.dashboard-filter-bed .secondary{width:100%}@media(max-width:650px){.dashboard-filter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-filter-bed{padding:10px}.dashboard-filter-bed .secondary{font-size:12px}}
 /* Real hospital photo with unobtrusive transparent Ministry of Health symbol */
 header.hospital-hero{background:#082239!important}
 header.hospital-hero .hero-art{inset:0;z-index:-2;background-image:linear-gradient(270deg,#06172df0 0%,#09283dd9 28%,#09283d60 58%,#0822399a 100%),var(--hospital-image);background-size:cover;background-position:center 48%}
@@ -155,7 +155,7 @@ header.hospital-hero .hero-ecg{left:33%;bottom:5%;opacity:.75}
 /* Capacity workspace */
 :root {
   --canvas: #f4f7fb;
-  --hospital-image: url("https://cdn2.advanceinfotech.org/ksa.directory/1200x675/business/116/hail-general-hospital-2-1667286500.webp");
+  --hospital-image: url("assets/hail-general-hospital.webp");
   --surface: #fff;
   --ink: #172c45;
   --quiet: #50647a;
@@ -164,6 +164,7 @@ header.hospital-hero .hero-ecg{left:33%;bottom:5%;opacity:.75}
   --brand: #102b49;
   --primary: #0e7490;
   --focus: #087b9a;
+  --control-line: #7a8da2;
   --radius: 12px;
   font-family: Inter, system-ui, sans-serif;
   color: var(--ink);
@@ -178,6 +179,7 @@ html[data-theme="dark"] {
   --line: #35516c;
   --tint: #1d3953;
   --focus: #69d6f4;
+  --control-line: #829bb1;
 }
 body { line-height: 1.5; }
 :where(button, input, select, textarea, a):focus-visible,
@@ -186,6 +188,7 @@ body { line-height: 1.5; }
   outline-offset: 2px;
 }
 button:not(:disabled) { transition: background-color 150ms, border-color 150ms; }
+#content :is(input, select, textarea), .login-card :is(input, select) { border-color: var(--control-line); }
 button.primary { background: var(--primary); color: #fff; }
 button.primary:hover { background: #095a72; }
 button.secondary { background: var(--tint); color: var(--ink); }
@@ -237,9 +240,42 @@ header.hospital-hero small { font-size: 12px; margin-block-start: 0; }
   border-color: #64bbcb;
 }
 .nav-group + .nav-group { border-block-start: 1px solid #ffffff30; margin-block-start: 6px; padding-block-start: 6px; }
-.hero-tools :focus-visible, .side-panel :focus-visible { outline-color: #91e7ff; }
+header.hospital-hero :focus-visible, .side-panel :focus-visible { outline-color: #91e7ff; }
+.mobile-nav-toggle { display: none; }
+.skip-link {
+  position: fixed;
+  z-index: 50;
+  inset-block-start: 8px;
+  inset-inline-start: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+.skip-link:not(:focus) { clip-path: inset(50%); }
+@media (min-width: 851px) {
+  .side-panel {
+    position: sticky;
+    inset-block-start: 0;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    max-block-size: calc(100vh - 76px);
+    max-block-size: calc(100dvh - 76px);
+  }
+  #nav {
+    min-block-size: 0;
+    overflow-y: auto;
+    padding: 4px;
+    overscroll-behavior-y: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #7da3bf var(--brand);
+    scroll-padding-block: 4px;
+  }
+  .side-head { flex-shrink: 0; }
+}
 .workspace .shell { padding: 14px clamp(12px, 1.8vw, 30px); }
-.panel, .grid .panel.stat {
+.panel {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: none;
@@ -248,8 +284,8 @@ header.hospital-hero small { font-size: 12px; margin-block-start: 0; }
 .page-heading { margin: 0 0 12px; font-size: clamp(20px, 2vw, 26px); }
 #content .demo-role-strip { margin-block-start: 12px; }
 #content .dashboard-kpis { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; margin-block-end: 12px; }
-#content .dashboard-kpis .stat {
-  min-block-size: 0;
+#content .grid .stat {
+  min-height: 0;
   height: auto;
   margin: 0;
   padding: 9px 12px;
@@ -257,11 +293,21 @@ header.hospital-hero small { font-size: 12px; margin-block-start: 0; }
   background: var(--surface);
   color: var(--ink);
   border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: none;
 }
-#content .dashboard-kpis .stat[aria-pressed="true"] { box-shadow: inset 0 0 0 2px var(--primary); }
-#content .dashboard-kpis .stat b { font-size: clamp(23px, 2.5vw, 32px); margin: 0; line-height: 1.2; }
-#content .dashboard-kpis .stat small { font-size: 12px; color: var(--quiet); }
-.stat-clickable:hover, .stat-clickable:focus-visible { transform: none; }
+#content .stat b { display: block; margin: 1px 0; color: var(--ink); font-size: clamp(23px, 2.5vw, 32px); line-height: 1.2; }
+#content .stat small { font-size: 12px; color: var(--quiet); }
+#content .stat-clickable { border-color: var(--control-line); touch-action: manipulation; }
+#content .stat-clickable:hover { background: var(--tint); }
+#content .stat-clickable[aria-pressed="true"] {
+  background: var(--tint);
+  border-color: var(--focus);
+  box-shadow: inset 0 0 0 1px var(--focus);
+}
+.kpi-selected { visibility: hidden; display: block; float: inline-end; margin-inline-start: 4px; }
+[aria-pressed="true"] .kpi-selected { visibility: visible; }
+.percent { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .capacity-layout { display: grid; gap: 12px; }
 .capacity-layout .panel { margin-block-end: 12px; }
 .dept-line small { color: var(--quiet); }
@@ -301,7 +347,7 @@ header.hospital-hero small { font-size: 12px; margin-block-start: 0; }
 .bed-details-list dd { margin: 0; }
 .scroll { max-inline-size: 100%; }
 .scroll :is(th,td) { text-align: start; }
-.action-options button, .stat-clickable { text-align: start; }
+.action-options button { text-align: start; }
 .dialog-surface { max-height: 90dvh; overflow: auto; }
 .login-screen {
   min-block-size: 100svh;
@@ -327,16 +373,30 @@ header.hospital-hero small { font-size: 12px; margin-block-start: 0; }
   .bed-grid { grid-template-columns: repeat(5,minmax(0,1fr)); }
 }
 @media (max-width: 850px) {
+  .mobile-nav-toggle {
+    display: inline-grid;
+    place-items: center;
+    min-inline-size: 44px;
+    min-block-size: 44px;
+    background: var(--brand);
+    color: #fff;
+    border: 1px solid #95afc6;
+    border-radius: 8px;
+  }
   .side-panel { inset-inline-start: 0; inset-inline-end: auto; transform: translateX(-110%); visibility: hidden; }
   [dir="rtl"] .side-panel { transform: translateX(110%); }
   [dir] .side-panel.mobile-open { transform: none; visibility: visible; }
   .sidebar-backdrop:not(.hidden) { display: block; position: fixed; inset: 0; z-index: 35; background: #07182b80; }
 }
 @media (max-width: 650px) {
-  header.hospital-hero { flex-wrap: wrap; }
-  .hero-controls { flex: 1 1 100%; justify-content: space-between; }
-  .hero-datetime { flex-wrap: wrap; }
-  .hero-user-toggle { min-block-size: 44px; }
+  header.hospital-hero { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 6px 8px; padding-block: 6px; }
+  .hero-controls { grid-column: 1 / -1; flex-wrap: wrap; gap: 4px 8px; }
+  .hero-datetime { order: 1; display: flex; flex-wrap: wrap; gap: 4px 8px; padding: 0; }
+  .hero-tools { gap: 8px; }
+  header.hospital-hero :is(.hero-icon-button,.hero-user-toggle) { min-width: 44px; min-height: 44px; padding: 5px 8px !important; }
+  .hero-title .moh-symbol { inline-size: 36px; block-size: 36px; flex-basis: 36px; }
+  .bed-summary { gap: 4px; margin-block: 4px 8px; }
+  .bed-summary span { padding: 2px 7px; line-height: 1.45; }
   .bed-controls label { flex: 1 1 120px; }
 }
 @media (max-width: 440px) {
@@ -349,12 +409,13 @@ header.hospital-hero small { font-size: 12px; margin-block-start: 0; }
 }
 </style></head><body>
 <section class="login-screen" id="loginScreen"><div class="login-card"><div class="login-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8m-4-4h8"/></svg></div><button type="button" class="language-toggle secondary" onclick="toggleLanguage()">English</button><p class="login-brand">مستشفى حايل العام</p><h1>تسجيل الدخول</h1><p>نظام إدارة الأسرة والطاقة الاستيعابية</p><form id="loginForm"><label>الإدارة / الجهة<select name="group" id="loginGroup" required><option value="">اختر الإدارة أو القسم</option><option value="admin">الإدارة الرئيسية</option><option value="tech">الدعم الفني</option><option value="nursing">التمريض</option><option value="coord">تنسيق المرضى</option><option value="cleaning">النظافة</option><option value="maintenance">الصيانة</option></select></label><label>المستخدم / محطة التمريض<select name="username" id="loginUser" required disabled><option value="">اختر الإدارة أولاً</option></select></label><label>كلمة المرور<input name="password" type="password" autocomplete="current-password" required placeholder="كلمة المرور"></label><div class="login-error" id="loginError" role="alert"></div><button type="submit" class="primary">دخول إلى النظام</button></form><p class="muted" style="margin-top:15px">حساب العرض: <b>الإدارة الرئيسية ← مدير الأسرة</b> · كلمة المرور <b>123456</b></p><div class="security-hint">تنبيه أمني: تسجيل الدخول للعرض المحلي فقط، ولا يحمي البيانات فعلياً. لا تستخدم بيانات مرضى حقيقية.</div></div></section>
-<div id="appShell" class="hidden"><header class="hospital-hero">
+<div id="appShell" class="hidden"><a class="skip-link" href="#content">تجاوز القائمة إلى المحتوى</a><header class="hospital-hero">
 <div class="hero-art" aria-hidden="true"><div class="hero-ecg"><svg viewBox="0 0 360 70" preserveAspectRatio="none"><path d="M0 38 H102 L117 31 L131 44 L148 5 L165 64 L181 38 H210 L222 26 L235 46 L248 38 H360" fill="none" stroke="#c6faff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
-<div class="hero-title"><div class="moh-symbol" aria-label="رمز وزارة الصحة السعودية"><img src="https://www.moh.gov.sa/_layouts/15/MOH/Internet/New/images/logo.png" alt="رمز وزارة الصحة" loading="eager" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><svg hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8m-4-4h8"/></svg></div><div><strong id="hospitalTitle">مستشفى حايل العام</strong><small>نظام إدارة الأسرة والطاقة الاستيعابية</small></div></div>
+<div class="hero-title"><div class="moh-symbol" aria-label="رمز وزارة الصحة السعودية"><img src="assets/ministry-of-health.png" alt="رمز وزارة الصحة" loading="eager" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><svg hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8m-4-4h8"/></svg></div><div><strong id="hospitalTitle">مستشفى حايل العام</strong><small>نظام إدارة الأسرة والطاقة الاستيعابية</small></div></div>
+<button class="mobile-nav-toggle" type="button" aria-controls="sidePanel" aria-expanded="false" aria-label="فتح القائمة" onclick="toggleSidebar()"><svg class="header-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
 <div class="hero-controls"><div class="hero-datetime"><span>▦ <span id="liveDate">—</span></span><span>◷ <span id="liveTime">—</span></span></div><div class="hero-tools"><button type="button" class="language-toggle" onclick="toggleLanguage()">English</button><button class="hero-icon-button theme-toggle" id="themeToggle" type="button" onclick="toggleTheme()" aria-label="تبديل الوضع الليلي والنهاري" title="تبديل الوضع الليلي والنهاري"><svg class="header-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></svg></button><button class="hero-icon-button" onclick="go('alerts')" aria-label="فتح الإشعارات" title="الإشعارات"><svg class="header-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><span id="headerAlertBadge" class="hero-alert-dot hidden"></span></button><div class="hero-user"><button class="hero-user-toggle" onclick="toggleUserMenu()" aria-expanded="false" id="userMenuButton">المدير <span aria-hidden="true">⌄</span></button><div class="hero-user-menu hidden" id="userMenu"><div class="hero-user-caption">وضع العرض المحلي</div><button onclick="go('settings');closeUserMenu()"><svg class="header-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.9 4.9 7 7m10 10 2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg> الإعدادات</button><button onclick="logout();closeUserMenu()"><svg class="header-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 17l5-5-5-5m5 5H3m9-9h6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-6"/></svg> تسجيل الخروج</button></div></div></div></div>
 </header>
-<div class="workspace" id="workspace"><div id="sidebarBackdrop" class="sidebar-backdrop hidden" aria-hidden="true" onclick="toggleSidebar()"></div><aside class="side-panel" id="sidePanel" aria-label="القائمة الجانبية"><div class="side-head"><button class="sidebar-toggle" type="button" aria-controls="sidePanel" aria-expanded="true" onclick="toggleSidebar()" aria-label="طي أو توسيع القائمة" title="طي أو توسيع القائمة">☰</button><span class="side-brand">القائمة الرئيسية</span></div><div id="nav"></div></aside><main class="shell"><div class="mobile-toolbar"><button class="secondary" type="button" aria-controls="sidePanel" aria-expanded="false" onclick="toggleSidebar()">☰ القائمة</button></div><div id="content" tabindex="-1"></div><footer class="footer">نظام إدارة الأسرة والطاقة الاستيعابية</footer></main></div></div>
+<div class="workspace" id="workspace"><div id="sidebarBackdrop" class="sidebar-backdrop hidden" aria-hidden="true" onclick="toggleSidebar()"></div><aside class="side-panel" id="sidePanel" aria-label="القائمة الجانبية"><div class="side-head"><button class="sidebar-toggle" type="button" aria-controls="sidePanel" aria-expanded="true" onclick="toggleSidebar()" aria-label="طي أو توسيع القائمة" title="طي أو توسيع القائمة">☰</button><span class="side-brand">القائمة الرئيسية</span></div><div id="nav"></div></aside><main class="shell"><div id="content" tabindex="-1"></div><footer class="footer">نظام إدارة الأسرة والطاقة الاستيعابية</footer></main></div></div>
 <dialog id="dialog" class="dialog-surface" aria-labelledby="formTitle"><form id="entryForm" class="form"><h3 id="formTitle"></h3><div class="formgrid" id="fields"></div><div class="toolbar"><button class="primary" type="submit">حفظ</button><button class="secondary" type="button" onclick="document.getElementById('dialog').close()">إلغاء</button></div></form></dialog><dialog id="actionDialog" class="action-dialog" aria-labelledby="actionTitle"><div class="action-dialog-inner"><h3 id="actionTitle"></h3><div id="actionOptions" class="action-options"></div><button type="button" class="secondary" id="actionCancel">إلغاء</button></div></dialog>
 <dialog id="bedDetails" class="action-dialog" aria-labelledby="bedDetailsTitle">
   <div class="action-dialog-inner">
@@ -574,7 +635,8 @@ const english = {
   'القائمة الجانبية':'Sidebar',
   'القائمة الرئيسية':'Main navigation',
   'طي أو توسيع القائمة':'Toggle sidebar',
-  '☰ القائمة':'☰ Menu',
+  'فتح القائمة':'Open navigation',
+  'تجاوز القائمة إلى المحتوى':'Skip to content',
   'فتح الإشعارات':'Open alerts',
   'تفعيل الوضع النهاري':'Switch to light theme',
   'تفعيل الوضع الليلي':'Switch to dark theme',
@@ -780,7 +842,7 @@ function applyLanguage() {
     button.textContent = language === 'ar' ? 'English' : 'العربية';
     button.lang = language === 'ar' ? 'en' : 'ar';
   }
-  for (const selector of ['#loginScreen','header','#workspace','.action-dialog','#dialog']) {
+  for (const selector of ['#loginScreen','.skip-link','header','#workspace','.action-dialog','#dialog']) {
     for (const element of document.querySelectorAll(selector)) translateInterface(element, true);
   }
 }
@@ -818,7 +880,8 @@ function applySidebar() {
   sidebar.classList.toggle('mobile-open', open);
   document.getElementById('sidebarBackdrop').classList.toggle('hidden', !open);
   document.querySelector('.sidebar-toggle').setAttribute('aria-expanded', mobileLayout.matches ? open : !sidebarCollapsed);
-  document.querySelector('.mobile-toolbar button').setAttribute('aria-expanded', open);
+  document.querySelector('.mobile-nav-toggle').setAttribute('aria-expanded', open);
+  document.querySelector('.skip-link').inert = open;
   document.querySelector('main').inert = open;
   document.querySelector('header').inert = open;
 }
@@ -827,7 +890,7 @@ function toggleSidebar() {
   if (mobileLayout.matches) {
     mobileSidebarOpen = !mobileSidebarOpen;
     applySidebar();
-    document.querySelector(mobileSidebarOpen ? '.sidebar-toggle' : '.mobile-toolbar button').focus();
+    document.querySelector(mobileSidebarOpen ? '.sidebar-toggle' : '.mobile-nav-toggle').focus();
     return;
   }
   sidebarCollapsed = !sidebarCollapsed;
@@ -862,7 +925,9 @@ const audit=(action,detail)=>{const account=DEMO_ACCOUNTS[sessionStorage.getItem
 const notify=(text,severity='warning')=>{db.alerts.unshift({id:id(),time:new Date().toISOString(),text,severity,ack:false});db.alerts=db.alerts.slice(0,150);persist()};
 const stamp=t=>new Date(t).toLocaleString(language === 'ar' ? 'ar-SA' : 'en-GB');const count=s=>db.beds.filter(b=>b.status===s).length;
 const pill=s=>'<span class="pill '+attr(s)+'">'+esc(ui(labels[s]||s))+'</span>';
-const stat=(name,value,sub,filter)=>filter?'<button type="button" class="panel stat stat-clickable" data-dashboard-filter="'+filter+'" aria-pressed="'+(dashboardBedFilter===filter)+'"><small>'+name+'</small><b>'+value+'</b><small>'+sub+'</small></button>':'<div class="panel stat"><small>'+name+'</small><b>'+value+'</b><small>'+sub+'</small></div>';
+// Keep the Latin digits and percent sign together inside surrounding RTL text.
+const percent = value => '<bdi class="percent" dir="ltr">'+Math.round(value)+'%</bdi>';
+const stat=(name,value,sub,filter)=>filter?'<button type="button" class="panel stat stat-clickable" data-dashboard-filter="'+filter+'" aria-pressed="'+(dashboardBedFilter===filter)+'"><span class="kpi-selected" aria-hidden="true">✓</span><small>'+name+'</small><b>'+value+'</b><small>'+sub+'</small></button>':'<div class="panel stat"><small>'+name+'</small><b>'+value+'</b><small>'+sub+'</small></div>';
 const panel=(title,body)=>'<section class="panel"><h2>'+title+'</h2>'+body+'</section>';
 const note=t=>'<div class="notice">'+t+'</div>';
 const table=(heads,rows)=>rows.length ? '<div class="scroll"><table><thead><tr>'+heads.map(h=>'<th scope="col">'+h+'</th>').join('')+'</tr></thead><tbody>'+rows.join('')+'</tbody></table></div>' : note(ui('لا توجد سجلات للعرض'));
@@ -957,12 +1022,12 @@ nav.innerHTML = '<nav class="nav" aria-label="'+attr(ui('القائمة الرئ
 ).join('')+'</nav>';
 let html='';
 if(['nursing','housekeeping','maintenancePortal','operations','demoGuide'].includes(page))html=portalPage(page);
-if(page==='dashboard'){let all=db.beds.length,oper=all-count('maintenance'),occ=count('occupied');html='<h1 class="page-heading">'+ui('لوحة التحكم')+'</h1><div class="grid dashboard-kpis">'+stat('إجمالي الأسرة',all,'جميع أنواع الرعاية','all')+stat('جاهزة',db.beds.filter(bedAvailable).length,'جاهزة تشغيلياً','ready')+stat('مشغولة',occ,ui('إشغال الأسرة التشغيلية')+' '+(oper?Math.round(occ/oper*100):0)+'%','occupied')+stat('محجوزة',count('reserved'),'الحجز لا يعني الإشغال','reserved')+'</div>';
+if(page==='dashboard'){let all=db.beds.length,oper=all-count('maintenance'),occ=count('occupied');html='<h1 class="page-heading">'+ui('لوحة التحكم')+'</h1><div class="grid dashboard-kpis">'+stat('إجمالي الأسرة',all,'جميع أنواع الرعاية','all')+stat('جاهزة',db.beds.filter(bedAvailable).length,'جاهزة تشغيلياً','ready')+stat('مشغولة',occ,ui('إشغال الأسرة التشغيلية')+' '+percent(oper?occ/oper*100:0),'occupied')+stat('محجوزة',count('reserved'),'الحجز لا يعني الإشغال','reserved')+'</div>';
 
-if(dashboardBedFilter){const filtered=db.beds.filter(b=>dashboardBedFilter==='all'||(dashboardBedFilter==='ready'?bedAvailable(b):b.status===dashboardBedFilter));const titles={all:'جميع الأسرة',ready:'الأسرة الجاهزة',occupied:'الأسرة المشغولة',reserved:'الأسرة المحجوزة'};html+='<section class="panel dashboard-filter-panel"><div class="dashboard-filter-head"><h2>'+ui(titles[dashboardBedFilter])+' ('+filtered.length+')</h2><button type="button" class="secondary" id="clearDashboardFilter">إظهار بقية اللوحة</button></div><div class="dashboard-filter-grid">'+(filtered.length?filtered.map(b=>{return '<article class="dashboard-filter-bed"><strong>'+esc(b.id)+'</strong>'+pill(b.status)+'<div class="tiny">'+esc(b.dept)+' · '+esc(b.type)+'</div><button type="button" class="secondary dashboard-bed-open" data-bed-id="'+attr(b.id)+'">عرض في إدارة الأسرة</button></article>'}).join(''):'<div class="notice">لا توجد أسرة ضمن هذه الحالة حالياً</div>')+'</div></section>'}else{html+='<div class="capacity-layout"><div>'+panel('الأقسام والطاقة الاستيعابية','<div class="dept-compact">'+departments().map(d=>{let b=db.beds.filter(x=>x.dept===d),occ=b.filter(x=>x.status==='occupied').length,p=b.length?Math.round(occ/b.length*100):0;return '<div class="dept-line"><strong>'+esc(d)+'</strong><div class="dept-meter"><span style="width:'+p+'%"></span></div><b>'+p+'٪</b><small>'+occ+'/'+b.length+' مشغول · '+b.filter(bedAvailable).length+' جاهز</small></div>'}).join('')+'</div>');
+if(dashboardBedFilter){const filtered=db.beds.filter(b=>dashboardBedFilter==='all'||(dashboardBedFilter==='ready'?bedAvailable(b):b.status===dashboardBedFilter));const titles={all:'جميع الأسرة',ready:'الأسرة الجاهزة',occupied:'الأسرة المشغولة',reserved:'الأسرة المحجوزة'};html+='<section class="panel dashboard-filter-panel"><div class="dashboard-filter-head"><h2>'+ui(titles[dashboardBedFilter])+' ('+filtered.length+')</h2><button type="button" class="secondary" id="clearDashboardFilter">إظهار بقية اللوحة</button></div><div class="dashboard-filter-grid">'+(filtered.length?filtered.map(b=>{return '<article class="dashboard-filter-bed"><strong>'+esc(b.id)+'</strong>'+pill(b.status)+'<div class="tiny">'+esc(b.dept)+' · '+esc(b.type)+'</div><button type="button" class="secondary dashboard-bed-open" data-bed-id="'+attr(b.id)+'">عرض في إدارة الأسرة</button></article>'}).join(''):'<div class="notice">لا توجد أسرة ضمن هذه الحالة حالياً</div>')+'</div></section>'}else{html+='<div class="capacity-layout"><div>'+panel('الأقسام والطاقة الاستيعابية','<div class="dept-compact">'+departments().map(d=>{let b=db.beds.filter(x=>x.dept===d),occ=b.filter(x=>x.status==='occupied').length,p=b.length?Math.round(occ/b.length*100):0;return '<div class="dept-line"><strong>'+esc(d)+'</strong><div class="dept-meter"><span style="width:'+p+'%"></span></div><b>'+percent(p)+'</b><small>'+occ+'/'+b.length+' مشغول · '+b.filter(bedAvailable).length+' جاهز</small></div>'}).join('')+'</div>');
 let pressure=oper?occ/oper*100:0;html+='</div><div>'+panel('مراقبة الضغط التشغيلي',note(language==='ar'
-  ? 'نسبة الإشغال الحالية: <b>'+Math.round(pressure)+'٪</b> من الأسرة التشغيلية. عتبة التنبيه التوضيحية: '+db.settings.threshold+'٪. الاحتياطي المقترح: '+db.settings.reserveMin+' سرير جاهز. الملاءمة الطبية تختلف حسب نوع الرعاية.'
-  : 'Current occupancy: <b>'+Math.round(pressure)+'%</b> of operational beds. Demo alert threshold: '+db.settings.threshold+'%. Suggested reserve: '+db.settings.reserveMin+' ready beds. Clinical suitability depends on care type.')+(pressure>=db.settings.threshold?'<p class="pill critical">ضغط مرتفع</p>':'<p class="pill ready">ضمن العتبة التوضيحية</p>'));
+  ? 'نسبة الإشغال الحالية: <b>'+percent(pressure)+'</b> من الأسرة التشغيلية. عتبة التنبيه التوضيحية: '+percent(db.settings.threshold)+'. الاحتياطي المقترح: '+db.settings.reserveMin+' سرير جاهز. الملاءمة الطبية تختلف حسب نوع الرعاية.'
+  : 'Current occupancy: <b>'+percent(pressure)+'</b> of operational beds. Demo alert threshold: '+percent(db.settings.threshold)+'. Suggested reserve: '+db.settings.reserveMin+' ready beds. Clinical suitability depends on care type.')+(pressure>=db.settings.threshold?'<p class="pill critical">ضغط مرتفع</p>':'<p class="pill ready">ضمن العتبة التوضيحية</p>'));
 html+=panel('أحدث النشاطات',db.logs.length?db.logs.slice(0,6).map(l=>'<div class="item"><span class="tiny">'+stamp(l.time)+'</span> — '+esc(l.action)+' <span class="muted">'+esc(l.detail)+'</span></div>').join(''):note('لا توجد عمليات مسجلة بعد'))+'</div></div>'}}
 if(page==='beds'){
   html=panel('إدارة الأسرة',note('تُفصل حالة الإشغال عن جاهزية التنظيف والمعدات. لا يجوز تحويل السرير المشغول مباشرة إلى جاهز.')+
@@ -977,8 +1042,8 @@ if(page==='requests'){html=panel('طلبات استقبال المرضى','<div 
 if(page==='cleaning'){let rows=db.beds.filter(b=>['cleaning','maintenance'].includes(b.status)||!b.clean||!b.equipment);html=panel('التنظيف والصيانة واعتماد الجاهزية',note('اكتمال التنظيف لا يعني جاهزية السرير تلقائياً؛ تُراجع التجهيزات وحالة الإشغال قبل اعتماده.')+table(['السرير','القسم','الحالة','النظافة','المعدات','الإجراءات'],rows.map(b=>tr([esc(b.id),esc(b.dept),pill(b.status),b.clean?'مكتمل':'غير مكتمل',b.equipment?'متوفرة':'ناقصة','<div class="actions">'+btn('إنهاء التنظيف','finishCleaning(\''+attr(b.id)+'\')')+btn('فحص الجاهزية','approveBed(\''+attr(b.id)+'\')')+'</div>']))))}
 if(page==='equipment'){html=panel('إدارة المعدات الطبية',note('نقل الأجهزة وتغيير حالتها مسؤولية فريق الأجهزة الطبية والصيانة وفق قرار المشروع. هنا تُحاكى العملية مع تسجيلها في سجل التدقيق.')+'<div class="toolbar">'+btn('+ إضافة جهاز','addEquipment()','primary')+'</div>'+table(['المعرف','الجهاز','القسم','السرير المرتبط','الحالة','إجراء'],db.equipment.map(e=>tr([esc(e.id),esc(e.name),esc(e.dept),esc(e.bed||'متنقل / غير مرتبط'),pill(e.status),'<div class="actions">'+btn('تحديث / نقل','editEquipment(\''+attr(e.id)+'\')')+'</div>']))))}
 if(page==='transfers'){html=panel('التحويلات بين المستشفيات — محاكاة',note('لا يتم إرسال أي طلب فعلي. المستشفى المستقبل والتجمع الصحي والهلال الأحمر جهات افتراضية للعرض. القبول لا يعني تخصيص سرير أو وصول المريض.')+'<div class="toolbar">'+btn('+ طلب تحويل توضيحي','addTransfer()','primary')+'</div>'+table(['رقم التحويل','الجهة المستقبلة','الحالة','نوع الرعاية','الأولوية','الإجراء'],db.transfers.map(t=>tr([esc(t.id),esc(t.target),pill(t.status),esc(t.care),esc(t.priority)+(t.requestId?'<div class="tiny">طلب: '+esc(t.requestId)+'</div>':''),btn('تحديث محاكاة','manageTransfer(\''+attr(t.id)+'\')')]))))}
-if(page==='alerts'){html=panel('الإشعارات داخل النظام',note('الإشعارات محلية داخل المتصفح فقط، ولا تصل إلى موظفين آخرين أو أجهزة أخرى.')+'<div class="toolbar">'+'<button type="button" class="secondary" id="ackAllInline">إقرار جميع الإشعارات</button>'+'</div>'+table(['التاريخ','الأولوية','الرسالة','الحالة','إجراء'],db.alerts.map(a=>tr([stamp(a.time),pill(a.severity),esc(a.text),a.ack?'تم الاطلاع':'لم يُطّلع عليه',a.ack?'—':'<button type="button" class="primary inline-ack" data-alert-id="'+attr(a.id)+'">إقرار</button>']))))}
-if(page==='reports'){let all=db.beds.length,oper=all-count('maintenance'),occ=count('occupied');html='<div class="grid">'+stat('إشغال الأسرة التشغيلية',oper?Math.round(occ/oper*100)+'٪':'0٪','المقام: غير الخارجة من الخدمة')+stat('جاهزة',db.beds.filter(bedAvailable).length,'تشغيلياً')+stat('قيد التنظيف',count('cleaning'),'غير جاهزة')+stat('طلبات مفتوحة',db.requests.filter(r=>!['closed','rejected'].includes(r.status)).length,'طلبات توضيحية')+'</div>';
+if(page==='alerts'){html=panel('الإشعارات داخل النظام',note('الإشعارات محلية داخل المتصفح فقط، ولا تصل إلى موظفين آخرين أو أجهزة أخرى.')+'<div class="toolbar">'+'<button type="button" class="secondary" id="ackAllInline">إقرار جميع الإشعارات</button>'+'</div>'+table(['التاريخ','الأولوية','الرسالة','الحالة','إجراء'],db.alerts.map(a=>tr([stamp(a.time),pill(a.severity),a.code==='capacity'?esc(a.text).replace(/(\d+)٪/g,(_,value)=>percent(Number(value))):esc(a.text),a.ack?'تم الاطلاع':'لم يُطّلع عليه',a.ack?'—':'<button type="button" class="primary inline-ack" data-alert-id="'+attr(a.id)+'">إقرار</button>']))))}
+if(page==='reports'){let all=db.beds.length,oper=all-count('maintenance'),occ=count('occupied');html='<div class="grid">'+stat('إشغال الأسرة التشغيلية',percent(oper?occ/oper*100:0),'المقام: غير الخارجة من الخدمة')+stat('جاهزة',db.beds.filter(bedAvailable).length,'تشغيلياً')+stat('قيد التنظيف',count('cleaning'),'غير جاهزة')+stat('طلبات مفتوحة',db.requests.filter(r=>!['closed','rejected'].includes(r.status)).length,'طلبات توضيحية')+'</div>';
 html+=panel('توزيع الحالات',Object.keys({ready:1,occupied:1,reserved:1,cleaning:1,maintenance:1}).map(k=>'<div style="margin:15px 0"><div class="heading"><span>'+labels[k]+'</span><b>'+count(k)+'</b></div><div class="chartline"><div style="width:'+(all?count(k)/all*100:0)+'%"></div></div></div>').join('')+'<div class="toolbar">'+btn('تصدير CSV','exportBeds()')+btn('تصدير سجل التدقيق CSV','exportAudit()')+'</div>')}
 if(page==='recovery'){html=panel('استمرارية التشغيل والتعافي — إجراءات توضيحية',note('عند توقف الخادم الحقيقي تُستخدم النماذج الورقية المعتمدة. هذه النسخة لا توفر خادماً أو استعادة مؤسسية؛ يمكن تسجيل العمليات الورقية بعد عودة النظام للمراجعة.')+'<div class="toolbar">'+btn('+ إدخال حدث ورقي للمطابقة','addRecovery()','primary')+'</div>'+table(['الوقت الفعلي','نوع العملية','السرير','الوصف','حالة المراجعة','إجراء'],db.recovery.map(r=>tr([esc(r.happened),esc(r.type),esc(r.bed),esc(r.description),pill(r.status),r.status==='pending'?btn('اعتماد المطابقة','approveRecovery(\''+attr(r.id)+'\')'):'—'])))+note('اعتماد المطابقة هنا تسجيل توضيحي فقط؛ لا تُعدل حالة السرير تلقائياً بناءً على نموذج ورقي دون تنفيذ العملية التشغيلية الصحيحة.'))}
 if(page==='integrations'){html=panel('الربط الخارجي — عرض توضيحي فقط',note('لا يوجد أي اتصال فعلي أو تبادل بيانات مع الجهات أدناه. لا تُستخدم معلومات مرضى حقيقية.')+'<div class="cards">'+[['beds','المستشفيات الأخرى','طلبات تحويل ومشاركة السعة وفق الموافقات المتبادلة'],['dashboard','التجمع الصحي','مؤشرات وتقارير واطلاع تشغيلي محدود بالصلاحيات'],['transfers','الهلال الأحمر','احتياجات الحالة الطبية والوقت المتوقع للوصول'],['integrations','واجهات API','تكاملات آمنة مستقبلية وخوادم مستقلة'],['settings','صلاحيات المستخدمين','أدوار معتمدة وMFA وسجلات تدقيق في التشغيل الفعلي'],['recovery','النسخ الاحتياطي','نسخ مشفرة واستعادة واختبارات على بنية خوادم لاحقة']].map(x=>'<div class="card"><h3><span class="integration-icon">'+sidebarIcon(x[0])+'</span> '+x[1]+'</h3><p>'+x[2]+'</p>'+pill('غير متصل')+'</div>').join('')+'</div>')}
@@ -1017,13 +1082,11 @@ document.getElementById('requestEmpty')?.classList.toggle('hidden', !!document.q
 function go(k){
   if(k!=='requests'){requestSearchValue='';requestStatusValue=''}
   page=k;
-  const fromMobile = mobileSidebarOpen;
   mobileSidebarOpen=false;
   applySidebar();
   render();
   window.scrollTo(0,0);
-  if(fromMobile) document.getElementById('content').focus({preventScroll:true});
-  else document.querySelector('.nav button[aria-current="page"]')?.focus({preventScroll:true});
+  document.getElementById('content').focus({preventScroll:true});
 }
 function drawBeds() {
   const el = document.getElementById('bedTable');
