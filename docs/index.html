@@ -606,9 +606,6 @@ function ensureFortyDemoBeds(target){
   ['SUR','الجراحة','تنويم',210],
   ['ISO','العزل','عزل',310]
  ];
- const occupied=target.beds.filter(b=>b.status==='occupied').length;
- const planned=['ready','ready','ready','reserved','ready','cleaning','ready','maintenance','ready','ready','ready','ready','ready','ready','ready','ready','ready','ready'];
- let n=0;
  for(let i=0;target.beds.length<40&&i<500;i++){
   const [prefix,dept,type,start]=groups[i%groups.length];
   const id=prefix+'-'+String(start+Math.floor(i/groups.length)).padStart(3,'0');
@@ -616,7 +613,6 @@ function ensureFortyDemoBeds(target){
   // Keep seeded additional beds ready; request lifecycle tests can move them to other states.
   const status='ready';
   target.beds.push({id,dept,type,status,clean:true,equipment:true});
-  n++;
  }
  target.sampleBeds40V1=true;
  return target;
