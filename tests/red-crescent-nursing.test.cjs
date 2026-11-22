@@ -127,3 +127,21 @@ test('audit history search and offline launchers are exposed',()=>{
  assert.match(html,/academicAuditTable/);
  assert.match(html,/prepareAcademicDemo/);
 });
+
+test('forty-bed seed is repeatable and preserves existing records',()=>{
+ const s=setup({beds:[bed('CUSTOM-1')],requests:[],alerts:[],logs:[],settings:{reserveMin:0}});
+ s.run('ensureFortyDemoBeds(db);persist()');
+ const first=s.read();
+ assert.equal(first.beds.length,40);
+ assert.ok(first.beds.some(b=>b.id==='CUSTOM-1'));
+ assert.equal(new Set(first.beds.map(b=>b.id)).size,40);
+ s.run('ensureFortyDemoBeds(db);persist()');
+ assert.equal(s.read().beds.length,40);
+});
+test('fresh university demo contains forty beds across multiple departments',()=>{
+ const s=setup({beds:[],requests:[],alerts:[],logs:[],settings:{reserveMin:0}});
+ s.run('prepareAcademicDemo()');
+ const data=s.read();
+ assert.equal(data.beds.length,40);
+ assert.ok(new Set(data.beds.map(b=>b.dept)).size>=6);
+});
