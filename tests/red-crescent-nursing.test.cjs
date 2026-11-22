@@ -106,3 +106,24 @@ test('nursing view only shows eligible actions and tasks in the selected departm
  assert.equal(result.requests[0].status, 'closed');
  assert.equal(result.departmentTasks.find(t=>t.bed==='ICU-1'&&t.kind==='cleaning').status, 'pending');
 });
+
+test('academic demo preset prepares one pending Red Crescent request and can be replayed',()=>{
+ const s=setup({beds:[bed('ER-1')],requests:[],alerts:[],logs:[],settings:{reserveMin:0}});
+ s.run('prepareAcademicDemo()');
+ const first=s.read();
+ const sample=first.requests.find(r=>r.id==='DEMO-AMB-001');
+ assert.ok(sample);
+ assert.equal(sample.status,'pending');
+ assert.equal(sample.source,'الهلال الأحمر السعودي');
+ assert.ok(first.beds.some(b=>b.status==='ready'&&b.type===sample.care));
+ s.run("acceptRequestInline('DEMO-AMB-001')");
+ assert.equal(s.read().requests.find(r=>r.id==='DEMO-AMB-001').status,'arrived');
+ s.run('prepareAcademicDemo()');
+ assert.equal(s.read().requests.filter(r=>r.id==='DEMO-AMB-001').length,1);
+ assert.equal(s.read().requests.find(r=>r.id==='DEMO-AMB-001').status,'pending');
+});
+test('audit history search and offline launchers are exposed',()=>{
+ assert.match(html,/filterAuditRows/);
+ assert.match(html,/academicAuditTable/);
+ assert.match(html,/prepareAcademicDemo/);
+});
