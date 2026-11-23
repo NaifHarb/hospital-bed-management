@@ -1,16 +1,18 @@
-# Hospital Bed Management — Offline University Demo
+# تشغيل نسخة المناقشة محلياً
 
-## How to run
+1. جهّز جهاز Windows عليه Python 3.8 أو أحدث وMicrosoft Edge أو Google Chrome مسبقاً. يعمل التطبيق بدون إنترنت بعد تجهيز هذه المتطلبات وفك الحزمة.
+2. فكّ ضغط الحزمة كاملة، واترك `run-local-windows.bat` و`run-local.py` ومجلد `docs` معاً. شغّل `run-local-windows.bat` بالنقر المزدوج. تفتح الصفحة في المتصفح الافتراضي، ويمكن فتح `http://localhost:8765/docs/` يدوياً في Edge أو Chrome.
+3. اترك نافذة التشغيل مفتوحة. لإيقاف الخادم، اضغط Ctrl+C أو أغلق النافذة. إذا كان المنفذ 8765 مستخدماً، أوقف الخادم القديم أولاً.
+4. يمكنك تشغيل الخادم من مجلد المشروع يدوياً بالأمر `python -m http.server 8765 --bind 127.0.0.1`. على macOS أو Linux يمكنك استخدام `sh run-local-mac-linux.sh`.
 
-1. Download the repository ZIP from GitHub and extract **all** files.
-2. On Windows double-click `run-local-windows.bat` (Python 3 must be installed). On macOS/Linux run `sh run-local-mac-linux.sh`.
-3. Open `http://localhost:8765/docs/` in a browser. No Internet is needed after extraction; this is a local static web server, **not** a multi-user hospital backend.
-4. Log in as `admin` using the existing demo credentials, open Settings, and choose **تجهيز سيناريو المناقشة**. This replaces the local demo data after confirmation; export JSON first if needed.
-5. Accept the sample Red Crescent request `DEMO-AMB-001`, verify the occupied bed and dashboard counters, then demonstrate discharge and cleaning.
+## تجربة المناقشة
 
-## Important
+- ادخل بحساب مدير الأسرة من مجموعة مدير الأسرة. كلمة مرور الحساب التجريبي `123456`.
+- من الإعدادات، اختر **تجهيز سيناريو المناقشة**. تصدير JSON يحفظ نسخة من تعديلاتك قبل استبدالها بالسيناريو.
+- اقبل الطلب التجريبي `DEMO-AMB-001`، ثم راقب عداد الإشغال. يمكنك متابعة الخروج والتنظيف واعتماد الجاهزية من واجهات الأقسام.
+- استخدم بيانات المحاكاة فقط. خزّن البيانات في ملف JSON من الإعدادات، واستورد النسخة إلى نفس التطبيق عند الحاجة.
+- استخدم ملف تعريف المتصفح نفسه وعنوان `localhost` نفسه في كل مرة. لتبديل الأدوار أثناء عرض سيناريو واحد، سجّل الخروج ثم ادخل بحساب آخر في التبويب نفسه. يحفظ التطبيق البيانات محلياً في المتصفح، وقد يطلب المتصفح تسجيل الدخول مجدداً عند إعادة فتحه.
 
-- Data is stored in browser localStorage per browser profile. Use the **same browser and localhost URL** throughout the demonstration. Different browsers/devices do not share data.
-- Do not use real patient data. Credentials and permissions are for academic simulation, not production security.
-- Keep a backup JSON export and a copy of the repository ZIP on a USB drive.
-- If port 8765 is busy, close the other local server before relaunching.
+## إعادة اختبار QA على Linux
+
+شغّل خادم Python أعلاه في نافذة واحدة. في نافذة ثانية، مع توفر Python Playwright وChromium، شغّل `QA_EVIDENCE=/tmp/hospital-qa CHROMIUM_PATH=/usr/bin/chromium python tests/browser-qa.py`. اختبارات Node الموجودة تعمل بالأمر `node --test tests/*.test.cjs`. متطلبات Playwright وNode تخص الاختبار الآلي فقط.

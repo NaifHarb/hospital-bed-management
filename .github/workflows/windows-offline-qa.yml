@@ -1,0 +1,40 @@
+name: Windows offline demo QA
+on:
+  push:
+    branches: [qa/windows-laptop-offline]
+    paths:
+      - '.github/workflows/windows-offline-qa.yml'
+      - 'tests/windows-offline-qa.py'
+      - 'run-local-windows.bat'
+      - 'run-local.py'
+      - 'docs/**'
+
+permissions:
+  contents: read
+
+jobs:
+  windows-demo:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [msedge, chrome]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test driver
+        run: python -m pip install playwright
+      - name: Verify Windows launcher and browser
+        shell: pwsh
+        env:
+          PYTHONUTF8: '1'
+          QA_BROWSER: ${{ matrix.browser }}
+        run: python tests/windows-offline-qa.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: windows-offline-${{ matrix.browser }}
+          path: windows-qa-evidence/

@@ -508,7 +508,7 @@ html :is(.portal-card,.dashboard-filter-bed)[data-bed-state] {
 <script>
 'use strict';
 const KEY='hospital-bed-ipad-v2';
-const defaults={hospital:'مستشفى توضيحي',actor:'مسؤول إدارة الأسرة (توضيحي)',reserveMin:1,threshold:80};
+const defaults={hospital:'مستشفى حايل العام',actor:'مسؤول إدارة الأسرة (توضيحي)',reserveMin:1,threshold:80};
 const initial={settings:{...defaults},beds:[
 {id:'ICU-012',dept:'العناية المركزة',type:'عناية مركزة',status:'ready',clean:true,equipment:true},
 {id:'ICU-013',dept:'العناية المركزة',type:'عناية مركزة',status:'occupied',clean:false,equipment:true},
@@ -529,7 +529,7 @@ const initial={settings:{...defaults},beds:[
 {id:'EQ-003',name:'جهاز تنفس',dept:'العناية المركزة',bed:'ICU-014',status:'maintenance'}
 ],transfers:[],alerts:[],logs:[],recovery:[],version:2};
 let db;try{db=JSON.parse(localStorage.getItem(KEY))||structuredClone(initial)}catch{db=structuredClone(initial)}
-db.settings={...defaults,...db.settings,hospital:'مستشفى حايل العام'};for(const k of ['beds','requests','equipment','transfers','alerts','logs','recovery'])if(!Array.isArray(db[k]))db[k]=[];
+db.settings={...defaults,...db.settings};for(const k of ['beds','requests','equipment','transfers','alerts','logs','recovery'])if(!Array.isArray(db[k]))db[k]=[];
 
 // Extra fictional records are inserted once, without overwriting existing browser data.
 if(!db.samplePatientsV3){
@@ -1409,7 +1409,36 @@ function download(name,body,mime){let u=URL.createObjectURL(new Blob([body],{typ
 function exportBeds(){csvDownload('hospital-beds.csv',[['القسم','السرير','النوع','الحالة','النظافة','التجهيزات'],...db.beds.map(b=>[b.dept,b.id,b.type,labels[b.status],b.clean,b.equipment])])}
 function exportAudit(){csvDownload('hospital-audit.csv',[['الوقت','الدور','العملية','التفاصيل'],...db.logs.map(l=>[l.time,l.actor,l.action,l.detail])])}
 function exportJson(){download('hospital-demo-data.json',JSON.stringify(db,null,2),'application/json')}
-function importJson(){if(!demoCan('importJson'))return alert('استيراد البيانات مخصص لدور مدير الأسرة في المحاكاة');let input=document.createElement('input');input.type='file';input.accept='.json,application/json';input.onchange=async()=>{let file=input.files?.[0];if(!file)return;try{let v=JSON.parse(await file.text());if(!v||!Array.isArray(v.beds)||!Array.isArray(v.requests)||!Array.isArray(v.equipment)||!v.settings||!Array.isArray(v.logs))throw Error('ملف غير متوافق');if(!confirm('سيستبدل هذا الاستيراد البيانات التوضيحية الحالية. هل تتابع؟'))return;db={...structuredClone(initial),...v,settings:{...defaults,...v.settings}};if(!db.samplePatientsV3)db.samplePatientsV3=true;audit('استيراد بيانات توضيحية',file.name);render()}catch(e){alert('تعذر الاستيراد: '+e.message)}};input.click()}
+function importJson(){
+  if(!demoCan('importJson'))return alert('استيراد البيانات غير متاح لهذا الحساب');
+  const input=document.createElement('input');
+  input.type='file';
+  input.accept='.json,application/json';
+  input.onchange=async()=>{
+    const file=input.files?.[0];
+    if(!file)return;
+    try{
+      const payload=JSON.parse(await file.text());
+      const isRecord=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
+      const required=['beds','requests','equipment','logs'];
+      const optional=['transfers','alerts','recovery','departmentTasks'];
+      const validList=key=>Array.isArray(payload[key])&&payload[key].every(isRecord);
+      if(!isRecord(payload)||!isRecord(payload.settings)||!required.every(validList)||
+         !optional.every(key=>!Object.hasOwn(payload,key)||validList(key))){
+        throw Error('ملف غير متوافق');
+      }
+      const next={...structuredClone(initial),...payload,settings:{...defaults,...payload.settings}};
+      const errors=validateDemoState(next);
+      if(errors.length)throw Error(errors[0]);
+      if(!demoCan('importJson')||!confirm('سيستبدل هذا الاستيراد البيانات التوضيحية الحالية. هل تتابع؟'))return;
+      next.samplePatientsV3=true;
+      db=next;
+      audit('استيراد بيانات توضيحية',file.name);
+      render();
+    }catch(error){alert('تعذر الاستيراد: '+error.message)}
+  };
+  input.click();
+}
 function prepareUniversityDemo(){
  if(!demoCan('resetDemo'))return alert('تهيئة العرض مخصصة لمدير الأسرة');
  if(!confirm('ستُحفظ نسخة JSON من بيانات هذا المتصفح، ثم تُستبدل البيانات الحالية ببيانات سيناريو الجراحة. هل تريد المتابعة؟'))return;
