@@ -1,0 +1,34 @@
+{
+  "source_commit": "f77848c8891b5e2299467163710e44abcb18bffe",
+  "run_url": "https://github.com/NaifHarb/hospital-bed-management/actions/runs/45091245549",
+  "environment": {
+    "os": "Windows Server 2025 Datacenter",
+    "build": "10.0.26100",
+    "python": "3.12",
+    "browser_mode": "headless"
+  },
+  "browsers": {
+    "chrome": {
+      "result": "PASS",
+      "stages": {
+        "bat_http_200_from_path_with_spaces": "PASS",
+        "demo_admin_login_and_40_beds": "PASS",
+        "rtl_dashboard_1366x768_light_and_dark": "PASS",
+        "rtl_dashboard_1920x1080_light_and_dark": "PASS",
+        "images_loaded_no_external_page_requests_or_script_errors": "PASS"
+      },
+      "artifact_url": "https://github.com/NaifHarb/hospital-bed-management/actions/runs/45091245549/artifacts/14781358140"
+    },
+    "msedge": {
+      "result": "PASS",
+      "stages": {
+        "bat_http_200_from_path_with_spaces": "PASS",
+        "demo_admin_login_and_40_beds": "PASS",
+        "rtl_dashboard_1366x768_light_and_dark": "PASS",
+        "rtl_dashboard_1920x1080_light_and_dark": "PASS",
+        "images_loaded_no_external_page_requests_or_script_errors": "PASS"
+      },
+      "artifact_url": "https://github.com/NaifHarb/hospital-bed-management/actions/runs/45091245549/artifacts/14781342968"
+    }
+  }
+}
