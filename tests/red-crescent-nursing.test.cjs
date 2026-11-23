@@ -168,3 +168,54 @@ test('notification bell toggles back to the previously viewed page',()=>{
  s.run('toggleAlertPage()');
  assert.equal(s.run('page'),'reports');
 });
+
+test('theme toggle reverses on second click without changing hospital records',()=>{
+ const s=setup({beds:[bed('ER-1')],requests:[],alerts:[],logs:[],settings:{reserveMin:0}});
+ s.run('applyTheme=()=>{}');
+ const before=s.run('currentTheme');
+ s.run('toggleTheme()');
+ assert.notEqual(s.run('currentTheme'),before);
+ s.run('toggleTheme()');
+ assert.equal(s.run('currentTheme'),before);
+ assert.equal(s.read().beds.length,1);
+});
+test('sidebar toggle reverses on second click on desktop and mobile',()=>{
+ const s=setup({beds:[bed('ER-1')],requests:[],alerts:[],logs:[],settings:{reserveMin:0}});
+ s.run('applySidebar=()=>{};mobileLayout.matches=false');
+ const desktop=s.run('sidebarCollapsed');
+ s.run('toggleSidebar()');
+ assert.notEqual(s.run('sidebarCollapsed'),desktop);
+ s.run('toggleSidebar()');
+ assert.equal(s.run('sidebarCollapsed'),desktop);
+ s.run('mobileLayout.matches=true');
+ s.run('toggleSidebar()');
+ assert.equal(s.run('mobileSidebarOpen'),true);
+ s.run('toggleSidebar()');
+ assert.equal(s.run('mobileSidebarOpen'),false);
+});
+test('user menu toggle and close maintain expanded state',()=>{
+ const s=setup({beds:[bed('ER-1')],requests:[],alerts:[],logs:[],settings:{reserveMin:0}});
+ s.run(`{
+ const classes=new Set(['hidden']);
+ const menu={classList:{contains:k=>classes.has(k),add:k=>classes.add(k),toggle:(k,force)=>force?classes.add(k):classes.delete(k)}};
+ const button={setAttribute:(k,v)=>{menu.expanded=v}};
+ document.getElementById=id=>id==='userMenu'?menu:button;
+ globalMenu=menu;
+ }`);
+ s.run('toggleUserMenu()');
+ assert.equal(s.run('globalMenu.expanded'),'true');
+ s.run('toggleUserMenu()');
+ assert.equal(s.run('globalMenu.expanded'),'false');
+ s.run('toggleUserMenu();closeUserMenu()');
+ assert.equal(s.run('globalMenu.expanded'),'false');
+});
+test('dashboard KPI click toggles filter off on repeated click',()=>{
+ assert.match(html,/dashboardBedFilter === filter \? '' : filter/);
+ assert.match(html,/aria-pressed/);
+ assert.match(html,/id="clearDashboardFilter"/);
+});
+test('navigation buttons are intentionally page links rather than closable popovers',()=>{
+ assert.match(html,/data-view="\'+k\+'"/);
+ assert.match(html,/onclick="go\(/);
+ assert.match(html,/function go\(k\)/);
+});
