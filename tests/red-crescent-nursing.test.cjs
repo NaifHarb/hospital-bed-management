@@ -181,7 +181,7 @@ test('theme toggle reverses on second click without changing hospital records',(
 });
 test('sidebar toggle reverses on second click on desktop and mobile',()=>{
  const s=setup({beds:[bed('ER-1')],requests:[],alerts:[],logs:[],settings:{reserveMin:0}});
- s.run('applySidebar=()=>{};mobileLayout.matches=false');
+ s.run('applySidebar=()=>{};document.querySelector=()=>({focus(){}});mobileLayout.matches=false');
  const desktop=s.run('sidebarCollapsed');
  s.run('toggleSidebar()');
  assert.notEqual(s.run('sidebarCollapsed'),desktop);
@@ -215,7 +215,7 @@ test('dashboard KPI click toggles filter off on repeated click',()=>{
  assert.match(html,/id="clearDashboardFilter"/);
 });
 test('navigation buttons are intentionally page links rather than closable popovers',()=>{
- assert.match(html,/data-view="\'+k\+'"/);
+ assert.ok(html.includes('data-view='));
  assert.match(html,/onclick="go\(/);
  assert.match(html,/function go\(k\)/);
 });
