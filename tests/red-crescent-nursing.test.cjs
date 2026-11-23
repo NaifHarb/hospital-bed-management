@@ -158,3 +158,13 @@ test('nursing login departments are dynamically grouped without nursing prefix',
  assert.match(html,/label.replace\(\/\^تمريض/);
  assert.match(html,/القسم المراد \/ المستخدم/);
 });
+
+test('notification bell toggles back to the previously viewed page',()=>{
+ assert.match(html,/onclick="toggleAlertPage\(\)"/);
+ assert.match(html,/function toggleAlertPage\(\)/);
+ const s=setup({beds:[bed('ER-1')],requests:[],alerts:[],logs:[],settings:{reserveMin:0}});
+ s.run("page='reports';render=()=>{};applySidebar=()=>{};go=key=>{page=key};toggleAlertPage()");
+ assert.equal(s.run('page'),'alerts');
+ s.run('toggleAlertPage()');
+ assert.equal(s.run('page'),'reports');
+});
