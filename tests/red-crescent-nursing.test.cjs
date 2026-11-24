@@ -219,3 +219,20 @@ test('navigation buttons are intentionally page links rather than closable popov
  assert.match(html,/onclick="go\(/);
  assert.match(html,/function go\(k\)/);
 });
+
+test('medical equipment seed adds thirty devices across six departments without duplication or overwriting',()=>{
+ const s=setup({beds:[bed('ER-1')],equipment:[{id:'CUSTOM-EQ',name:'Custom',dept:'الطوارئ',bed:'',status:'ready'}],requests:[],alerts:[],logs:[],settings:{reserveMin:0}});
+ s.run('ensureDemoEquipment(db);persist()');
+ const data=s.read();
+ assert.equal(data.equipment.length,31);
+ assert.equal(new Set(data.equipment.map(e=>e.id)).size,31);
+ assert.equal(new Set(data.equipment.map(e=>e.dept)).size,6);
+ assert.equal(data.equipment[0].id,'CUSTOM-EQ');
+ assert.ok(data.equipment.every(e=>!e.bed||data.beds.some(b=>b.id===e.bed&&b.dept===e.dept)));
+ s.run('ensureDemoEquipment(db);persist()');
+ assert.deepEqual(s.read(),data);
+});
+test('fresh demo contains 33 medical devices',()=>{
+ const s=setup({beds:[],requests:[],alerts:[],logs:[],settings:{reserveMin:0}});
+ assert.equal(s.run('freshDemoData().equipment.length'),33);
+});
