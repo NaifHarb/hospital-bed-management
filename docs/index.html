@@ -617,8 +617,31 @@ function ensureFortyDemoBeds(target){
  target.sampleBeds40V1=true;
  return target;
 }
-function freshDemoData(){return ensureFortyDemoBeds(repairOccupiedDemoLinks(expandHospitalDemo(seedOccupiedExamples(addDemoPatients(structuredClone(initial))))))}
-db=expandHospitalDemo(db);repairOccupiedDemoLinks(db);ensureFortyDemoBeds(db);localStorage.setItem(KEY,JSON.stringify(db));
+function ensureDemoEquipment(target){
+ if(target.sampleEquipmentV1)return target;
+ const groups=[
+ ['العناية المركزة',['جهاز تنفس صناعي','جهاز مراقبة العلامات الحيوية','مضخة حقن','مضخة محاليل','جهاز شفط طبي']],
+ ['الطوارئ',['جهاز تخطيط القلب','جهاز صدمات كهربائية','جهاز مراقبة العلامات الحيوية','جهاز قياس الأكسجين','جهاز شفط متنقل']],
+ ['التنويم',['مضخة محاليل','جهاز قياس ضغط الدم','جهاز قياس الأكسجين','جهاز أكسجين متنقل','كرسي متحرك']],
+ ['الأطفال',['جهاز مراقبة أطفال','مضخة حقن للأطفال','جهاز استنشاق','جهاز قياس الأكسجين للأطفال','مضخة محاليل']],
+ ['الجراحة',['جهاز مراقبة العلامات الحيوية','مضخة محاليل','جهاز شفط طبي','جهاز تدفئة المرضى','جهاز تخطيط القلب']],
+ ['العزل',['جهاز تنفس صناعي','جهاز مراقبة العلامات الحيوية','جهاز أكسجين متنقل','مضخة محاليل','جهاز شفط طبي']]
+ ];
+ if(!Array.isArray(target.equipment))target.equipment=[];
+ const usedBeds=new Set(target.equipment.map(e=>e.bed).filter(Boolean));
+ groups.forEach(([dept,names],g)=>names.forEach((name,i)=>{
+  const id='EQ-'+String(101+g*5+i);
+  if(target.equipment.some(e=>e.id===id))return;
+  const status=i===4?'maintenance':i===2?'used':'ready';
+  const bed=i<2?target.beds.find(b=>b.dept===dept&&b.status==='ready'&&b.equipment&&!usedBeds.has(b.id)):null;
+  if(bed)usedBeds.add(bed.id);
+  target.equipment.push({id,name,dept,bed:bed?.id||'',status});
+ }));
+ target.sampleEquipmentV1=true;
+ return target;
+}
+function freshDemoData(){return ensureDemoEquipment(ensureFortyDemoBeds(repairOccupiedDemoLinks(expandHospitalDemo(seedOccupiedExamples(addDemoPatients(structuredClone(initial)))))))}
+db=expandHospitalDemo(db);repairOccupiedDemoLinks(db);ensureFortyDemoBeds(db);ensureDemoEquipment(db);localStorage.setItem(KEY,JSON.stringify(db));
 let page='dashboard';let nursingDeptFilter='';let dashboardBedFilter='';let requestSearchValue='';let requestStatusValue='';
 
 const LANGUAGE_KEY = 'hospital-bed-language';
